@@ -1,0 +1,23 @@
+{
+  "schema": "neuroterrarium.replay-manifest.v1",
+  "sha256": "dd1102b51d9c336b357fac41224f8819c5bac380b3966d659f0768ef35bafe0a",
+  "bytes": 4498229,
+  "frames": 160,
+  "source_sha256": "6b7c41ee2040146f59b7ec233ac3c0b412b40c1bb358b164e6cb906d792eac1c",
+  "source_files": {
+    "brain_cache.py": "29e581a15ed83929ba4898edcee640ce3956b3d2cab72034c45d1c0602f9f0d6",
+    "controllers.py": "d401493d8965dbb9fada08e84d8e3edc38e430e857450a68ef273b7d5b749923",
+    "data.py": "afc685639be1386f12cd8147bb448acd3127011587f21e2d5c75999c9505d46f",
+    "interface.py": "0b9142171b9ed69cfa985d4b76f85d8a6188e7d286e43210fc52e0fcaa0e37e1",
+    "neural.py": "32d4ff33c4f7988d105bcf7234b96b9f5a834384769e9468d5368174e102173e",
+    "reference.py": "89cc02714236c18b75e462e80fff193a0eefa30096aa544aacf4733a9fd1bc0d",
+    "registry.py": "dc0cbdee7357746ebd81a786d0bd314460f515c55a3bf4d945ccc68d305f125b",
+    "runtime.py": "e45ba838fcb3fd661be6a88bb26e6c7364c5a422823f22ff71ab1499738af34f",
+    "world.py": "6150cf8af614c2f9b74b544c2077a91599b3ad8e85991de8d969fac1e3486c8a"
+  },
+  "data_manifest_sha256": "623516c79859e45d0319995d619e3839261adf0e43d4de091fab322d509b91b4",
+  "interface_sha256": "0873a4ac160c2033ca095dabae76c2edd7b968638362d66710ae42ab5850aa90",
+  "interface_registry_sha256": "f5e8f40870c802387c1f7df23c3f5d7c83fd7717d381316413d64aa65824048e",
+  "models_manifest_sha256": "de26cab314ac91685d21fff49b926d8290323df7883b453297809d55720b111c",
+  "model_set_sha256": "cae47dab8ca9ec107fb655485d076b8439b33d1c7f77b611f8e368fcb1d9a439"
+}

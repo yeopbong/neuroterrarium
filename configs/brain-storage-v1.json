@@ -1,0 +1,19 @@
+{
+  "schema": "neuroterrarium.complete-csr-profile.v1",
+  "profile": "shiu-v783-full",
+  "cache_schema": "neuroterrarium.complete-csr-cache.v1",
+  "neurons": 138639,
+  "directed_pairs": 15091983,
+  "synaptic_contacts": 54492922,
+  "graph_digest": "967009dd9657b687ea7dac846bf1e0a04403f31c485c9adea4590edd28870e8f",
+  "storage": "All verified connections in the original stable presynaptic order, as read-only CSR arrays. No pruning or numerical parameter change.",
+  "input_groups": [
+    "sugar",
+    "lplc2",
+    "lc4",
+    "dna02"
+  ],
+  "license": "CC BY-NC 4.0; derived from the separately attributed FlyWire data. The code MIT license does not relicense this cache.",
+  "identity_evidence": "Full v783 graph constructed from the frozen paired data and registered input sites; graph digest preserved in full-graph numerical and closed-loop validation.",
+  "summary_sha256": "be35d12a62276e463eb6bb09a59935f56ed2512299bf8501218de163c568c9fd"
+}

@@ -1,0 +1,74 @@
+{
+  "schema": "neuroterrarium.data.v1",
+  "profile": "shiu-v783-full",
+  "connectome_version": "783",
+  "annotation_version": "v2.1.0",
+  "sources": {
+    "completeness": {
+      "filename": "Completeness_783.csv",
+      "url": "https://raw.githubusercontent.com/philshiu/Drosophila_brain_model/91bdd1e7dcf193f3e7ca5a8933497fcef63b7960/Completeness_783.csv",
+      "upstream_revision": "91bdd1e7dcf193f3e7ca5a8933497fcef63b7960",
+      "connectome_version": "783",
+      "accessed_date": "2026-09-13",
+      "bytes": 3327347,
+      "sha256": "bbb847a4cc2caaa7a16349722d220c087317b946d148d4d592d94d250617a311",
+      "license": "CC-BY-NC-4.0"
+    },
+    "connectivity": {
+      "filename": "Connectivity_783.parquet",
+      "url": "https://raw.githubusercontent.com/philshiu/Drosophila_brain_model/91bdd1e7dcf193f3e7ca5a8933497fcef63b7960/Connectivity_783.parquet",
+      "upstream_revision": "91bdd1e7dcf193f3e7ca5a8933497fcef63b7960",
+      "connectome_version": "783",
+      "accessed_date": "2026-09-13",
+      "bytes": 100804642,
+      "sha256": "efeb23fb99098e9c390f6869969b2a121a2ee92c833cfc45ecb2c1d8e1af0347",
+      "license": "CC-BY-NC-4.0"
+    },
+    "annotations": {
+      "filename": "neuron_annotations_v2.1.0.tsv",
+      "url": "https://raw.githubusercontent.com/flyconnectome/flywire_annotations/ebd66db2596fcc39c6950fb54ea3efa00f7fe8a0/supplemental_files/Supplemental_file1_neuron_annotations.tsv",
+      "upstream_revision": "ebd66db2596fcc39c6950fb54ea3efa00f7fe8a0",
+      "connectome_version": "783",
+      "accessed_date": "2026-09-13",
+      "bytes": 27015208,
+      "sha256": "30be6c73975a70c56d930e27911f36455d3886e15abf383b78edd2a5d679e0b6",
+      "license": "CC-BY-NC-4.0"
+    }
+  },
+  "expected": {
+    "neurons": 138639,
+    "connection_rows": 15091983,
+    "directed_pairs": 15091983,
+    "synaptic_contacts": 54492922
+  },
+  "rules": {
+    "node_selection": "All rows of the paired upstream Completeness_783.csv, in source order; require Completed=True. No nodes added from annotations.",
+    "connectivity_selection": "All rows of the paired upstream Connectivity_783.parquet, without edge threshold, pruning, or sign changes.",
+    "row_grain": "One directed presynaptic/postsynaptic neuron pair per row, independently verified unique. The exported pandas index is ignored.",
+    "aggregation": "No runtime aggregation; Connectivity is the supplied positive integer synaptic-contact count per directed neuron pair.",
+    "neurotransmitter_sign": "Excitatory is the upstream model sign per presynaptic neuron, +1 or -1. It is validated against the supplied signed count and is not overwritten using later annotations.",
+    "weights": "The neural model applies its separately registered global weight to Excitatory x Connectivity. No weight fitting occurs in the loader.",
+    "annotations": "Exact root-ID joins to frozen v783 annotations. Unknown type, side, or neurotransmitter remain unknown. Additional annotated cells are not execution nodes.",
+    "identifiers": "Python int64/integer; decimal strings at JSON/browser boundaries. No floating-point conversion.",
+    "integrity": "Verify byte length and SHA-256 before parsing. Verify exact int64 parquet schema, no nulls, endpoint IDs against node order, positive counts, signed-count product, consistent presynaptic signs, unique pairs, and independently computed counts.",
+    "version_migration": "Not automatic. Each interface migration requires separately recorded old/new profile IDs and stable anchor evidence."
+  },
+  "licenses": {
+    "project_code": "MIT; does not relicense data.",
+    "flywire_guidelines": "https://flywire.ai/guidelines",
+    "flywire_data": "CC-BY-NC-4.0",
+    "flywire_data_license_url": "https://creativecommons.org/licenses/by-nc/4.0/",
+    "zenodo_metadata_note": "The depositor metadata for 10.5281/zenodo.10676866 states CC-BY-4.0; the FlyWire public-data guidelines state CC-BY-NC-4.0. These packaged graph and annotation assets follow the FlyWire noncommercial condition.",
+    "upstream_code": "Shiu code: MIT, copyright 2023 Philip Shiu and Nico Spiller."
+  },
+  "citations": [
+    "https://doi.org/10.1038/s41586-024-07763-9",
+    "https://doi.org/10.1038/s41586-024-07558-y",
+    "https://doi.org/10.1038/s41586-024-07686-5",
+    "https://doi.org/10.1016/j.cell.2018.06.019",
+    "https://doi.org/10.1038/s41592-021-01183-7",
+    "https://doi.org/10.1007/978-3-030-00934-2_36",
+    "https://doi.org/10.1016/j.cell.2024.03.016",
+    "https://doi.org/10.5281/zenodo.10676866"
+  ]
+}

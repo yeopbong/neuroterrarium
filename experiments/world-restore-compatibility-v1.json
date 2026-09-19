@@ -1,0 +1,1743 @@
+{
+  "schema": "neuroterrarium.world-compatibility-results.v1",
+  "status": "passed",
+  "original_world_sha256": "6f84eebb1785a91eafd0922524d860581a780fcf0df6facc6317bc06556b7b31",
+  "compatible_world_sha256": "6150cf8af614c2f9b74b544c2077a91599b3ad8e85991de8d969fac1e3486c8a",
+  "model_set_manifest_sha256": "de26cab314ac91685d21fff49b926d8290323df7883b453297809d55720b111c",
+  "verification_source_sha256": "063128c7576ca95d19b5f5974b9e60163c5787b46a5ceb29bc5986e93c250e18",
+  "models": 9,
+  "paired_development_episodes": 72,
+  "action_windows_per_implementation": 18000,
+  "wall_seconds": 14.315659999992931,
+  "scope": "Exact observations, applied and raw actions, likelihoods, recurrent state, rewards, bodies, complete world-state tapes and episode outcomes; midpoint snapshot restoration included.",
+  "episodes": [
+    {
+      "model": "feedforward-101",
+      "development_seed": 7001,
+      "action_windows": 250,
+      "shape": [
+        250,
+        140
+      ],
+      "exact_equal": true,
+      "original_numeric_sha256": "5548faa5f399af95942bbc47df9cf9a54a4fa829de851697b40dff12abc859a7",
+      "compatible_numeric_sha256": "5548faa5f399af95942bbc47df9cf9a54a4fa829de851697b40dff12abc859a7",
+      "original_world_tape_sha256": "83edfc526e77ec45d21c1015205f5a1adb42ff3261270f6d2d2ef3cc410cafe4",
+      "compatible_world_tape_sha256": "83edfc526e77ec45d21c1015205f5a1adb42ff3261270f6d2d2ef3cc410cafe4",
+      "outcome": {
+        "food": 0.0,
+        "energy": 0.6602944984852456,
+        "collisions": 0,
+        "episode_return": -0.16534013064466396,
+        "episode_steps": 250,
+        "scene": "obstacles",
+        "terminated": false,
+        "truncated": true
+      }
+    },
+    {
+      "model": "feedforward-101",
+      "development_seed": 7002,
+      "action_windows": 250,
+      "shape": [
+        250,
+        140
+      ],
+      "exact_equal": true,
+      "original_numeric_sha256": "c96103f165025a48830d479a8434f8926cf142d6f03d5e694920be087d5aaf15",
+      "compatible_numeric_sha256": "c96103f165025a48830d479a8434f8926cf142d6f03d5e694920be087d5aaf15",
+      "original_world_tape_sha256": "c1f045ea8a1c9548a9df339c28adede6e866a637a03d43249b898f0197a65b13",
+      "compatible_world_tape_sha256": "c1f045ea8a1c9548a9df339c28adede6e866a637a03d43249b898f0197a65b13",
+      "outcome": {
+        "food": 0.0,
+        "energy": 0.688655036604398,
+        "collisions": 0,
+        "episode_return": -0.1471844914032527,
+        "episode_steps": 250,
+        "scene": "threat",
+        "terminated": false,
+        "truncated": true
+      }
+    },
+    {
+      "model": "feedforward-101",
+      "development_seed": 7003,
+      "action_windows": 250,
+      "shape": [
+        250,
+        140
+      ],
+      "exact_equal": true,
+      "original_numeric_sha256": "ca0fd1a938eef7734de7175ec66f01e561b33869d91063134e948afce77c19a4",
+      "compatible_numeric_sha256": "ca0fd1a938eef7734de7175ec66f01e561b33869d91063134e948afce77c19a4",
+      "original_world_tape_sha256": "d9b806e114c6013c0e438c51390ffd607a1fd73435e1bd61a61e48360d05c5e1",
+      "compatible_world_tape_sha256": "d9b806e114c6013c0e438c51390ffd607a1fd73435e1bd61a61e48360d05c5e1",
+      "outcome": {
+        "food": 0.7000000000000006,
+        "energy": 0.9944905085418463,
+        "collisions": 0,
+        "episode_return": 70.22834924515269,
+        "episode_steps": 250,
+        "scene": "forage",
+        "terminated": false,
+        "truncated": true
+      }
+    },
+    {
+      "model": "feedforward-101",
+      "development_seed": 7004,
+      "action_windows": 250,
+      "shape": [
+        250,
+        140
+      ],
+      "exact_equal": true,
+      "original_numeric_sha256": "324e0fbf43b1e07bf9df8ade38d6fcc37b754e0cb5c2065f266c303ff117a915",
+      "compatible_numeric_sha256": "324e0fbf43b1e07bf9df8ade38d6fcc37b754e0cb5c2065f266c303ff117a915",
+      "original_world_tape_sha256": "f243fbb9c58aad2213f3ab32b5c31ec79ef5ab959ed9819342a432e9a8683b1f",
+      "compatible_world_tape_sha256": "f243fbb9c58aad2213f3ab32b5c31ec79ef5ab959ed9819342a432e9a8683b1f",
+      "outcome": {
+        "food": 0.0,
+        "energy": 0.6336624959791027,
+        "collisions": 0,
+        "episode_return": -0.14998136207193255,
+        "episode_steps": 250,
+        "scene": "forage",
+        "terminated": false,
+        "truncated": true
+      }
+    },
+    {
+      "model": "feedforward-101",
+      "development_seed": 7005,
+      "action_windows": 250,
+      "shape": [
+        250,
+        140
+      ],
+      "exact_equal": true,
+      "original_numeric_sha256": "bb17a9f5119d211a26cdf2c3973f8287b29d3414e5be817e3bef137a2cf8fc62",
+      "compatible_numeric_sha256": "bb17a9f5119d211a26cdf2c3973f8287b29d3414e5be817e3bef137a2cf8fc62",
+      "original_world_tape_sha256": "02399311b0f3c57b8c718611c9b624c4bc0c767a59e1043249f317337dba224a",
+      "compatible_world_tape_sha256": "02399311b0f3c57b8c718611c9b624c4bc0c767a59e1043249f317337dba224a",
+      "outcome": {
+        "food": 0.6999999999999996,
+        "energy": 0.9928607567821075,
+        "collisions": 0,
+        "episode_return": 70.0346133378604,
+        "episode_steps": 250,
+        "scene": "threat",
+        "terminated": false,
+        "truncated": true
+      }
+    },
+    {
+      "model": "feedforward-101",
+      "development_seed": 7006,
+      "action_windows": 250,
+      "shape": [
+        250,
+        140
+      ],
+      "exact_equal": true,
+      "original_numeric_sha256": "792455c827578362e21ded556a905898af53da83546e0064218a446945395e7b",
+      "compatible_numeric_sha256": "792455c827578362e21ded556a905898af53da83546e0064218a446945395e7b",
+      "original_world_tape_sha256": "6785bd928d83e3f3fb3d7072f8c1b516a272a75ada421ceae6343c38c6eb753b",
+      "compatible_world_tape_sha256": "6785bd928d83e3f3fb3d7072f8c1b516a272a75ada421ceae6343c38c6eb753b",
+      "outcome": {
+        "food": 0.0,
+        "energy": 0.5439588664432204,
+        "collisions": 0,
+        "episode_return": -0.16215810808949085,
+        "episode_steps": 250,
+        "scene": "obstacles",
+        "terminated": false,
+        "truncated": true
+      }
+    },
+    {
+      "model": "feedforward-101",
+      "development_seed": 7007,
+      "action_windows": 250,
+      "shape": [
+        250,
+        140
+      ],
+      "exact_equal": true,
+      "original_numeric_sha256": "71024cf4e97b867a3f16765e512fe8b0920b256d47120f77079557763c87b78b",
+      "compatible_numeric_sha256": "71024cf4e97b867a3f16765e512fe8b0920b256d47120f77079557763c87b78b",
+      "original_world_tape_sha256": "8f6e37c9e1e47c87a2bf0f3682e065cc31604bb31e11e1cf72f3ffd88a20f611",
+      "compatible_world_tape_sha256": "8f6e37c9e1e47c87a2bf0f3682e065cc31604bb31e11e1cf72f3ffd88a20f611",
+      "outcome": {
+        "food": 0.0,
+        "energy": 0.7820153783689858,
+        "collisions": 0,
+        "episode_return": -0.1504807754793763,
+        "episode_steps": 250,
+        "scene": "obstacles",
+        "terminated": false,
+        "truncated": true
+      }
+    },
+    {
+      "model": "feedforward-101",
+      "development_seed": 7008,
+      "action_windows": 250,
+      "shape": [
+        250,
+        140
+      ],
+      "exact_equal": true,
+      "original_numeric_sha256": "985575f2f83b6d667e6e348576b3f8b20a63e1d5494caf08e3baefa63660c3a4",
+      "compatible_numeric_sha256": "985575f2f83b6d667e6e348576b3f8b20a63e1d5494caf08e3baefa63660c3a4",
+      "original_world_tape_sha256": "9d5d2f9f573a1db142c584604691003d38d882b9d1a6b2858405cbf7259223c8",
+      "compatible_world_tape_sha256": "9d5d2f9f573a1db142c584604691003d38d882b9d1a6b2858405cbf7259223c8",
+      "outcome": {
+        "food": 0.0,
+        "energy": 0.6102650136146672,
+        "collisions": 0,
+        "episode_return": -0.155498708145992,
+        "episode_steps": 250,
+        "scene": "obstacles",
+        "terminated": false,
+        "truncated": true
+      }
+    },
+    {
+      "model": "feedforward-202",
+      "development_seed": 7001,
+      "action_windows": 250,
+      "shape": [
+        250,
+        140
+      ],
+      "exact_equal": true,
+      "original_numeric_sha256": "ae58ad44fae28dd3d0c3d44955f0fabd08e275b6545854c5cf667676bac6d336",
+      "compatible_numeric_sha256": "ae58ad44fae28dd3d0c3d44955f0fabd08e275b6545854c5cf667676bac6d336",
+      "original_world_tape_sha256": "5d2982206c2620ef665eb3d11bd737c2c3e810e9644d2c9e27d9aec6d6417ece",
+      "compatible_world_tape_sha256": "5d2982206c2620ef665eb3d11bd737c2c3e810e9644d2c9e27d9aec6d6417ece",
+      "outcome": {
+        "food": 0.0,
+        "energy": 0.6590834301102083,
+        "collisions": 0,
+        "episode_return": -0.16963861532211394,
+        "episode_steps": 250,
+        "scene": "obstacles",
+        "terminated": false,
+        "truncated": true
+      }
+    },
+    {
+      "model": "feedforward-202",
+      "development_seed": 7002,
+      "action_windows": 250,
+      "shape": [
+        250,
+        140
+      ],
+      "exact_equal": true,
+      "original_numeric_sha256": "b7182db1263d90093a5cb471af36dbde8d2c74485bd08b9bdd94681371bfbb93",
+      "compatible_numeric_sha256": "b7182db1263d90093a5cb471af36dbde8d2c74485bd08b9bdd94681371bfbb93",
+      "original_world_tape_sha256": "113ad90527a12b39540ec6358818946eadebd6b9ac4a730b504f8b5244ce79bd",
+      "compatible_world_tape_sha256": "113ad90527a12b39540ec6358818946eadebd6b9ac4a730b504f8b5244ce79bd",
+      "outcome": {
+        "food": 0.0,
+        "energy": 0.6839137919951912,
+        "collisions": 0,
+        "episode_return": -0.18422585026413257,
+        "episode_steps": 250,
+        "scene": "threat",
+        "terminated": false,
+        "truncated": true
+      }
+    },
+    {
+      "model": "feedforward-202",
+      "development_seed": 7003,
+      "action_windows": 250,
+      "shape": [
+        250,
+        140
+      ],
+      "exact_equal": true,
+      "original_numeric_sha256": "457f3bf63a67ac109335a2755844aeebba60328e33a0d05e30ecf82829aa6b15",
+      "compatible_numeric_sha256": "457f3bf63a67ac109335a2755844aeebba60328e33a0d05e30ecf82829aa6b15",
+      "original_world_tape_sha256": "62f53fd846f55b8d0e49febf83c685eed1f6c9d5f2f8e86fe77ab1bd30f1a807",
+      "compatible_world_tape_sha256": "62f53fd846f55b8d0e49febf83c685eed1f6c9d5f2f8e86fe77ab1bd30f1a807",
+      "outcome": {
+        "food": 0.0,
+        "energy": 0.6793070897671605,
+        "collisions": 0,
+        "episode_return": -0.17817159251451514,
+        "episode_steps": 250,
+        "scene": "forage",
+        "terminated": false,
+        "truncated": true
+      }
+    },
+    {
+      "model": "feedforward-202",
+      "development_seed": 7004,
+      "action_windows": 250,
+      "shape": [
+        250,
+        140
+      ],
+      "exact_equal": true,
+      "original_numeric_sha256": "2c9615219a648eb93586faa8c63ed1e7d6e1256466662514d26af93fa87f476b",
+      "compatible_numeric_sha256": "2c9615219a648eb93586faa8c63ed1e7d6e1256466662514d26af93fa87f476b",
+      "original_world_tape_sha256": "eb464818e8d96969f80ad3c715a249262e3e771474123d8550cc4d7d0afafa4b",
+      "compatible_world_tape_sha256": "eb464818e8d96969f80ad3c715a249262e3e771474123d8550cc4d7d0afafa4b",
+      "outcome": {
+        "food": 0.0,
+        "energy": 0.6293740875010517,
+        "collisions": 0,
+        "episode_return": -0.18399358480647288,
+        "episode_steps": 250,
+        "scene": "forage",
+        "terminated": false,
+        "truncated": true
+      }
+    },
+    {
+      "model": "feedforward-202",
+      "development_seed": 7005,
+      "action_windows": 250,
+      "shape": [
+        250,
+        140
+      ],
+      "exact_equal": true,
+      "original_numeric_sha256": "61e728b1480f4f24c53ac0a5b5c7d4d91b88b215f3c0368ae2e22b46781d9e2f",
+      "compatible_numeric_sha256": "61e728b1480f4f24c53ac0a5b5c7d4d91b88b215f3c0368ae2e22b46781d9e2f",
+      "original_world_tape_sha256": "6163e878b3ab7caa91cb9c29765e8f1f934f095af357c90b6e6e5a5b1b870aef",
+      "compatible_world_tape_sha256": "6163e878b3ab7caa91cb9c29765e8f1f934f095af357c90b6e6e5a5b1b870aef",
+      "outcome": {
+        "food": 0.6999999999999998,
+        "energy": 0.9915603343858299,
+        "collisions": 0,
+        "episode_return": 70.02764411583799,
+        "episode_steps": 250,
+        "scene": "threat",
+        "terminated": false,
+        "truncated": true
+      }
+    },
+    {
+      "model": "feedforward-202",
+      "development_seed": 7006,
+      "action_windows": 250,
+      "shape": [
+        250,
+        140
+      ],
+      "exact_equal": true,
+      "original_numeric_sha256": "08b32f7290a45fc81d36f631ff2d5742540ee2fe0ab35b82ec2ca7738bab91e6",
+      "compatible_numeric_sha256": "08b32f7290a45fc81d36f631ff2d5742540ee2fe0ab35b82ec2ca7738bab91e6",
+      "original_world_tape_sha256": "502e6a74bcdd6f5a9081fb90e1bcede453a85e2477110ded41be3817c0314300",
+      "compatible_world_tape_sha256": "502e6a74bcdd6f5a9081fb90e1bcede453a85e2477110ded41be3817c0314300",
+      "outcome": {
+        "food": 0.0,
+        "energy": 0.5415458496991885,
+        "collisions": 0,
+        "episode_return": -0.1763961267103239,
+        "episode_steps": 250,
+        "scene": "obstacles",
+        "terminated": false,
+        "truncated": true
+      }
+    },
+    {
+      "model": "feedforward-202",
+      "development_seed": 7007,
+      "action_windows": 250,
+      "shape": [
+        250,
+        140
+      ],
+      "exact_equal": true,
+      "original_numeric_sha256": "6d1548d111da42fc35b5e211f867de0ae5fe7d1564720784da4bc9fbc34fe77b",
+      "compatible_numeric_sha256": "6d1548d111da42fc35b5e211f867de0ae5fe7d1564720784da4bc9fbc34fe77b",
+      "original_world_tape_sha256": "aeb15a8fc4f211f73afbaf489c289e79e1d71ea0ff176dcf3449963a2068286d",
+      "compatible_world_tape_sha256": "aeb15a8fc4f211f73afbaf489c289e79e1d71ea0ff176dcf3449963a2068286d",
+      "outcome": {
+        "food": 0.0,
+        "energy": 0.7772137336546587,
+        "collisions": 0,
+        "episode_return": -0.17387080176726122,
+        "episode_steps": 250,
+        "scene": "obstacles",
+        "terminated": false,
+        "truncated": true
+      }
+    },
+    {
+      "model": "feedforward-202",
+      "development_seed": 7008,
+      "action_windows": 250,
+      "shape": [
+        250,
+        140
+      ],
+      "exact_equal": true,
+      "original_numeric_sha256": "f4bee38f033a14879643d463728af95db5b26172cb275b47f7ffa227fa5b546e",
+      "compatible_numeric_sha256": "f4bee38f033a14879643d463728af95db5b26172cb275b47f7ffa227fa5b546e",
+      "original_world_tape_sha256": "7d71f3d448210540b255aa0000f9eded014bb5b44b617cad55adfdf84bd45cd6",
+      "compatible_world_tape_sha256": "7d71f3d448210540b255aa0000f9eded014bb5b44b617cad55adfdf84bd45cd6",
+      "outcome": {
+        "food": 0.0,
+        "energy": 0.6074534475238618,
+        "collisions": 0,
+        "episode_return": -0.17680073841378008,
+        "episode_steps": 250,
+        "scene": "obstacles",
+        "terminated": false,
+        "truncated": true
+      }
+    },
+    {
+      "model": "feedforward-303",
+      "development_seed": 7001,
+      "action_windows": 250,
+      "shape": [
+        250,
+        140
+      ],
+      "exact_equal": true,
+      "original_numeric_sha256": "20e21fea3f73ab05692c56027c9c1fb68e6b5e107e8d83fc49ac4ef4a9a0d4d8",
+      "compatible_numeric_sha256": "20e21fea3f73ab05692c56027c9c1fb68e6b5e107e8d83fc49ac4ef4a9a0d4d8",
+      "original_world_tape_sha256": "f53cd56e3e4c8831f2aca855642c65d8e0feaebd0b89dc277420d378306424f0",
+      "compatible_world_tape_sha256": "f53cd56e3e4c8831f2aca855642c65d8e0feaebd0b89dc277420d378306424f0",
+      "outcome": {
+        "food": 0.0,
+        "energy": 0.6692370579520711,
+        "collisions": 0,
+        "episode_return": -0.028705409471562117,
+        "episode_steps": 250,
+        "scene": "obstacles",
+        "terminated": false,
+        "truncated": true
+      }
+    },
+    {
+      "model": "feedforward-303",
+      "development_seed": 7002,
+      "action_windows": 250,
+      "shape": [
+        250,
+        140
+      ],
+      "exact_equal": true,
+      "original_numeric_sha256": "392e57e734fddd8a5b51473963963f9d73123a15916cb040b956c662fc589fe3",
+      "compatible_numeric_sha256": "392e57e734fddd8a5b51473963963f9d73123a15916cb040b956c662fc589fe3",
+      "original_world_tape_sha256": "01fa0ea0c4a25a22ac7e1ed7d4637047120120cae838d3e4b21c8ab488d51d39",
+      "compatible_world_tape_sha256": "01fa0ea0c4a25a22ac7e1ed7d4637047120120cae838d3e4b21c8ab488d51d39",
+      "outcome": {
+        "food": 0.0,
+        "energy": 0.6947374548514504,
+        "collisions": 0,
+        "episode_return": -0.03317856199938788,
+        "episode_steps": 250,
+        "scene": "threat",
+        "terminated": false,
+        "truncated": true
+      }
+    },
+    {
+      "model": "feedforward-303",
+      "development_seed": 7003,
+      "action_windows": 250,
+      "shape": [
+        250,
+        140
+      ],
+      "exact_equal": true,
+      "original_numeric_sha256": "cd30245f0d2c95f470ae223c7320c4d66ef48faac0cdebde7bf3113dc8c304ed",
+      "compatible_numeric_sha256": "cd30245f0d2c95f470ae223c7320c4d66ef48faac0cdebde7bf3113dc8c304ed",
+      "original_world_tape_sha256": "2b2b36b92ee23a60d02b795a82a97b098710a54c65bf856e59c59a4e422bbde6",
+      "compatible_world_tape_sha256": "2b2b36b92ee23a60d02b795a82a97b098710a54c65bf856e59c59a4e422bbde6",
+      "outcome": {
+        "food": 0.0,
+        "energy": 0.6890782738536618,
+        "collisions": 0,
+        "episode_return": -0.03528588539719632,
+        "episode_steps": 250,
+        "scene": "forage",
+        "terminated": false,
+        "truncated": true
+      }
+    },
+    {
+      "model": "feedforward-303",
+      "development_seed": 7004,
+      "action_windows": 250,
+      "shape": [
+        250,
+        140
+      ],
+      "exact_equal": true,
+      "original_numeric_sha256": "fbfbb671199664d5754dedd653c0b316762f075c05e71bbb3fe64da174542ab2",
+      "compatible_numeric_sha256": "fbfbb671199664d5754dedd653c0b316762f075c05e71bbb3fe64da174542ab2",
+      "original_world_tape_sha256": "64fc8f852b4867a8bee3d441efb8f4a656cb65e3d1ca2ab2be4439914888cf71",
+      "compatible_world_tape_sha256": "64fc8f852b4867a8bee3d441efb8f4a656cb65e3d1ca2ab2be4439914888cf71",
+      "outcome": {
+        "food": 0.0,
+        "energy": 0.639992835644963,
+        "collisions": 0,
+        "episode_return": -0.0351089089454719,
+        "episode_steps": 250,
+        "scene": "forage",
+        "terminated": false,
+        "truncated": true
+      }
+    },
+    {
+      "model": "feedforward-303",
+      "development_seed": 7005,
+      "action_windows": 250,
+      "shape": [
+        250,
+        140
+      ],
+      "exact_equal": true,
+      "original_numeric_sha256": "0658a92113da6e506514ced52bd7adeaf77450a67e7882fe7b801c31de7b4b6d",
+      "compatible_numeric_sha256": "0658a92113da6e506514ced52bd7adeaf77450a67e7882fe7b801c31de7b4b6d",
+      "original_world_tape_sha256": "e349cb04485d9b4a1470ec3353a0321f7fda23d1b9ae1d5f1b5bfe5cee6ed33f",
+      "compatible_world_tape_sha256": "e349cb04485d9b4a1470ec3353a0321f7fda23d1b9ae1d5f1b5bfe5cee6ed33f",
+      "outcome": {
+        "food": 0.0,
+        "energy": 0.8804483147204982,
+        "collisions": 0,
+        "episode_return": -0.031867064558417264,
+        "episode_steps": 250,
+        "scene": "threat",
+        "terminated": false,
+        "truncated": true
+      }
+    },
+    {
+      "model": "feedforward-303",
+      "development_seed": 7006,
+      "action_windows": 250,
+      "shape": [
+        250,
+        140
+      ],
+      "exact_equal": true,
+      "original_numeric_sha256": "f27501c3a087c506153cc9c21db358e54bceb1f2ece4511e7ac8fd9eb3e4b7b1",
+      "compatible_numeric_sha256": "f27501c3a087c506153cc9c21db358e54bceb1f2ece4511e7ac8fd9eb3e4b7b1",
+      "original_world_tape_sha256": "cd1d4bf8165905cdcfa06a66546fc7f5bb8abf1a3bca0d3119709148f961248e",
+      "compatible_world_tape_sha256": "cd1d4bf8165905cdcfa06a66546fc7f5bb8abf1a3bca0d3119709148f961248e",
+      "outcome": {
+        "food": 0.0,
+        "energy": 0.5521406283116663,
+        "collisions": 0,
+        "episode_return": -0.02983903049327463,
+        "episode_steps": 250,
+        "scene": "obstacles",
+        "terminated": false,
+        "truncated": true
+      }
+    },
+    {
+      "model": "feedforward-303",
+      "development_seed": 7007,
+      "action_windows": 250,
+      "shape": [
+        250,
+        140
+      ],
+      "exact_equal": true,
+      "original_numeric_sha256": "9c93764945a87c78de4fd57e78dbe124d986765b44a363881debe8a6a956cbb7",
+      "compatible_numeric_sha256": "9c93764945a87c78de4fd57e78dbe124d986765b44a363881debe8a6a956cbb7",
+      "original_world_tape_sha256": "ef028a678eb39b477a1efa5d18085b965d51fe5d883ad29371ae005ab44846ca",
+      "compatible_world_tape_sha256": "ef028a678eb39b477a1efa5d18085b965d51fe5d883ad29371ae005ab44846ca",
+      "outcome": {
+        "food": 0.0,
+        "energy": 0.7877976067185264,
+        "collisions": 0,
+        "episode_return": -0.02716675438391019,
+        "episode_steps": 250,
+        "scene": "obstacles",
+        "terminated": false,
+        "truncated": true
+      }
+    },
+    {
+      "model": "feedforward-303",
+      "development_seed": 7008,
+      "action_windows": 250,
+      "shape": [
+        250,
+        140
+      ],
+      "exact_equal": true,
+      "original_numeric_sha256": "96ba14e109d3227cc7568a759acbd001373264d1379abe64596bb9e26643e2d9",
+      "compatible_numeric_sha256": "96ba14e109d3227cc7568a759acbd001373264d1379abe64596bb9e26643e2d9",
+      "original_world_tape_sha256": "3174bbee54ea4d0e98ecfce42483c4d54f871b05408aeb932b5556ff32f5a779",
+      "compatible_world_tape_sha256": "3174bbee54ea4d0e98ecfce42483c4d54f871b05408aeb932b5556ff32f5a779",
+      "outcome": {
+        "food": 0.0,
+        "energy": 0.618101787183245,
+        "collisions": 0,
+        "episode_return": -0.029448136542478128,
+        "episode_steps": 250,
+        "scene": "obstacles",
+        "terminated": false,
+        "truncated": true
+      }
+    },
+    {
+      "model": "recurrent-101",
+      "development_seed": 7001,
+      "action_windows": 250,
+      "shape": [
+        250,
+        140
+      ],
+      "exact_equal": true,
+      "original_numeric_sha256": "460ac1d9c97e8661583bc456b7dc005bd3220531936939c75d3d2cef2538be75",
+      "compatible_numeric_sha256": "460ac1d9c97e8661583bc456b7dc005bd3220531936939c75d3d2cef2538be75",
+      "original_world_tape_sha256": "ac577abeff2243e2c382351901ac7f9a8238a4e72ca828e35a7e59df94af6bac",
+      "compatible_world_tape_sha256": "ac577abeff2243e2c382351901ac7f9a8238a4e72ca828e35a7e59df94af6bac",
+      "outcome": {
+        "food": 0.0,
+        "energy": 0.63950976631149,
+        "collisions": 0,
+        "episode_return": -0.3597071485243732,
+        "episode_steps": 250,
+        "scene": "obstacles",
+        "terminated": false,
+        "truncated": true
+      }
+    },
+    {
+      "model": "recurrent-101",
+      "development_seed": 7002,
+      "action_windows": 250,
+      "shape": [
+        250,
+        140
+      ],
+      "exact_equal": true,
+      "original_numeric_sha256": "fb053279eecfcb952f0b2d7841ce92733453611e92ad1b4a0854e558f9553346",
+      "compatible_numeric_sha256": "fb053279eecfcb952f0b2d7841ce92733453611e92ad1b4a0854e558f9553346",
+      "original_world_tape_sha256": "99892e8760bc631be457e1dae92c87fc93eff05a5c793f232c0616a2d068ede6",
+      "compatible_world_tape_sha256": "99892e8760bc631be457e1dae92c87fc93eff05a5c793f232c0616a2d068ede6",
+      "outcome": {
+        "food": 0.0,
+        "energy": 0.6721342288444876,
+        "collisions": 0,
+        "episode_return": -0.2839112373459343,
+        "episode_steps": 250,
+        "scene": "threat",
+        "terminated": false,
+        "truncated": true
+      }
+    },
+    {
+      "model": "recurrent-101",
+      "development_seed": 7003,
+      "action_windows": 250,
+      "shape": [
+        250,
+        140
+      ],
+      "exact_equal": true,
+      "original_numeric_sha256": "4d56395833b6197da3126f4ce80d481b2eee6a334a1aff203523e0b305a9a1af",
+      "compatible_numeric_sha256": "4d56395833b6197da3126f4ce80d481b2eee6a334a1aff203523e0b305a9a1af",
+      "original_world_tape_sha256": "5895f1813a6d94ba02a0ba6bf33ead3e959c8150d0132eda1b83320e7ff0c6cc",
+      "compatible_world_tape_sha256": "5895f1813a6d94ba02a0ba6bf33ead3e959c8150d0132eda1b83320e7ff0c6cc",
+      "outcome": {
+        "food": 0.0,
+        "energy": 0.6678473071634801,
+        "collisions": 0,
+        "episode_return": -0.2717838348439332,
+        "episode_steps": 250,
+        "scene": "forage",
+        "terminated": false,
+        "truncated": true
+      }
+    },
+    {
+      "model": "recurrent-101",
+      "development_seed": 7004,
+      "action_windows": 250,
+      "shape": [
+        250,
+        140
+      ],
+      "exact_equal": true,
+      "original_numeric_sha256": "47be80a320891a93b5a706d66066ab0d1baa2099f05f9ce2b3211cf42beab86e",
+      "compatible_numeric_sha256": "47be80a320891a93b5a706d66066ab0d1baa2099f05f9ce2b3211cf42beab86e",
+      "original_world_tape_sha256": "2e42121dc5d6b8f41dc928fe90214370c2134c2ea4124eda488baf228b787c96",
+      "compatible_world_tape_sha256": "2e42121dc5d6b8f41dc928fe90214370c2134c2ea4124eda488baf228b787c96",
+      "outcome": {
+        "food": 0.0,
+        "energy": 0.6176167106291984,
+        "collisions": 0,
+        "episode_return": -0.2838990100419522,
+        "episode_steps": 250,
+        "scene": "forage",
+        "terminated": false,
+        "truncated": true
+      }
+    },
+    {
+      "model": "recurrent-101",
+      "development_seed": 7005,
+      "action_windows": 250,
+      "shape": [
+        250,
+        140
+      ],
+      "exact_equal": true,
+      "original_numeric_sha256": "84ffb4b46b439ef2e91bfa01b65f2abd95f8fa586c14e94a2095fba4f3b70c79",
+      "compatible_numeric_sha256": "84ffb4b46b439ef2e91bfa01b65f2abd95f8fa586c14e94a2095fba4f3b70c79",
+      "original_world_tape_sha256": "66fe58dabc49ca452160981c113c34fe8edc1aa03b55f0241c93af0c95766174",
+      "compatible_world_tape_sha256": "66fe58dabc49ca452160981c113c34fe8edc1aa03b55f0241c93af0c95766174",
+      "outcome": {
+        "food": 0.0,
+        "energy": 0.856745826681514,
+        "collisions": 0,
+        "episode_return": -0.2962834475234133,
+        "episode_steps": 250,
+        "scene": "threat",
+        "terminated": false,
+        "truncated": true
+      }
+    },
+    {
+      "model": "recurrent-101",
+      "development_seed": 7006,
+      "action_windows": 250,
+      "shape": [
+        250,
+        140
+      ],
+      "exact_equal": true,
+      "original_numeric_sha256": "23399879dbfc094a324ce33715ebb3e158fd304640ea44e5deaedc0119cf6122",
+      "compatible_numeric_sha256": "23399879dbfc094a324ce33715ebb3e158fd304640ea44e5deaedc0119cf6122",
+      "original_world_tape_sha256": "82f1b0dba7edf294027b5be558b4fa9dbcb1d3a00ef613d345c79c0b46345730",
+      "compatible_world_tape_sha256": "82f1b0dba7edf294027b5be558b4fa9dbcb1d3a00ef613d345c79c0b46345730",
+      "outcome": {
+        "food": 0.0,
+        "energy": 0.5244430360014323,
+        "collisions": 0,
+        "episode_return": -0.3365810013113913,
+        "episode_steps": 250,
+        "scene": "obstacles",
+        "terminated": false,
+        "truncated": true
+      }
+    },
+    {
+      "model": "recurrent-101",
+      "development_seed": 7007,
+      "action_windows": 250,
+      "shape": [
+        250,
+        140
+      ],
+      "exact_equal": true,
+      "original_numeric_sha256": "66efaa02fdcb777bed5b07f799fe20b22d6ceb2e5dacc8c82dc600ee5a036c05",
+      "compatible_numeric_sha256": "66efaa02fdcb777bed5b07f799fe20b22d6ceb2e5dacc8c82dc600ee5a036c05",
+      "original_world_tape_sha256": "4e6d655187f79956c4a20e72088ef18ad50969f89cbc8828cfe0408e079bd151",
+      "compatible_world_tape_sha256": "4e6d655187f79956c4a20e72088ef18ad50969f89cbc8828cfe0408e079bd151",
+      "outcome": {
+        "food": 0.0,
+        "energy": 0.7592100197880378,
+        "collisions": 0,
+        "episode_return": -0.3437247363811741,
+        "episode_steps": 250,
+        "scene": "obstacles",
+        "terminated": false,
+        "truncated": true
+      }
+    },
+    {
+      "model": "recurrent-101",
+      "development_seed": 7008,
+      "action_windows": 250,
+      "shape": [
+        250,
+        140
+      ],
+      "exact_equal": true,
+      "original_numeric_sha256": "499773c347cf0f8f87e95819d723011e26ac09530093d55c64db0d3e5990af0f",
+      "compatible_numeric_sha256": "499773c347cf0f8f87e95819d723011e26ac09530093d55c64db0d3e5990af0f",
+      "original_world_tape_sha256": "2d6195f6391ac30ba8f309884030c4fc2c8af7050cc7e1357a9f7495b413c014",
+      "compatible_world_tape_sha256": "2d6195f6391ac30ba8f309884030c4fc2c8af7050cc7e1357a9f7495b413c014",
+      "outcome": {
+        "food": 0.0,
+        "energy": 0.5904344700947393,
+        "collisions": 0,
+        "episode_return": -0.3355196986871958,
+        "episode_steps": 250,
+        "scene": "obstacles",
+        "terminated": false,
+        "truncated": true
+      }
+    },
+    {
+      "model": "recurrent-202",
+      "development_seed": 7001,
+      "action_windows": 250,
+      "shape": [
+        250,
+        140
+      ],
+      "exact_equal": true,
+      "original_numeric_sha256": "b2e6b5c9fe84b018793169adbe746fcb154bdbdf31dab94502b1ecb0edd01bf2",
+      "compatible_numeric_sha256": "b2e6b5c9fe84b018793169adbe746fcb154bdbdf31dab94502b1ecb0edd01bf2",
+      "original_world_tape_sha256": "b69904f0ef5e08a411f3ef8221ff072f691dd081ccacc1c82ff7da8700653217",
+      "compatible_world_tape_sha256": "b69904f0ef5e08a411f3ef8221ff072f691dd081ccacc1c82ff7da8700653217",
+      "outcome": {
+        "food": 0.0,
+        "energy": 0.6484841123422914,
+        "collisions": 0,
+        "episode_return": -0.32381065095037165,
+        "episode_steps": 250,
+        "scene": "obstacles",
+        "terminated": false,
+        "truncated": true
+      }
+    },
+    {
+      "model": "recurrent-202",
+      "development_seed": 7002,
+      "action_windows": 250,
+      "shape": [
+        250,
+        140
+      ],
+      "exact_equal": true,
+      "original_numeric_sha256": "34a8fa953f6cbf2869ca022f899a40e827978817ea6cb9573b5d554085e1c544",
+      "compatible_numeric_sha256": "34a8fa953f6cbf2869ca022f899a40e827978817ea6cb9573b5d554085e1c544",
+      "original_world_tape_sha256": "e317c93be5b2090239704154c2f3cf59b7de382cb7f31d8f0c84079cc264440e",
+      "compatible_world_tape_sha256": "e317c93be5b2090239704154c2f3cf59b7de382cb7f31d8f0c84079cc264440e",
+      "outcome": {
+        "food": 0.0,
+        "energy": 0.6750362310755196,
+        "collisions": 0,
+        "episode_return": -0.30777821385219695,
+        "episode_steps": 250,
+        "scene": "threat",
+        "terminated": false,
+        "truncated": true
+      }
+    },
+    {
+      "model": "recurrent-202",
+      "development_seed": 7003,
+      "action_windows": 250,
+      "shape": [
+        250,
+        140
+      ],
+      "exact_equal": true,
+      "original_numeric_sha256": "e9c8295d3f6520f830f9ae78e5b548397bfdfba34635878418c345fd08f7db61",
+      "compatible_numeric_sha256": "e9c8295d3f6520f830f9ae78e5b548397bfdfba34635878418c345fd08f7db61",
+      "original_world_tape_sha256": "cec9caffa43c583d403f8c8a43185e020a756d024de34b5d6b36cddb8288d377",
+      "compatible_world_tape_sha256": "cec9caffa43c583d403f8c8a43185e020a756d024de34b5d6b36cddb8288d377",
+      "outcome": {
+        "food": 0.544301814734936,
+        "energy": 0.9485146238409016,
+        "collisions": 0,
+        "episode_return": 54.501309122766735,
+        "episode_steps": 250,
+        "scene": "forage",
+        "terminated": false,
+        "truncated": true
+      }
+    },
+    {
+      "model": "recurrent-202",
+      "development_seed": 7004,
+      "action_windows": 250,
+      "shape": [
+        250,
+        140
+      ],
+      "exact_equal": true,
+      "original_numeric_sha256": "2e3be13a667bd18fa51ae44ce8900d3eb7cc54dff3734012c0026ea7cae43287",
+      "compatible_numeric_sha256": "2e3be13a667bd18fa51ae44ce8900d3eb7cc54dff3734012c0026ea7cae43287",
+      "original_world_tape_sha256": "47ae2ecc4c9c0369ad43ffd918cf68509528d7cfaa60fa17526e7b76bc78a5d1",
+      "compatible_world_tape_sha256": "47ae2ecc4c9c0369ad43ffd918cf68509528d7cfaa60fa17526e7b76bc78a5d1",
+      "outcome": {
+        "food": 0.0,
+        "energy": 0.6204548013201686,
+        "collisions": 0,
+        "episode_return": -0.30688299793660695,
+        "episode_steps": 250,
+        "scene": "forage",
+        "terminated": false,
+        "truncated": true
+      }
+    },
+    {
+      "model": "recurrent-202",
+      "development_seed": 7005,
+      "action_windows": 250,
+      "shape": [
+        250,
+        140
+      ],
+      "exact_equal": true,
+      "original_numeric_sha256": "17f1d2c2fbd31dbdeda95b5f8ed7e0420ea6b5e20e34d4c177e7cc7498daceb2",
+      "compatible_numeric_sha256": "17f1d2c2fbd31dbdeda95b5f8ed7e0420ea6b5e20e34d4c177e7cc7498daceb2",
+      "original_world_tape_sha256": "34de905e95198b62c8b7b756887144bb9dd02e5747e5adab0b89b191995c60cc",
+      "compatible_world_tape_sha256": "34de905e95198b62c8b7b756887144bb9dd02e5747e5adab0b89b191995c60cc",
+      "outcome": {
+        "food": 0.7,
+        "energy": 0.9944646672286095,
+        "collisions": 0,
+        "episode_return": 69.93286771272442,
+        "episode_steps": 250,
+        "scene": "threat",
+        "terminated": false,
+        "truncated": true
+      }
+    },
+    {
+      "model": "recurrent-202",
+      "development_seed": 7006,
+      "action_windows": 250,
+      "shape": [
+        250,
+        140
+      ],
+      "exact_equal": true,
+      "original_numeric_sha256": "249c2b30de46be7dba0501d96fff6cc4800aabcce75dd71035025b2f9736d5cf",
+      "compatible_numeric_sha256": "249c2b30de46be7dba0501d96fff6cc4800aabcce75dd71035025b2f9736d5cf",
+      "original_world_tape_sha256": "2b30f3f555b14cbf467e563d860c1d779dca88ab1d7fc4ad858f1a558f099478",
+      "compatible_world_tape_sha256": "2b30f3f555b14cbf467e563d860c1d779dca88ab1d7fc4ad858f1a558f099478",
+      "outcome": {
+        "food": 0.0,
+        "energy": 0.5315192590552142,
+        "collisions": 0,
+        "episode_return": -0.32134995607942396,
+        "episode_steps": 250,
+        "scene": "obstacles",
+        "terminated": false,
+        "truncated": true
+      }
+    },
+    {
+      "model": "recurrent-202",
+      "development_seed": 7007,
+      "action_windows": 250,
+      "shape": [
+        250,
+        140
+      ],
+      "exact_equal": true,
+      "original_numeric_sha256": "bb9d2849c01ee83c66a28c8c46a5be7ae969f18cd9a4df8ecbb0876de6bb6b57",
+      "compatible_numeric_sha256": "bb9d2849c01ee83c66a28c8c46a5be7ae969f18cd9a4df8ecbb0876de6bb6b57",
+      "original_world_tape_sha256": "f400e4898e62fe51f30148a6220c5dbf82101a53d6a28b4498b0f02c0ebefd39",
+      "compatible_world_tape_sha256": "f400e4898e62fe51f30148a6220c5dbf82101a53d6a28b4498b0f02c0ebefd39",
+      "outcome": {
+        "food": 0.0,
+        "energy": 0.7669449708150764,
+        "collisions": 0,
+        "episode_return": -0.3224835198926908,
+        "episode_steps": 250,
+        "scene": "obstacles",
+        "terminated": false,
+        "truncated": true
+      }
+    },
+    {
+      "model": "recurrent-202",
+      "development_seed": 7008,
+      "action_windows": 250,
+      "shape": [
+        250,
+        140
+      ],
+      "exact_equal": true,
+      "original_numeric_sha256": "994df793467389b3b19fa4d3afc6ac6504059b5a7e2056c61f087c01a6cf310b",
+      "compatible_numeric_sha256": "994df793467389b3b19fa4d3afc6ac6504059b5a7e2056c61f087c01a6cf310b",
+      "original_world_tape_sha256": "c7d51ece32c39fe5bfe8354067235e5b3375b67138361a796495483dd515622d",
+      "compatible_world_tape_sha256": "c7d51ece32c39fe5bfe8354067235e5b3375b67138361a796495483dd515622d",
+      "outcome": {
+        "food": 0.0,
+        "energy": 0.5973514282828547,
+        "collisions": 0,
+        "episode_return": -0.32313482116431114,
+        "episode_steps": 250,
+        "scene": "obstacles",
+        "terminated": false,
+        "truncated": true
+      }
+    },
+    {
+      "model": "recurrent-303",
+      "development_seed": 7001,
+      "action_windows": 250,
+      "shape": [
+        250,
+        140
+      ],
+      "exact_equal": true,
+      "original_numeric_sha256": "9e72de6f7d6a19985f08b9c4fb2a5443e0e77152cdb5209179a59c669262c6fe",
+      "compatible_numeric_sha256": "9e72de6f7d6a19985f08b9c4fb2a5443e0e77152cdb5209179a59c669262c6fe",
+      "original_world_tape_sha256": "2f9c85bf72fff3b1bea8481dd337dfa5eeba31e737fa594d707e303739989eb6",
+      "compatible_world_tape_sha256": "2f9c85bf72fff3b1bea8481dd337dfa5eeba31e737fa594d707e303739989eb6",
+      "outcome": {
+        "food": 0.0,
+        "energy": 0.6501941581958454,
+        "collisions": 0,
+        "episode_return": -0.3001583743506677,
+        "episode_steps": 250,
+        "scene": "obstacles",
+        "terminated": false,
+        "truncated": true
+      }
+    },
+    {
+      "model": "recurrent-303",
+      "development_seed": 7002,
+      "action_windows": 250,
+      "shape": [
+        250,
+        140
+      ],
+      "exact_equal": true,
+      "original_numeric_sha256": "1c3422b512bb4552673f2090b637f4a7fc9e54533cfc957b9bd2e8ad4d536ef5",
+      "compatible_numeric_sha256": "1c3422b512bb4552673f2090b637f4a7fc9e54533cfc957b9bd2e8ad4d536ef5",
+      "original_world_tape_sha256": "5ca127713d22d822065b8cd479c1da2e32b22850264ff04e2a283d274e29c03d",
+      "compatible_world_tape_sha256": "5ca127713d22d822065b8cd479c1da2e32b22850264ff04e2a283d274e29c03d",
+      "outcome": {
+        "food": 0.0,
+        "energy": 0.6877477528800742,
+        "collisions": 0,
+        "episode_return": -0.17723370643042197,
+        "episode_steps": 250,
+        "scene": "threat",
+        "terminated": false,
+        "truncated": true
+      }
+    },
+    {
+      "model": "recurrent-303",
+      "development_seed": 7003,
+      "action_windows": 250,
+      "shape": [
+        250,
+        140
+      ],
+      "exact_equal": true,
+      "original_numeric_sha256": "bf77a8b2d47d32040fb8ed1537a2294d5d1332880057e532b3588acc8270c6ac",
+      "compatible_numeric_sha256": "bf77a8b2d47d32040fb8ed1537a2294d5d1332880057e532b3588acc8270c6ac",
+      "original_world_tape_sha256": "7b51f0bf12fb97ffc3e10aced5f0f9f4b81aa1fd60c38ae28fa9a2e1e8e1f48d",
+      "compatible_world_tape_sha256": "7b51f0bf12fb97ffc3e10aced5f0f9f4b81aa1fd60c38ae28fa9a2e1e8e1f48d",
+      "outcome": {
+        "food": 0.0,
+        "energy": 0.6828379064119987,
+        "collisions": 0,
+        "episode_return": -0.17191856295902486,
+        "episode_steps": 250,
+        "scene": "forage",
+        "terminated": false,
+        "truncated": true
+      }
+    },
+    {
+      "model": "recurrent-303",
+      "development_seed": 7004,
+      "action_windows": 250,
+      "shape": [
+        250,
+        140
+      ],
+      "exact_equal": true,
+      "original_numeric_sha256": "44ce787efa48d2b5107346812b715373012e554cc9aac17e7725781d1ad8dbee",
+      "compatible_numeric_sha256": "44ce787efa48d2b5107346812b715373012e554cc9aac17e7725781d1ad8dbee",
+      "original_world_tape_sha256": "bfe6e1a0bf3be99d015e519787aa5494baecdeb6f553ab9139e64871a8e9da3f",
+      "compatible_world_tape_sha256": "bfe6e1a0bf3be99d015e519787aa5494baecdeb6f553ab9139e64871a8e9da3f",
+      "outcome": {
+        "food": 0.046818501651287085,
+        "energy": 0.6573200323286582,
+        "collisions": 0,
+        "episode_return": 4.5329436170060164,
+        "episode_steps": 250,
+        "scene": "forage",
+        "terminated": false,
+        "truncated": true
+      }
+    },
+    {
+      "model": "recurrent-303",
+      "development_seed": 7005,
+      "action_windows": 250,
+      "shape": [
+        250,
+        140
+      ],
+      "exact_equal": true,
+      "original_numeric_sha256": "516148438701b2b9f9e243057e7c4ec4f88087eb6774bf3dd752e6eeea98901b",
+      "compatible_numeric_sha256": "516148438701b2b9f9e243057e7c4ec4f88087eb6774bf3dd752e6eeea98901b",
+      "original_world_tape_sha256": "bc951fe0184097a565fa2e2a0fcc9444132cb5703388fb0ed1cbe9e2f85be0ac",
+      "compatible_world_tape_sha256": "bc951fe0184097a565fa2e2a0fcc9444132cb5703388fb0ed1cbe9e2f85be0ac",
+      "outcome": {
+        "food": 0.0,
+        "energy": 0.8746206080732732,
+        "collisions": 0,
+        "episode_return": -0.16134395578280944,
+        "episode_steps": 250,
+        "scene": "threat",
+        "terminated": false,
+        "truncated": true
+      }
+    },
+    {
+      "model": "recurrent-303",
+      "development_seed": 7006,
+      "action_windows": 250,
+      "shape": [
+        250,
+        140
+      ],
+      "exact_equal": true,
+      "original_numeric_sha256": "1e846046f7f91aa7c920d26436204ac8db190b277b254f5a3c0b9159127e2331",
+      "compatible_numeric_sha256": "1e846046f7f91aa7c920d26436204ac8db190b277b254f5a3c0b9159127e2331",
+      "original_world_tape_sha256": "c1560f11ff617022bd9520751e6e854cc437f355af4b0fd97ee9d3c8e2df233b",
+      "compatible_world_tape_sha256": "c1560f11ff617022bd9520751e6e854cc437f355af4b0fd97ee9d3c8e2df233b",
+      "outcome": {
+        "food": 0.0,
+        "energy": 0.5339982065869453,
+        "collisions": 0,
+        "episode_return": -0.2887165859590468,
+        "episode_steps": 250,
+        "scene": "obstacles",
+        "terminated": false,
+        "truncated": true
+      }
+    },
+    {
+      "model": "recurrent-303",
+      "development_seed": 7007,
+      "action_windows": 250,
+      "shape": [
+        250,
+        140
+      ],
+      "exact_equal": true,
+      "original_numeric_sha256": "8420ecc225944dd25cb08f56ddebd6cacb1079a2f76982a82b9ff3798b8b43d9",
+      "compatible_numeric_sha256": "8420ecc225944dd25cb08f56ddebd6cacb1079a2f76982a82b9ff3798b8b43d9",
+      "original_world_tape_sha256": "306b1d712af3defda1b142b2c81362a1e08f03c8bed874c350c67701d0b9a7de",
+      "compatible_world_tape_sha256": "306b1d712af3defda1b142b2c81362a1e08f03c8bed874c350c67701d0b9a7de",
+      "outcome": {
+        "food": 0.0,
+        "energy": 0.7694017823620563,
+        "collisions": 0,
+        "episode_return": -0.28963962328046516,
+        "episode_steps": 250,
+        "scene": "obstacles",
+        "terminated": false,
+        "truncated": true
+      }
+    },
+    {
+      "model": "recurrent-303",
+      "development_seed": 7008,
+      "action_windows": 250,
+      "shape": [
+        250,
+        140
+      ],
+      "exact_equal": true,
+      "original_numeric_sha256": "278fb57d85d8aed73bd869bb1325c2ee8f62238c553e96a6c182f3bd0e9eb133",
+      "compatible_numeric_sha256": "278fb57d85d8aed73bd869bb1325c2ee8f62238c553e96a6c182f3bd0e9eb133",
+      "original_world_tape_sha256": "9912d946e0ed7070ea1b4b0512039337e7ff2733add25e0644d76e1f5140c405",
+      "compatible_world_tape_sha256": "9912d946e0ed7070ea1b4b0512039337e7ff2733add25e0644d76e1f5140c405",
+      "outcome": {
+        "food": 0.0,
+        "energy": 0.600097888989594,
+        "collisions": 0,
+        "episode_return": -0.2864407014344658,
+        "episode_steps": 250,
+        "scene": "obstacles",
+        "terminated": false,
+        "truncated": true
+      }
+    },
+    {
+      "model": "hybrid-101",
+      "development_seed": 7001,
+      "action_windows": 250,
+      "shape": [
+        250,
+        140
+      ],
+      "exact_equal": true,
+      "original_numeric_sha256": "dce0f67a57be8139de91a5ba3330ce2f3ee8d114debbcb31714853ee87b97446",
+      "compatible_numeric_sha256": "dce0f67a57be8139de91a5ba3330ce2f3ee8d114debbcb31714853ee87b97446",
+      "original_world_tape_sha256": "15acc6891b5645c081be6e692e22334f4ecf7fd78de53d32c742b89620caa3d0",
+      "compatible_world_tape_sha256": "15acc6891b5645c081be6e692e22334f4ecf7fd78de53d32c742b89620caa3d0",
+      "outcome": {
+        "food": 0.0,
+        "energy": 0.6251485754170939,
+        "collisions": 0,
+        "episode_return": -0.5508274557629231,
+        "episode_steps": 250,
+        "scene": "obstacles",
+        "terminated": false,
+        "truncated": true
+      }
+    },
+    {
+      "model": "hybrid-101",
+      "development_seed": 7002,
+      "action_windows": 250,
+      "shape": [
+        250,
+        140
+      ],
+      "exact_equal": true,
+      "original_numeric_sha256": "2ef061c60263d0aaa31e84b7ac079ba13d2470d912b200c648d43b5b23e7170c",
+      "compatible_numeric_sha256": "2ef061c60263d0aaa31e84b7ac079ba13d2470d912b200c648d43b5b23e7170c",
+      "original_world_tape_sha256": "586ad9be9eca4f0c151b869873daff0c98d2f7349f3fb4c8b1f492716534dd35",
+      "compatible_world_tape_sha256": "586ad9be9eca4f0c151b869873daff0c98d2f7349f3fb4c8b1f492716534dd35",
+      "outcome": {
+        "food": 0.0,
+        "energy": 0.6543590803445836,
+        "collisions": 0,
+        "episode_return": -0.502582596739827,
+        "episode_steps": 250,
+        "scene": "threat",
+        "terminated": false,
+        "truncated": true
+      }
+    },
+    {
+      "model": "hybrid-101",
+      "development_seed": 7003,
+      "action_windows": 250,
+      "shape": [
+        250,
+        140
+      ],
+      "exact_equal": true,
+      "original_numeric_sha256": "ac4d8d102ea807ef86694011fa9dd0550f64ee74d1802105a3ce85a46d8a6c60",
+      "compatible_numeric_sha256": "ac4d8d102ea807ef86694011fa9dd0550f64ee74d1802105a3ce85a46d8a6c60",
+      "original_world_tape_sha256": "262fd559f9fda3dc8f433565caa35e4f8377466415cc67efa7faca3ff1160df0",
+      "compatible_world_tape_sha256": "262fd559f9fda3dc8f433565caa35e4f8377466415cc67efa7faca3ff1160df0",
+      "outcome": {
+        "food": 0.46331026501953637,
+        "energy": 0.9119343529010583,
+        "collisions": 0,
+        "episode_return": 46.423270889116466,
+        "episode_steps": 250,
+        "scene": "forage",
+        "terminated": false,
+        "truncated": true
+      }
+    },
+    {
+      "model": "hybrid-101",
+      "development_seed": 7004,
+      "action_windows": 250,
+      "shape": [
+        250,
+        140
+      ],
+      "exact_equal": true,
+      "original_numeric_sha256": "cef92bae370f969ec0fa015f535fe8bce4b05089e0e00ab8b4e843a30be38948",
+      "compatible_numeric_sha256": "cef92bae370f969ec0fa015f535fe8bce4b05089e0e00ab8b4e843a30be38948",
+      "original_world_tape_sha256": "69aa199ff78e741e5f5e3cdb802b2bc5958617c1b71c845499f1a75d480b3ccf",
+      "compatible_world_tape_sha256": "69aa199ff78e741e5f5e3cdb802b2bc5958617c1b71c845499f1a75d480b3ccf",
+      "outcome": {
+        "food": 0.0,
+        "energy": 0.599337500951323,
+        "collisions": 0,
+        "episode_return": -0.506489810763896,
+        "episode_steps": 250,
+        "scene": "forage",
+        "terminated": false,
+        "truncated": true
+      }
+    },
+    {
+      "model": "hybrid-101",
+      "development_seed": 7005,
+      "action_windows": 250,
+      "shape": [
+        250,
+        140
+      ],
+      "exact_equal": true,
+      "original_numeric_sha256": "27f0d6ec30afa2299ed9bb981389ecec14ae1fcd17c226c6e327dab48b2543d2",
+      "compatible_numeric_sha256": "27f0d6ec30afa2299ed9bb981389ecec14ae1fcd17c226c6e327dab48b2543d2",
+      "original_world_tape_sha256": "5aa48db5732037e3eeb3ce59a56b1a029bd8c01760bb3ff88ed55e47b6c29de3",
+      "compatible_world_tape_sha256": "5aa48db5732037e3eeb3ce59a56b1a029bd8c01760bb3ff88ed55e47b6c29de3",
+      "outcome": {
+        "food": 0.5027990636974572,
+        "energy": 1.0,
+        "collisions": 0,
+        "episode_return": 50.2402135379853,
+        "episode_steps": 250,
+        "scene": "threat",
+        "terminated": false,
+        "truncated": true
+      }
+    },
+    {
+      "model": "hybrid-101",
+      "development_seed": 7006,
+      "action_windows": 250,
+      "shape": [
+        250,
+        140
+      ],
+      "exact_equal": true,
+      "original_numeric_sha256": "3fb726774a72f7e7d255fb77ea5158ef5d8d5b093eee907994297425dbdc4083",
+      "compatible_numeric_sha256": "3fb726774a72f7e7d255fb77ea5158ef5d8d5b093eee907994297425dbdc4083",
+      "original_world_tape_sha256": "37941d403d76c65953bcf19062ca70d80645fc3efa6b1f80215e00fddb97e723",
+      "compatible_world_tape_sha256": "37941d403d76c65953bcf19062ca70d80645fc3efa6b1f80215e00fddb97e723",
+      "outcome": {
+        "food": 0.0,
+        "energy": 0.5092593060415564,
+        "collisions": 0,
+        "episode_return": -0.5323019858357312,
+        "episode_steps": 250,
+        "scene": "obstacles",
+        "terminated": false,
+        "truncated": true
+      }
+    },
+    {
+      "model": "hybrid-101",
+      "development_seed": 7007,
+      "action_windows": 250,
+      "shape": [
+        250,
+        140
+      ],
+      "exact_equal": true,
+      "original_numeric_sha256": "572bbb7216e1817f2bcab75a524580753f35d2b0df01288bcff1bb95ab0a1664",
+      "compatible_numeric_sha256": "572bbb7216e1817f2bcab75a524580753f35d2b0df01288bcff1bb95ab0a1664",
+      "original_world_tape_sha256": "45d757e135e36aa2aad92e688189393347fba2ab1c1c220a16c0fbaa107601f3",
+      "compatible_world_tape_sha256": "45d757e135e36aa2aad92e688189393347fba2ab1c1c220a16c0fbaa107601f3",
+      "outcome": {
+        "food": 0.0,
+        "energy": 0.7438244997848991,
+        "collisions": 0,
+        "episode_return": -0.543808386947214,
+        "episode_steps": 250,
+        "scene": "obstacles",
+        "terminated": false,
+        "truncated": true
+      }
+    },
+    {
+      "model": "hybrid-101",
+      "development_seed": 7008,
+      "action_windows": 250,
+      "shape": [
+        250,
+        140
+      ],
+      "exact_equal": true,
+      "original_numeric_sha256": "9901bbf32360170ebbdc505835a83b0ced31dea948c5fbd7bc2acaa5ae4ce43b",
+      "compatible_numeric_sha256": "9901bbf32360170ebbdc505835a83b0ced31dea948c5fbd7bc2acaa5ae4ce43b",
+      "original_world_tape_sha256": "cea86eb5fa4ca3dc37741bfea32edb0cc5f2c974a9cca89c2c417e40270ce62f",
+      "compatible_world_tape_sha256": "cea86eb5fa4ca3dc37741bfea32edb0cc5f2c974a9cca89c2c417e40270ce62f",
+      "outcome": {
+        "food": 0.0,
+        "energy": 0.5745689838752146,
+        "collisions": 0,
+        "episode_return": -0.543025065146684,
+        "episode_steps": 250,
+        "scene": "obstacles",
+        "terminated": false,
+        "truncated": true
+      }
+    },
+    {
+      "model": "hybrid-202",
+      "development_seed": 7001,
+      "action_windows": 250,
+      "shape": [
+        250,
+        140
+      ],
+      "exact_equal": true,
+      "original_numeric_sha256": "e6c52c9b3dd8d88cf832fe3ceb20239b1a2e78d115dacaa560c308cd96448ba1",
+      "compatible_numeric_sha256": "e6c52c9b3dd8d88cf832fe3ceb20239b1a2e78d115dacaa560c308cd96448ba1",
+      "original_world_tape_sha256": "e60a6e7774f73e684fc77112102534cfb53e6f544b7c8c74a59c8abf0fd798c6",
+      "compatible_world_tape_sha256": "e60a6e7774f73e684fc77112102534cfb53e6f544b7c8c74a59c8abf0fd798c6",
+      "outcome": {
+        "food": 0.0,
+        "energy": 0.6116614643338246,
+        "collisions": 0,
+        "episode_return": -0.733673285718263,
+        "episode_steps": 250,
+        "scene": "obstacles",
+        "terminated": false,
+        "truncated": true
+      }
+    },
+    {
+      "model": "hybrid-202",
+      "development_seed": 7002,
+      "action_windows": 250,
+      "shape": [
+        250,
+        140
+      ],
+      "exact_equal": true,
+      "original_numeric_sha256": "e02f3689f0f0719a166295243c46a64827f59093aee85d16895782cd44fc97c0",
+      "compatible_numeric_sha256": "e02f3689f0f0719a166295243c46a64827f59093aee85d16895782cd44fc97c0",
+      "original_world_tape_sha256": "2226a90dc3b7a1c2561963240941256c3ef2fedde09b0bb7f0b761db67cf7194",
+      "compatible_world_tape_sha256": "2226a90dc3b7a1c2561963240941256c3ef2fedde09b0bb7f0b761db67cf7194",
+      "outcome": {
+        "food": 0.0,
+        "energy": 0.6474203765152335,
+        "collisions": 0,
+        "episode_return": -0.6207363108098507,
+        "episode_steps": 250,
+        "scene": "threat",
+        "terminated": false,
+        "truncated": true
+      }
+    },
+    {
+      "model": "hybrid-202",
+      "development_seed": 7003,
+      "action_windows": 250,
+      "shape": [
+        250,
+        140
+      ],
+      "exact_equal": true,
+      "original_numeric_sha256": "b0add1744688a971edd4f79b178a14a23f039d748f63dc86e845b5fb6971754e",
+      "compatible_numeric_sha256": "b0add1744688a971edd4f79b178a14a23f039d748f63dc86e845b5fb6971754e",
+      "original_world_tape_sha256": "56f85f9fab107b13d293765a5caddb0b29ad7e3730e086363066e0c8cdd86bb3",
+      "compatible_world_tape_sha256": "56f85f9fab107b13d293765a5caddb0b29ad7e3730e086363066e0c8cdd86bb3",
+      "outcome": {
+        "food": 0.0,
+        "energy": 0.6860271625228054,
+        "collisions": 0,
+        "episode_return": -0.09469681781387078,
+        "episode_steps": 250,
+        "scene": "forage",
+        "terminated": false,
+        "truncated": true
+      }
+    },
+    {
+      "model": "hybrid-202",
+      "development_seed": 7004,
+      "action_windows": 250,
+      "shape": [
+        250,
+        140
+      ],
+      "exact_equal": true,
+      "original_numeric_sha256": "5bcdf6b5e0f925be83cb4f97aa89a4bb1bc319e5248986788d57cef681955534",
+      "compatible_numeric_sha256": "5bcdf6b5e0f925be83cb4f97aa89a4bb1bc319e5248986788d57cef681955534",
+      "original_world_tape_sha256": "6722424493b4f6d07326037023b9a6eff6d9ba4a6fd8d1462cf74761596625ea",
+      "compatible_world_tape_sha256": "6722424493b4f6d07326037023b9a6eff6d9ba4a6fd8d1462cf74761596625ea",
+      "outcome": {
+        "food": 0.0,
+        "energy": 0.6368928951191298,
+        "collisions": 0,
+        "episode_return": -0.11027415967430963,
+        "episode_steps": 250,
+        "scene": "forage",
+        "terminated": false,
+        "truncated": true
+      }
+    },
+    {
+      "model": "hybrid-202",
+      "development_seed": 7005,
+      "action_windows": 250,
+      "shape": [
+        250,
+        140
+      ],
+      "exact_equal": true,
+      "original_numeric_sha256": "9582bd50937fc69c6bd9f4b10adecdb490173731ae1462fdd2fd517c8aeb4d32",
+      "compatible_numeric_sha256": "9582bd50937fc69c6bd9f4b10adecdb490173731ae1462fdd2fd517c8aeb4d32",
+      "original_world_tape_sha256": "b7f7d4d12e3da2aff0e3ff4353fe066472407247d52dabe0a2a77f27e250a55d",
+      "compatible_world_tape_sha256": "b7f7d4d12e3da2aff0e3ff4353fe066472407247d52dabe0a2a77f27e250a55d",
+      "outcome": {
+        "food": 0.0,
+        "energy": 0.8722443686509078,
+        "collisions": 0,
+        "episode_return": -0.1685191689238328,
+        "episode_steps": 250,
+        "scene": "threat",
+        "terminated": false,
+        "truncated": true
+      }
+    },
+    {
+      "model": "hybrid-202",
+      "development_seed": 7006,
+      "action_windows": 250,
+      "shape": [
+        250,
+        140
+      ],
+      "exact_equal": true,
+      "original_numeric_sha256": "ae154ca4bfc0786e0685a3b6da47509c6ecb30ef29c14d1b09da245035c8e73b",
+      "compatible_numeric_sha256": "ae154ca4bfc0786e0685a3b6da47509c6ecb30ef29c14d1b09da245035c8e73b",
+      "original_world_tape_sha256": "d4f75d3c034468b32714722e3205e6eaa5c2636c76157d2810064df4e15c10a8",
+      "compatible_world_tape_sha256": "d4f75d3c034468b32714722e3205e6eaa5c2636c76157d2810064df4e15c10a8",
+      "outcome": {
+        "food": 0.0,
+        "energy": 0.4945552335357243,
+        "collisions": 0,
+        "episode_return": -0.7335512277248512,
+        "episode_steps": 250,
+        "scene": "obstacles",
+        "terminated": false,
+        "truncated": true
+      }
+    },
+    {
+      "model": "hybrid-202",
+      "development_seed": 7007,
+      "action_windows": 250,
+      "shape": [
+        250,
+        140
+      ],
+      "exact_equal": true,
+      "original_numeric_sha256": "5f054601d546b1c4ec628db14d88ba93a0e3e4965ee2eed73e7ad0412f7c3eca",
+      "compatible_numeric_sha256": "5f054601d546b1c4ec628db14d88ba93a0e3e4965ee2eed73e7ad0412f7c3eca",
+      "original_world_tape_sha256": "63781d3efca34db4745a67608e00ee8c397d22ac8face00a15a15ec8c8900ffe",
+      "compatible_world_tape_sha256": "63781d3efca34db4745a67608e00ee8c397d22ac8face00a15a15ec8c8900ffe",
+      "outcome": {
+        "food": 0.0,
+        "energy": 0.7295901457240113,
+        "collisions": 0,
+        "episode_return": -0.7336908185258502,
+        "episode_steps": 250,
+        "scene": "obstacles",
+        "terminated": false,
+        "truncated": true
+      }
+    },
+    {
+      "model": "hybrid-202",
+      "development_seed": 7008,
+      "action_windows": 250,
+      "shape": [
+        250,
+        140
+      ],
+      "exact_equal": true,
+      "original_numeric_sha256": "07ea14ccc7fa82101460fa36c1e0e3e8ae93bc03953d548957f1a23df6741ea2",
+      "compatible_numeric_sha256": "07ea14ccc7fa82101460fa36c1e0e3e8ae93bc03953d548957f1a23df6741ea2",
+      "original_world_tape_sha256": "7d510f21dd76dbbd4f4a79eede6f85ea6af025d527844457b66582eb31f02931",
+      "compatible_world_tape_sha256": "7d510f21dd76dbbd4f4a79eede6f85ea6af025d527844457b66582eb31f02931",
+      "outcome": {
+        "food": 0.0,
+        "energy": 0.5601306107786304,
+        "collisions": 0,
+        "episode_return": -0.735659736574291,
+        "episode_steps": 250,
+        "scene": "obstacles",
+        "terminated": false,
+        "truncated": true
+      }
+    },
+    {
+      "model": "hybrid-303",
+      "development_seed": 7001,
+      "action_windows": 250,
+      "shape": [
+        250,
+        140
+      ],
+      "exact_equal": true,
+      "original_numeric_sha256": "dab9ae08229fc27590fd91bee4bdbb2181eedc63425f6ea0b697dc50e637630f",
+      "compatible_numeric_sha256": "dab9ae08229fc27590fd91bee4bdbb2181eedc63425f6ea0b697dc50e637630f",
+      "original_world_tape_sha256": "4cdeeb44956deec1aa1a28f9ae56056b736fa0d45879243bf918cba933cb0edf",
+      "compatible_world_tape_sha256": "4cdeeb44956deec1aa1a28f9ae56056b736fa0d45879243bf918cba933cb0edf",
+      "outcome": {
+        "food": 0.0,
+        "energy": 0.588853968174451,
+        "collisions": 0,
+        "episode_return": -0.979302028337717,
+        "episode_steps": 250,
+        "scene": "obstacles",
+        "terminated": false,
+        "truncated": true
+      }
+    },
+    {
+      "model": "hybrid-303",
+      "development_seed": 7002,
+      "action_windows": 250,
+      "shape": [
+        250,
+        140
+      ],
+      "exact_equal": true,
+      "original_numeric_sha256": "39f96439a1bfd7224824c018d1982c7544d64f6d0e48d082504ee15425936f50",
+      "compatible_numeric_sha256": "39f96439a1bfd7224824c018d1982c7544d64f6d0e48d082504ee15425936f50",
+      "original_world_tape_sha256": "dc8625b2be23915a30e163e60641b4926d006dc522ec5142a7a4455c791f86c0",
+      "compatible_world_tape_sha256": "dc8625b2be23915a30e163e60641b4926d006dc522ec5142a7a4455c791f86c0",
+      "outcome": {
+        "food": 0.0,
+        "energy": 0.6136349621789106,
+        "collisions": 0,
+        "episode_return": -0.9900420604330308,
+        "episode_steps": 250,
+        "scene": "threat",
+        "terminated": false,
+        "truncated": true
+      }
+    },
+    {
+      "model": "hybrid-303",
+      "development_seed": 7003,
+      "action_windows": 250,
+      "shape": [
+        250,
+        140
+      ],
+      "exact_equal": true,
+      "original_numeric_sha256": "d8deb52810d782473fd515261a1de42bd629d642e709006b329af26659104266",
+      "compatible_numeric_sha256": "d8deb52810d782473fd515261a1de42bd629d642e709006b329af26659104266",
+      "original_world_tape_sha256": "caec115b9101c86b71422aa033646b982c07698a07a2635c5516c70c36f490a4",
+      "compatible_world_tape_sha256": "caec115b9101c86b71422aa033646b982c07698a07a2635c5516c70c36f490a4",
+      "outcome": {
+        "food": 0.0,
+        "energy": 0.6080872710093876,
+        "collisions": 0,
+        "episode_return": -0.989521571782828,
+        "episode_steps": 250,
+        "scene": "forage",
+        "terminated": false,
+        "truncated": true
+      }
+    },
+    {
+      "model": "hybrid-303",
+      "development_seed": 7004,
+      "action_windows": 250,
+      "shape": [
+        250,
+        140
+      ],
+      "exact_equal": true,
+      "original_numeric_sha256": "ebe5f3ab94a46c6c6ebd313d43074c6de16b09615374f5d8dfdfa8914d8e4f11",
+      "compatible_numeric_sha256": "ebe5f3ab94a46c6c6ebd313d43074c6de16b09615374f5d8dfdfa8914d8e4f11",
+      "original_world_tape_sha256": "cb634ec37039814eb7117d799b467195ee4df141c599bc1214aded98ebd0d997",
+      "compatible_world_tape_sha256": "cb634ec37039814eb7117d799b467195ee4df141c599bc1214aded98ebd0d997",
+      "outcome": {
+        "food": 0.0,
+        "energy": 0.5590015338102311,
+        "collisions": 0,
+        "episode_return": -0.9902049178498984,
+        "episode_steps": 250,
+        "scene": "forage",
+        "terminated": false,
+        "truncated": true
+      }
+    },
+    {
+      "model": "hybrid-303",
+      "development_seed": 7005,
+      "action_windows": 250,
+      "shape": [
+        250,
+        140
+      ],
+      "exact_equal": true,
+      "original_numeric_sha256": "fc00ea603764033920f953b17ba7ff41064f870a35f9ea504ac570e29d46d2e1",
+      "compatible_numeric_sha256": "fc00ea603764033920f953b17ba7ff41064f870a35f9ea504ac570e29d46d2e1",
+      "original_world_tape_sha256": "37ed3b8ff89d7db1f0b88b214086bb8d8bfdae9d9b9ccb70286c6ca1abf865f2",
+      "compatible_world_tape_sha256": "37ed3b8ff89d7db1f0b88b214086bb8d8bfdae9d9b9ccb70286c6ca1abf865f2",
+      "outcome": {
+        "food": 0.0,
+        "energy": 0.7991088086950369,
+        "collisions": 0,
+        "episode_return": -0.9911953684049833,
+        "episode_steps": 250,
+        "scene": "threat",
+        "terminated": false,
+        "truncated": true
+      }
+    },
+    {
+      "model": "hybrid-303",
+      "development_seed": 7006,
+      "action_windows": 250,
+      "shape": [
+        250,
+        140
+      ],
+      "exact_equal": true,
+      "original_numeric_sha256": "50b7d6690287abc499d9e2094a98ca040e68aded9b41b62954ab643188c3096d",
+      "compatible_numeric_sha256": "50b7d6690287abc499d9e2094a98ca040e68aded9b41b62954ab643188c3096d",
+      "original_world_tape_sha256": "780e71879921171d71771e681394890844d4268b9c4ffa19d2ca69dbc804674b",
+      "compatible_world_tape_sha256": "780e71879921171d71771e681394890844d4268b9c4ffa19d2ca69dbc804674b",
+      "outcome": {
+        "food": 0.0,
+        "energy": 0.4717342775466602,
+        "collisions": 0,
+        "episode_return": -0.9804139734095353,
+        "episode_steps": 250,
+        "scene": "obstacles",
+        "terminated": false,
+        "truncated": true
+      }
+    },
+    {
+      "model": "hybrid-303",
+      "development_seed": 7007,
+      "action_windows": 250,
+      "shape": [
+        250,
+        140
+      ],
+      "exact_equal": true,
+      "original_numeric_sha256": "88ccf522a78e7d535ee8b8df4618ee0712778b16e3f8437f80a43cbf655e69df",
+      "compatible_numeric_sha256": "88ccf522a78e7d535ee8b8df4618ee0712778b16e3f8437f80a43cbf655e69df",
+      "original_world_tape_sha256": "57b1a8deb337e8058d5c786eba2a667a918085d818c3e32cbc2eb6913dbea53a",
+      "compatible_world_tape_sha256": "57b1a8deb337e8058d5c786eba2a667a918085d818c3e32cbc2eb6913dbea53a",
+      "outcome": {
+        "food": 0.0,
+        "energy": 0.7082363808657646,
+        "collisions": 1,
+        "episode_return": -0.980191077862084,
+        "episode_steps": 250,
+        "scene": "obstacles",
+        "terminated": false,
+        "truncated": true
+      }
+    },
+    {
+      "model": "hybrid-303",
+      "development_seed": 7008,
+      "action_windows": 250,
+      "shape": [
+        250,
+        140
+      ],
+      "exact_equal": true,
+      "original_numeric_sha256": "28fb0e627a95deb36dcd799f4b4adaa6620ed911cff5e2e9cdc4c9f8751528da",
+      "compatible_numeric_sha256": "28fb0e627a95deb36dcd799f4b4adaa6620ed911cff5e2e9cdc4c9f8751528da",
+      "original_world_tape_sha256": "cd54e795ef445bb72b318ecf7e2d11807b45c63f294a0f54d5e4a55ba7d6de69",
+      "compatible_world_tape_sha256": "cd54e795ef445bb72b318ecf7e2d11807b45c63f294a0f54d5e4a55ba7d6de69",
+      "outcome": {
+        "food": 0.0,
+        "energy": 0.5379937903681415,
+        "collisions": 0,
+        "episode_return": -0.9727735501879422,
+        "episode_steps": 250,
+        "scene": "obstacles",
+        "terminated": false,
+        "truncated": true
+      }
+    }
+  ]
+}

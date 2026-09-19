@@ -1,0 +1,103 @@
+{
+  "schema": "neuroterrarium.model-set.v1",
+  "status": "completed",
+  "protocol_sha256": "656b93d7c88d9f03a6e21c4b853a2f24a6f472fc98a8b24a316119c45db44245",
+  "source_sha256": {
+    "training.py": "01a2e3866738c692dfc64d1d125d1696daf639df26a1d6c2cd81ffa8c907472e",
+    "controllers.py": "d401493d8965dbb9fada08e84d8e3edc38e430e857450a68ef273b7d5b749923",
+    "world.py": "6f84eebb1785a91eafd0922524d860581a780fcf0df6facc6317bc06556b7b31"
+  },
+  "transitions_per_model": 1000000,
+  "models": [
+    {
+      "id": "feedforward-101",
+      "checkpoint": "feedforward-101",
+      "architecture": "feedforward",
+      "seed": 101,
+      "policy_sha256": "f2f1a61f9ebf69b9b9729adc13d44ac115e197fb3026969e1d540afb12344cc5",
+      "checkpoint_manifest_sha256": "05534d41ef945d206115c9aa94060651fb5de4368d534f7dec320afe3df00b1f",
+      "transitions": 1000000,
+      "training_status": "completed"
+    },
+    {
+      "id": "feedforward-202",
+      "checkpoint": "feedforward-202",
+      "architecture": "feedforward",
+      "seed": 202,
+      "policy_sha256": "14e9a82f4ab773a5d0d37897558fc4ec45af333769d723c5b7811d2411744fa7",
+      "checkpoint_manifest_sha256": "031561da733a57eeebf14fff834bcdcf734300d8b827037dc772d6451ca2ffa4",
+      "transitions": 1000000,
+      "training_status": "completed"
+    },
+    {
+      "id": "feedforward-303",
+      "checkpoint": "feedforward-303",
+      "architecture": "feedforward",
+      "seed": 303,
+      "policy_sha256": "19aa342edf1b89cf77901aa84c27d1d7ba81a673df7341ff25b12d8dc5f6b2ca",
+      "checkpoint_manifest_sha256": "608564961968055bcf4b51e461b2244172875f7b491bebe8c1f98f406e9cc85a",
+      "transitions": 1000000,
+      "training_status": "completed"
+    },
+    {
+      "id": "recurrent-101",
+      "checkpoint": "recurrent-101",
+      "architecture": "recurrent",
+      "seed": 101,
+      "policy_sha256": "43f6cafbbde237386d8ff7a9fdac115bbce1210332ce13f0830bc6c3803fd3f2",
+      "checkpoint_manifest_sha256": "ea777afcc8791093f3303081b9b15f36a26fd5a7ecfe8d92ba8a4f2915daad03",
+      "transitions": 1000000,
+      "training_status": "completed"
+    },
+    {
+      "id": "recurrent-202",
+      "checkpoint": "recurrent-202",
+      "architecture": "recurrent",
+      "seed": 202,
+      "policy_sha256": "560e3fce30e2050c9a28fc9f854252f88534101942e5f542ef5ab8eb2bb41b11",
+      "checkpoint_manifest_sha256": "c05ffb4d0bfd11f954bc4e8eb9a357dabf9142e763809199489b30c945e08a78",
+      "transitions": 1000000,
+      "training_status": "completed"
+    },
+    {
+      "id": "recurrent-303",
+      "checkpoint": "recurrent-303",
+      "architecture": "recurrent",
+      "seed": 303,
+      "policy_sha256": "2fc0b496e958f5833248cc7decc92dd4b9447f36dfa79cc04971244e73411049",
+      "checkpoint_manifest_sha256": "70c6db898cc3b368a9c14e40e75ca1a869ebdd5c707af0f29c93af7a60555e7d",
+      "transitions": 1000000,
+      "training_status": "completed"
+    },
+    {
+      "id": "hybrid-101",
+      "checkpoint": "hybrid-101",
+      "architecture": "hybrid",
+      "seed": 101,
+      "policy_sha256": "535dc022ad32269bed6a6b48308451b1a97cd7863ae7609c4d3b96e1596083f6",
+      "checkpoint_manifest_sha256": "7b6175a0d114b5c504cab5d5ac36b8e3cab1f54ee81b30e413b1f7888e894177",
+      "transitions": 1000000,
+      "training_status": "completed"
+    },
+    {
+      "id": "hybrid-202",
+      "checkpoint": "hybrid-202",
+      "architecture": "hybrid",
+      "seed": 202,
+      "policy_sha256": "3420833e2251d9f217e07e961a79af4c3eee134080caa8ded3af8f88bbbc875a",
+      "checkpoint_manifest_sha256": "0b650973dc0d3b2cbd6deec4cce359657b5455fbb9f3875bf5455ba392965cda",
+      "transitions": 1000000,
+      "training_status": "completed"
+    },
+    {
+      "id": "hybrid-303",
+      "checkpoint": "hybrid-303",
+      "architecture": "hybrid",
+      "seed": 303,
+      "policy_sha256": "0005e77440636b190e7fca94a0542bc846961f2414d1af05cc4d4e3d884316a7",
+      "checkpoint_manifest_sha256": "c4b27ea0bf407fb5520f99b8ec1bd129d0a1270ec0dc9e281cdc272a135f6836",
+      "transitions": 1000000,
+      "training_status": "completed"
+    }
+  ]
+}

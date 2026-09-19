@@ -1,0 +1,62 @@
+name: Publish recorded playground
+on:
+  release:
+    types: [published]
+  workflow_dispatch:
+    inputs:
+      release_tag:
+        description: 'Published stable release tag to deploy (for example v0.1.0)'
+        required: true
+        type: string
+permissions:
+  actions: read
+  contents: read
+  pages: write
+  id-token: write
+concurrency:
+  group: pages
+  cancel-in-progress: false
+jobs:
+  deploy:
+    runs-on: ubuntu-24.04
+    timeout-minutes: 10
+    environment:
+      name: github-pages
+      url: ${{ steps.publish.outputs.page_url }}
+    steps:
+      - uses: actions/checkout@3d3c42e5aac5ba805825da76410c181273ba90b1 # v7
+        with:
+          ref: ${{ github.event.repository.default_branch }}
+          persist-credentials: false
+      - uses: actions/setup-node@820762786026740c76f36085b0efc47a31fe5020 # v7
+        with:
+          node-version: '24'
+          package-manager-cache: false
+      - name: Require an official release and successful CI for its exact commit
+        id: release
+        env:
+          GITHUB_TOKEN: ${{ github.token }}
+          RELEASE_TAG: ${{ inputs.release_tag }}
+        run: node scripts/release_gate.mjs
+      - uses: actions/checkout@3d3c42e5aac5ba805825da76410c181273ba90b1 # v7
+        with:
+          ref: ${{ steps.release.outputs.sha }}
+          persist-credentials: false
+      - name: Build and verify recorded assets
+        working-directory: web
+        run: |
+          npx --yes pnpm@11.19.0 install --frozen-lockfile --ignore-scripts
+          node --test test-verify-replay.mjs ../scripts/test-release-gate.mjs
+          npx --yes pnpm@11.19.0 run build
+          node verify-replay.mjs
+      - uses: actions/upload-pages-artifact@7b1f4a764d45c48632c6b24a0339c27f5614fb0b # v4
+        with:
+          path: web/dist
+      - name: Recheck release identity and latest CI before deployment
+        env:
+          GITHUB_TOKEN: ${{ github.token }}
+          RELEASE_TAG: ${{ inputs.release_tag }}
+          EXPECTED_RELEASE_SHA: ${{ steps.release.outputs.sha }}
+        run: node scripts/release_gate.mjs
+      - uses: actions/deploy-pages@d6db90164ac5ed86f2b6aed7e0febac5b3c0c03e # v4
+        id: publish

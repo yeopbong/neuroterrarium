@@ -1,0 +1,56 @@
+{
+  "schema": "neuroterrarium.ppo.v1",
+  "num_envs": 4,
+  "torch_threads": 2,
+  "hidden_size": 64,
+  "rollout_steps": 128,
+  "sequence_length": 32,
+  "minibatch_sequences": 16,
+  "epochs": 4,
+  "episode_steps": 250,
+  "learning_rate": 0.0003,
+  "gamma": 0.99,
+  "gae_lambda": 0.95,
+  "clip": 0.2,
+  "value_coefficient": 0.5,
+  "entropy_coefficient": 0.005,
+  "max_grad_norm": 0.5,
+  "checkpoint_updates": 4,
+  "dev_seeds": [
+    7001,
+    7002,
+    7003,
+    7004,
+    7005,
+    7006,
+    7007,
+    7008
+  ],
+  "dev_episode_steps": 125,
+  "architectures": [
+    "feedforward",
+    "recurrent",
+    "hybrid"
+  ],
+  "seeds": [
+    101,
+    202,
+    303
+  ],
+  "transition_definition": "One 0.02 s action window in one environment. Vector steps multiply by num_envs.",
+  "normalization": "Fixed local-rays-v1 scales; no learned running normalizer.",
+  "reward": "100*food_delta + energy_delta - 0.02*collision_count_delta - 0.001*(drive+3*escape). Food uses physical World consumption.",
+  "termination": "Body energy <=0.05 terminates. The 250-step episode limit truncates, with final-observation value bootstrap and no GAE continuation across reset.",
+  "sequence_protocol": "PPO on contiguous truncated-BPTT chunks; stored behavior hidden state initializes each chunk, episode_start resets state inside chunks. Gaussian latent likelihood is optimized before shared deterministic action transform.",
+  "scene_distribution": "Equal forage, obstacle, threat/control, relocation cases; independent named train/dev/test/stress map streams. Food relocation is scheduled at reset.",
+  "hybrid_reflex": "Same training/evaluation apply_action function; shared proximity and projection change only. Record raw action/log probability/applied action/reflex corrections separately.",
+  "status": "smoke",
+  "total_transitions": 4096,
+  "purpose": "Short integration and throughput probe; not a trained release model.",
+  "resource_limits": {
+    "minimum_disk_free_bytes": 10737418240,
+    "minimum_available_memory_bytes": 3221225472,
+    "maximum_process_rss_bytes": 1073741824,
+    "maximum_wall_seconds": 900
+  }
+}

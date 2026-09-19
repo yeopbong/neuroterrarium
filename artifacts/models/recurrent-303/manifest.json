@@ -1,0 +1,21 @@
+{
+  "schema": "neuroterrarium.ppo-checkpoint.v1",
+  "files": {
+    "policy.safetensors": {
+      "sha256": "2fc0b496e958f5833248cc7decc92dd4b9447f36dfa79cc04971244e73411049",
+      "bytes": 117340
+    },
+    "optimizer.safetensors": {
+      "sha256": "8d683b6e1f26ed769be0e56b1d3a23964ed22dc4be927c522ec424dd06ce029f",
+      "bytes": 235756
+    },
+    "runtime.safetensors": {
+      "sha256": "0ccf3710033e661da486d1b9f256b8016740414cb1ab63717edbeb72c7389f7c",
+      "bytes": 7316
+    },
+    "state.json": {
+      "sha256": "a0898be5ae57973a232acaebae4ce39738ee230dba7799ed0d015e658cd49f05",
+      "bytes": 42706
+    }
+  }
+}

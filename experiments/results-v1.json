@@ -1,0 +1,310 @@
+{
+  "schema": "neuroterrarium.results-index.v1",
+  "status": "complete",
+  "release_tag": "v0.1.0",
+  "core": {
+    "records": 5280,
+    "protocol_sha256": "6ce70ded46018686721fe234d459dc9b7d49072dda65c81f89552e5c296e5eed",
+    "files": {
+      "results.json": "faa0f2182c2b5a73364f63aabe2122ba1d2f79238d01feffd1f50af100138620",
+      "protocol-lock.json": "3a24c8ef53534238650b91c16a46fa9f551d17b77be9f22f2a2c135ac9ef6b9e",
+      "summary.json": "f637e1b30f9929defa54de5ad2db07f0e6615c0753b4a7c7c296e111640310cb",
+      "graph-summary.json": "948ac26ff03180b8a11fc63f21697c70f9d24912526db15d7949573d680279e6"
+    },
+    "source": {
+      "brain_cache.py": "29e581a15ed83929ba4898edcee640ce3956b3d2cab72034c45d1c0602f9f0d6",
+      "controllers.py": "d401493d8965dbb9fada08e84d8e3edc38e430e857450a68ef273b7d5b749923",
+      "data.py": "afc685639be1386f12cd8147bb448acd3127011587f21e2d5c75999c9505d46f",
+      "interface.py": "0b9142171b9ed69cfa985d4b76f85d8a6188e7d286e43210fc52e0fcaa0e37e1",
+      "neural.py": "32d4ff33c4f7988d105bcf7234b96b9f5a834384769e9468d5368174e102173e",
+      "reference.py": "89cc02714236c18b75e462e80fff193a0eefa30096aa544aacf4733a9fd1bc0d",
+      "registry.py": "dc0cbdee7357746ebd81a786d0bd314460f515c55a3bf4d945ccc68d305f125b",
+      "runtime.py": "e45ba838fcb3fd661be6a88bb26e6c7364c5a422823f22ff71ab1499738af34f",
+      "world.py": "6150cf8af614c2f9b74b544c2077a91599b3ad8e85991de8d969fac1e3486c8a",
+      "evaluation.py": "51fe07d781ca5653bbb1a877e6387a4ca230cc9eb36f7533ddb49bf725b15a86"
+    }
+  },
+  "supplement": {
+    "records": 630,
+    "protocol_sha256": "aa4b3cee902019b16faa0c35609e9e3aa006dbc0e2621dfb08ceab6de62fa6fb",
+    "files": {
+      "results.json": "f67a97a633d8eccd5492977e9c6901beddef7ea02661a8372e67ba6b6130632b",
+      "protocol-lock.json": "e9bd465090a7fc312bb361230f3ef899236a1ab89965936edb290dd9f730e248",
+      "summary.json": "925b577520611433b5fce38e65b36e2408cb2b2d95fb42e31a3d3b24ae6c24d7",
+      "graph-summary.json": "5d361081dddc1f64c290e439b142858e8f1651f907432e6fd8f6d97041b92bb7"
+    },
+    "source": {
+      "brain_cache.py": "29e581a15ed83929ba4898edcee640ce3956b3d2cab72034c45d1c0602f9f0d6",
+      "controllers.py": "d401493d8965dbb9fada08e84d8e3edc38e430e857450a68ef273b7d5b749923",
+      "data.py": "afc685639be1386f12cd8147bb448acd3127011587f21e2d5c75999c9505d46f",
+      "interface.py": "0b9142171b9ed69cfa985d4b76f85d8a6188e7d286e43210fc52e0fcaa0e37e1",
+      "neural.py": "32d4ff33c4f7988d105bcf7234b96b9f5a834384769e9468d5368174e102173e",
+      "reference.py": "89cc02714236c18b75e462e80fff193a0eefa30096aa544aacf4733a9fd1bc0d",
+      "registry.py": "dc0cbdee7357746ebd81a786d0bd314460f515c55a3bf4d945ccc68d305f125b",
+      "runtime.py": "e45ba838fcb3fd661be6a88bb26e6c7364c5a422823f22ff71ab1499738af34f",
+      "world.py": "6150cf8af614c2f9b74b544c2077a91599b3ad8e85991de8d969fac1e3486c8a",
+      "evaluation.py": "51fe07d781ca5653bbb1a877e6387a4ca230cc9eb36f7533ddb49bf725b15a86",
+      "supplemental.py": "3b470197dcbd95665b558a8117e548c090a900eb2f24d9f3402c91076bb5ed86"
+    }
+  },
+  "model_manifest_sha256": "de26cab314ac91685d21fff49b926d8290323df7883b453297809d55720b111c",
+  "supporting_evidence": {
+    "training": {
+      "path": "evidence/normalized/training-v1.json",
+      "sha256": "2d6f532f4394f577cad970372713dca8ff8d3ffc8c324fd1465199f4ed754e21",
+      "bytes": 54214,
+      "release_asset": "scientific-evidence-v1.tar.gz"
+    },
+    "neural": {
+      "path": "evidence/neural-gate-003/summary.json",
+      "sha256": "913d1ff2e2df59acf52333021977956927b6e74d61473aa54dd1080408837d97",
+      "bytes": 10976,
+      "release_asset": "scientific-evidence-v1.tar.gz"
+    },
+    "runtime": {
+      "path": "evidence/runtime-validation-003/validation.json",
+      "sha256": "725e4eb3fb0171ecad2dbf86552139de795a0d8a732c06213163b2583ce49d9f",
+      "bytes": 3664,
+      "release_asset": "scientific-evidence-v1.tar.gz"
+    },
+    "stability": {
+      "path": "evidence/stability-60min-v1/stability.json",
+      "sha256": "f051a08d40ed1a913029580b4db0f36b9f81673a0ea8b0621b5e2808abaf1fdf",
+      "bytes": 25820,
+      "release_asset": "scientific-evidence-v1.tar.gz"
+    },
+    "installed_wheel": {
+      "path": "evidence/installed-wheel-v4/summary.json",
+      "sha256": "ec8633681050375128572eb32f7438d3ee67b9dbce0881aa03b2907fb9a93980",
+      "bytes": 7045,
+      "release_asset": "scientific-evidence-v1.tar.gz"
+    },
+    "portable": {
+      "path": "evidence/portable-v3/summary.json",
+      "sha256": "9d4bd724aa0c6df5cad4e6a828545fbae7f04c6713c6dd40616430065b2cd644",
+      "bytes": 7261,
+      "release_asset": "scientific-evidence-v1.tar.gz"
+    },
+    "supplement_lineage_comparison": {
+      "path": "evidence/evaluation-supplement-v1b-lineage.json",
+      "sha256": "df358e32232ea077036915a663ded02b1d25b915777535a90f677ae9954f38fd",
+      "bytes": 266303,
+      "release_asset": "scientific-evidence-v1.tar.gz"
+    },
+    "supplement_completed_verification": {
+      "path": "evidence/evaluation-supplement-v1b-completed-verification.json",
+      "sha256": "1d0c1a0b80e78bc2099bd7434bc6cec98cc362c0741e4ad15461d461ffec74a3",
+      "bytes": 947,
+      "release_asset": "scientific-evidence-v1.tar.gz"
+    },
+    "supplement_command_records": {
+      "path": "evidence/lineage-commands/supplement-command-records-v1b.json",
+      "sha256": "4d2289279920b903f59857fe5ba5e51680135599171ec22c02c297b1770a32b3",
+      "bytes": 2702,
+      "release_asset": "scientific-evidence-v1.tar.gz"
+    },
+    "core_command_records": {
+      "path": "evidence/lineage-commands/core-command-records-v1.json",
+      "sha256": "85d91e62b6a00b4738b8937cef7fb112fd3aaac6344a2ccc4df728fa8d32bbc6",
+      "bytes": 3617,
+      "release_asset": "scientific-evidence-v1.tar.gz"
+    },
+    "core_completed_verification": {
+      "path": "evidence/evaluation-v1-resume-02/final-integrity.json",
+      "sha256": "9f4d9f50e1643bc0fbcddcd4d6f85b91ad70dc5aec6d76dcc1b850774f8cedb6",
+      "bytes": 1892,
+      "release_asset": "scientific-evidence-v1.tar.gz"
+    }
+  },
+  "supplement_revision": {
+    "path": "experiments/supplement-revision-v1b.json",
+    "parent_protocol_sha256": "b5835c584e3681f36566ac11763b220227227dd31eaf1a4d64fe5411924ebf71",
+    "parent_status_counts": {
+      "completed": 620,
+      "interrupted": 1,
+      "not_started": 9
+    },
+    "newly_executed_units": 630,
+    "reused_parent_units": 0,
+    "pooled_parent_units": 0,
+    "evidence": {
+      "manifest": {
+        "path": "evidence/supplement-resource-revision-v1b.json",
+        "sha256": "e2543e57bd35e50971d474408f8539dd37264d2a8e292a2d1dfab59c6f9bd254",
+        "bytes": 166926
+      },
+      "parent_directory": "evidence/evaluation-supplement-v1",
+      "parent_source": {
+        "path": "source-snapshots/supplement-v1/src/neuroterrarium/supplemental.py",
+        "sha256": "e141ca09b32e1dc8f2ed8ec877f53a1637ba1564207c6aa899e2d0d0c9101204",
+        "bytes": 34384
+      },
+      "parent_config": {
+        "path": "source-snapshots/supplement-v1/configs/evaluate-supplement-v1.json",
+        "sha256": "0e8c3249a531ed0752c3e16ee91907f35946bbad5cc98ce0c45265381f6d38b3",
+        "bytes": 5365
+      },
+      "commands": [
+        {
+          "path": "evidence/lineage-commands/supplement-parent-v1.json",
+          "sha256": "e94c33f84291a9a1faa6dc627f3416c33b7bd97e81603a74651c927e8d07a294",
+          "bytes": 880
+        },
+        {
+          "path": "evidence/lineage-commands/supplement-execution-v1b.json",
+          "sha256": "79d287ce06ba80cf5cdc6342d5c1a1203f5b4252fa82f4fbd1802738b72cac7a",
+          "bytes": 886
+        }
+      ],
+      "release_asset": "scientific-evidence-v1.tar.gz"
+    },
+    "sha256": "f796e34ec2737e06e3093fcf47585bf3db414138743380e97870503fac9415f6",
+    "bytes": 163183
+  },
+  "recovery": {
+    "path": "experiments/recovery-v1.json",
+    "parent_status": "resource_limited",
+    "reused_completed_count": 3926,
+    "rerun_units": [
+      "connectome--tonic_off--C_relocation--90027"
+    ],
+    "newly_executed_units": 1353,
+    "evidence": {
+      "parent_directory": "evidence/evaluation-v1-recovery-01",
+      "manifest": {
+        "path": "evidence/evaluation-v1-recovery-02/recovery-manifest.json",
+        "sha256": "9cf21f381837ef088e28269781bda114ea63161f050b0a20a54ca08dfcbc49bc",
+        "bytes": 1136646
+      },
+      "commands": [
+        {
+          "path": "evidence/lineage-commands/core-preparation-02.json",
+          "sha256": "192f87711e0c958e57fff877894bf2fcc0829c72aa1c2981686f740e75c503a2",
+          "bytes": 940
+        },
+        {
+          "path": "evidence/lineage-commands/core-execution-02.json",
+          "sha256": "20d9f199bc5317f10444a5c2d856249dc3c1d6ea90cf98495d4b210aa2c5f6fb",
+          "bytes": 1596
+        }
+      ],
+      "prefix_proof": {
+        "path": "evidence/evaluation-v1-resume-02/recovery-prefix-exact.json",
+        "sha256": "059827da80c83a7581984c28b2c4c87566f66bf11b57aba1121168cbbbb90f16",
+        "bytes": 2247
+      },
+      "release_asset": "scientific-evidence-v1.tar.gz",
+      "ancestors": [
+        {
+          "parent_directory": "evidence/evaluation-v1",
+          "manifest": {
+            "path": "evidence/evaluation-v1-recovery-01/recovery-manifest.json",
+            "sha256": "7528983338047842dc7ca353ddd0be07bf7727c3da11a4bd0615164576e36d97",
+            "bytes": 73334
+          },
+          "commands": [
+            {
+              "path": "evidence/lineage-commands/core-preparation-v1.json",
+              "sha256": "cb838d125e510560e6611606fe4df56b2d1cef74d1344737bc0ba1bb0396a653",
+              "bytes": 691
+            },
+            {
+              "path": "evidence/lineage-commands/core-execution-01.json",
+              "sha256": "965de4edcfcba2f23554f105b9ffd64a8ab671792e8cc84a74c7efd9f196904f",
+              "bytes": 1532
+            }
+          ],
+          "prefix_proof": {
+            "path": "evidence/evaluation-v1-resume-20260919/recovery-prefix-exact.json",
+            "sha256": "9ddab088443b8a4ba53c5008fc55359326c90300ac42ede0fa42ca8799e23232",
+            "bytes": 2258
+          },
+          "release_asset": "scientific-evidence-v1.tar.gz",
+          "child_directory": "evidence/evaluation-v1-recovery-01"
+        }
+      ]
+    },
+    "independent_final_units": 5280,
+    "history": [
+      {
+        "child_directory": "evidence/evaluation-v1-recovery-01",
+        "status": "resource_limited",
+        "planned_new_units": 5043,
+        "recorded_new_units": 3690,
+        "completed_new_units": 3689,
+        "missing_new_units": 1353
+      },
+      {
+        "child_directory": "evidence/evaluation-v1-recovery-02",
+        "status": "completed",
+        "planned_new_units": 1353,
+        "recorded_new_units": 1353,
+        "completed_new_units": 1353,
+        "missing_new_units": 0
+      }
+    ],
+    "sha256": "50956a1d59db2dea0015c0feafd5f4f410918c096140a56d570021d9e262e25f",
+    "bytes": 2393604
+  },
+  "tables": {
+    "experiments/tables/core-episodes.csv": {
+      "sha256": "1e62ec517d4a1d7635b5eecb315db74923fedaefc74f013f71a1e441249dd88c",
+      "bytes": 1711288,
+      "rows": 5280
+    },
+    "experiments/tables/core-task-summary.csv": {
+      "sha256": "d351dd8fcb97bb5bae5ebb96a6b898c7d9ee638140a4ed6671c8623e8b3f101a",
+      "bytes": 63352,
+      "rows": 176
+    },
+    "experiments/tables/architecture-differences.csv": {
+      "sha256": "5eab4153478a1573b5ca0f01fcac299ec674508f2055dd0b444d2a27086ef060",
+      "bytes": 7931,
+      "rows": 81
+    },
+    "experiments/tables/ablations.csv": {
+      "sha256": "933f4fdcbd48a64c447530f95dcd1ee33d28fd46b0c5ff41da3487ffe7418123",
+      "bytes": 26699,
+      "rows": 236
+    },
+    "experiments/tables/supplement-units.csv": {
+      "sha256": "4b033a4399c34fb60ec87c92770bb30e96b50f4b5809da50dbd09a1141592143",
+      "bytes": 566629,
+      "rows": 630
+    },
+    "experiments/tables/supplement-stress-summary.csv": {
+      "sha256": "1ef0b89dd2803ce16a898dcb8174f45efab9e71d44618306e440d1a4710b36a3",
+      "bytes": 2899,
+      "rows": 20
+    },
+    "experiments/tables/supplement-noise-differences.csv": {
+      "sha256": "ce4f2e4b08c5dc471f1e6c8a4965e629639d3603166ba3a0d9833131ff9c7901",
+      "bytes": 2348,
+      "rows": 24
+    },
+    "experiments/tables/shared-allocation.csv": {
+      "sha256": "99762617d1c0d415d77b386e5674a317aa14067799d0f7b90909ea7fcb64d1b6",
+      "bytes": 5578,
+      "rows": 30
+    }
+  },
+  "generator_sha256": "e7c35725c73d1dafcee68ce37d912b3a54fc17bfa8e00e23ce8166b76a79f50d",
+  "prespecified_examples": [
+    [
+      "A_expansion",
+      "motor_energy_demand"
+    ],
+    [
+      "C_relocation",
+      "food"
+    ]
+  ],
+  "availability": "Local candidate files verified. Public asset availability is checked after the tagged release.",
+  "limits": [
+    "Three training seeds per architecture.",
+    "One neural-input repetition per environment.",
+    "Short fixed scenes and engineering interfaces.",
+    "Conditional reaction/recovery intervals exclude nonresponding units, with defined counts retained.",
+    "Process RSS includes shared graph and all loaded policies; no exclusive per-model memory comparison."
+  ]
+}

@@ -1,0 +1,1711 @@
+{
+  "schema": "neuroterrarium.ppo-checkpoint.v1",
+  "policy": {
+    "schema": "gaussian-latent-ppo-v1",
+    "architecture": "recurrent",
+    "seed": 101,
+    "initialization_seed": 6589370895928098699,
+    "hidden_size": 64,
+    "observation_schema": "local-rays-v1",
+    "action_schema": "drive-turn-escape-feed-v1",
+    "observation_size": 59,
+    "normalization": "fixed world schema scales; no fitted running normalization",
+    "action_distribution": "four independent Gaussian latent variables",
+    "action_transform": "sigmoid drive/escape/feed; tanh turn; shared optional hybrid reflex"
+  },
+  "config": {
+    "schema": "neuroterrarium.ppo.v1",
+    "num_envs": 4,
+    "torch_threads": 2,
+    "hidden_size": 64,
+    "rollout_steps": 128,
+    "sequence_length": 32,
+    "minibatch_sequences": 16,
+    "epochs": 4,
+    "episode_steps": 250,
+    "learning_rate": 0.0003,
+    "gamma": 0.99,
+    "gae_lambda": 0.95,
+    "clip": 0.2,
+    "value_coefficient": 0.5,
+    "entropy_coefficient": 0.005,
+    "max_grad_norm": 0.5,
+    "checkpoint_updates": 20,
+    "dev_seeds": [
+      7001,
+      7002,
+      7003,
+      7004,
+      7005,
+      7006,
+      7007,
+      7008
+    ],
+    "dev_episode_steps": 250,
+    "architectures": [
+      "feedforward",
+      "recurrent",
+      "hybrid"
+    ],
+    "seeds": [
+      101,
+      202,
+      303
+    ],
+    "transition_definition": "One 0.02 s action window in one environment. Vector steps multiply by num_envs.",
+    "normalization": "Fixed local-rays-v1 scales; no learned running normalizer.",
+    "reward": "100*food_delta + energy_delta - 0.02*collision_count_delta - 0.001*(drive+3*escape). Food uses physical World consumption.",
+    "termination": "Body energy <=0.05 terminates. The 250-step episode limit truncates, with final-observation value bootstrap and no GAE continuation across reset.",
+    "sequence_protocol": "PPO on contiguous truncated-BPTT chunks; stored behavior hidden state initializes each chunk, episode_start resets state inside chunks. Gaussian latent likelihood is optimized before shared deterministic action transform.",
+    "scene_distribution": "Equal forage, obstacle, threat/control, relocation cases; independent named train/dev/test/stress map streams. Food relocation is scheduled at reset.",
+    "hybrid_reflex": "Same training/evaluation apply_action function; shared proximity and projection change only. Record raw action/log probability/applied action/reflex corrections separately.",
+    "status": "frozen",
+    "total_transitions": 1000000,
+    "purpose": "Fixed-budget independent PPO training of three feedforward, three recurrent, and three recurrent controllers with an explicit reflex branch.",
+    "frozen_date": "2026-09-13",
+    "resource_limits": {
+      "minimum_disk_free_bytes": 10737418240,
+      "minimum_available_memory_bytes": 3221225472,
+      "maximum_process_rss_bytes": 1073741824,
+      "maximum_wall_seconds": 900
+    },
+    "suite_wall_max_seconds": 5400,
+    "budget_evidence": {
+      "protocol": "4096 environment transitions per architecture; four worlds, two Torch CPU threads",
+      "measured_transitions_per_second": {
+        "feedforward": 3109.5649052598005,
+        "recurrent": 2263.9651032041525,
+        "hybrid": 2117.7997234909294
+      },
+      "measured_peak_process_rss_bytes": 320307200,
+      "estimated_nine_model_seconds": 3660,
+      "scope": "Smoke establishes execution and resource cost; it does not establish trained performance."
+    }
+  },
+  "config_sha256": "656b93d7c88d9f03a6e21c4b853a2f24a6f472fc98a8b24a316119c45db44245",
+  "source_sha256": {
+    "training.py": "01a2e3866738c692dfc64d1d125d1696daf639df26a1d6c2cd81ffa8c907472e",
+    "controllers.py": "d401493d8965dbb9fada08e84d8e3edc38e430e857450a68ef273b7d5b749923",
+    "world.py": "6f84eebb1785a91eafd0922524d860581a780fcf0df6facc6317bc06556b7b31"
+  },
+  "transitions": 1000000,
+  "updates": 1954,
+  "elapsed_wall_seconds": 359.1596384999939,
+  "training_status": "completed",
+  "optimizer": {
+    "state": {
+      "0": {
+        "step": {
+          "tensor": "optimizer/0/step"
+        },
+        "exp_avg": {
+          "tensor": "optimizer/0/exp_avg"
+        },
+        "exp_avg_sq": {
+          "tensor": "optimizer/0/exp_avg_sq"
+        }
+      },
+      "1": {
+        "step": {
+          "tensor": "optimizer/1/step"
+        },
+        "exp_avg": {
+          "tensor": "optimizer/1/exp_avg"
+        },
+        "exp_avg_sq": {
+          "tensor": "optimizer/1/exp_avg_sq"
+        }
+      },
+      "2": {
+        "step": {
+          "tensor": "optimizer/2/step"
+        },
+        "exp_avg": {
+          "tensor": "optimizer/2/exp_avg"
+        },
+        "exp_avg_sq": {
+          "tensor": "optimizer/2/exp_avg_sq"
+        }
+      },
+      "3": {
+        "step": {
+          "tensor": "optimizer/3/step"
+        },
+        "exp_avg": {
+          "tensor": "optimizer/3/exp_avg"
+        },
+        "exp_avg_sq": {
+          "tensor": "optimizer/3/exp_avg_sq"
+        }
+      },
+      "4": {
+        "step": {
+          "tensor": "optimizer/4/step"
+        },
+        "exp_avg": {
+          "tensor": "optimizer/4/exp_avg"
+        },
+        "exp_avg_sq": {
+          "tensor": "optimizer/4/exp_avg_sq"
+        }
+      },
+      "5": {
+        "step": {
+          "tensor": "optimizer/5/step"
+        },
+        "exp_avg": {
+          "tensor": "optimizer/5/exp_avg"
+        },
+        "exp_avg_sq": {
+          "tensor": "optimizer/5/exp_avg_sq"
+        }
+      },
+      "6": {
+        "step": {
+          "tensor": "optimizer/6/step"
+        },
+        "exp_avg": {
+          "tensor": "optimizer/6/exp_avg"
+        },
+        "exp_avg_sq": {
+          "tensor": "optimizer/6/exp_avg_sq"
+        }
+      },
+      "7": {
+        "step": {
+          "tensor": "optimizer/7/step"
+        },
+        "exp_avg": {
+          "tensor": "optimizer/7/exp_avg"
+        },
+        "exp_avg_sq": {
+          "tensor": "optimizer/7/exp_avg_sq"
+        }
+      },
+      "8": {
+        "step": {
+          "tensor": "optimizer/8/step"
+        },
+        "exp_avg": {
+          "tensor": "optimizer/8/exp_avg"
+        },
+        "exp_avg_sq": {
+          "tensor": "optimizer/8/exp_avg_sq"
+        }
+      },
+      "9": {
+        "step": {
+          "tensor": "optimizer/9/step"
+        },
+        "exp_avg": {
+          "tensor": "optimizer/9/exp_avg"
+        },
+        "exp_avg_sq": {
+          "tensor": "optimizer/9/exp_avg_sq"
+        }
+      },
+      "10": {
+        "step": {
+          "tensor": "optimizer/10/step"
+        },
+        "exp_avg": {
+          "tensor": "optimizer/10/exp_avg"
+        },
+        "exp_avg_sq": {
+          "tensor": "optimizer/10/exp_avg_sq"
+        }
+      }
+    },
+    "param_groups": [
+      {
+        "lr": 0.0003,
+        "betas": [
+          0.9,
+          0.999
+        ],
+        "eps": 1e-05,
+        "weight_decay": 0,
+        "amsgrad": false,
+        "maximize": false,
+        "foreach": null,
+        "capturable": false,
+        "differentiable": false,
+        "fused": null,
+        "decoupled_weight_decay": false,
+        "params": [
+          0,
+          1,
+          2,
+          3,
+          4,
+          5,
+          6,
+          7,
+          8,
+          9,
+          10
+        ]
+      }
+    ]
+  },
+  "permutations": {
+    "bit_generator": "PCG64",
+    "state": {
+      "state": 89228447383019216722942824333446401605,
+      "inc": 245690330059495547920452732432394260535
+    },
+    "has_uint32": 1,
+    "uinteger": 2702303447
+  },
+  "environments": [
+    {
+      "seed": 6594743209303488629,
+      "episode_steps": 250,
+      "split": "train",
+      "random": {
+        "bit_generator": "PCG64",
+        "state": {
+          "state": 99999178575513432086036476276409686913,
+          "inc": 134589715848198648312475019182117453969
+        },
+        "has_uint32": 1,
+        "uinteger": 605995635
+      },
+      "episodes": 1001,
+      "world": {
+        "schema": "world-v1",
+        "seed": 6185593098639429,
+        "scenario": "open",
+        "step": 0,
+        "bodies": [
+          {
+            "x": 45.617602131847526,
+            "y": 22.056985189068865,
+            "heading": 2.3315976125661555,
+            "speed": 0.0,
+            "energy": 0.5853412710773287,
+            "food": 0.0,
+            "collisions": 0,
+            "action": [
+              0.0,
+              0.0,
+              0.0,
+              0.0
+            ]
+          }
+        ],
+        "foods": [
+          {
+            "x": 42.23906021664008,
+            "y": 25.446555008144376,
+            "amount": 0.7,
+            "radius": 1.2
+          },
+          {
+            "x": 56.59840573064436,
+            "y": 26.896608348432675,
+            "amount": 0.7,
+            "radius": 1.2
+          }
+        ],
+        "obstacles": [],
+        "stimuli": [],
+        "external_events": [],
+        "previous_projection": [
+          [
+            0.0,
+            0.0,
+            0.0,
+            0.0,
+            0.0,
+            0.0,
+            0.0,
+            0.0,
+            0.0,
+            0.0,
+            0.0,
+            0.0,
+            0.0,
+            0.0,
+            0.0,
+            0.0
+          ]
+        ],
+        "replenish": false
+      },
+      "kind": "relocation",
+      "scheduled_food": [
+        64.14745660211963,
+        12.71418766722833
+      ],
+      "elapsed": 0,
+      "episode_return": 0.0
+    },
+    {
+      "seed": 1835313886365635925,
+      "episode_steps": 250,
+      "split": "train",
+      "random": {
+        "bit_generator": "PCG64",
+        "state": {
+          "state": 249342703436876625732686167164785256713,
+          "inc": 245022352342056043064423149102731899073
+        },
+        "has_uint32": 1,
+        "uinteger": 3787971596
+      },
+      "episodes": 1001,
+      "world": {
+        "schema": "world-v1",
+        "seed": 6155868237581094,
+        "scenario": "open",
+        "step": 0,
+        "bodies": [
+          {
+            "x": 40.85394312229745,
+            "y": 20.0341315805632,
+            "heading": -1.1813553775454975,
+            "speed": 0.0,
+            "energy": 0.9474938598242206,
+            "food": 0.0,
+            "collisions": 0,
+            "action": [
+              0.0,
+              0.0,
+              0.0,
+              0.0
+            ]
+          }
+        ],
+        "foods": [
+          {
+            "x": 42.128918850821684,
+            "y": 17.92999237417783,
+            "amount": 0.7,
+            "radius": 1.2
+          },
+          {
+            "x": 28.86650662643266,
+            "y": 19.4851632229971,
+            "amount": 0.7,
+            "radius": 1.2
+          }
+        ],
+        "obstacles": [],
+        "stimuli": [],
+        "external_events": [],
+        "previous_projection": [
+          [
+            0.0,
+            0.0,
+            0.0,
+            0.0,
+            0.0,
+            0.0,
+            0.0,
+            0.0,
+            0.0,
+            0.0,
+            0.0,
+            0.0,
+            0.0,
+            0.0,
+            0.0,
+            0.0
+          ]
+        ],
+        "replenish": false
+      },
+      "kind": "forage",
+      "scheduled_food": [
+        16.363740050310714,
+        22.16883183826333
+      ],
+      "elapsed": 0,
+      "episode_return": 0.0
+    },
+    {
+      "seed": 3002173595317455997,
+      "episode_steps": 250,
+      "split": "train",
+      "random": {
+        "bit_generator": "PCG64",
+        "state": {
+          "state": 206903317397469246940338397652482552606,
+          "inc": 48253040134152222113695082246337833735
+        },
+        "has_uint32": 1,
+        "uinteger": 2187226724
+      },
+      "episodes": 1001,
+      "world": {
+        "schema": "world-v1",
+        "seed": 803431542586749,
+        "scenario": "open",
+        "step": 0,
+        "bodies": [
+          {
+            "x": 33.39220405936506,
+            "y": 21.16989086271095,
+            "heading": 1.6563022659703455,
+            "speed": 0.0,
+            "energy": 0.7546130133558849,
+            "food": 0.0,
+            "collisions": 0,
+            "action": [
+              0.0,
+              0.0,
+              0.0,
+              0.0
+            ]
+          }
+        ],
+        "foods": [
+          {
+            "x": 28.01977939736971,
+            "y": 23.655210581116854,
+            "amount": 0.7,
+            "radius": 1.2
+          },
+          {
+            "x": 23.379177377490194,
+            "y": 27.783459995037454,
+            "amount": 0.7,
+            "radius": 1.2
+          }
+        ],
+        "obstacles": [],
+        "stimuli": [],
+        "external_events": [],
+        "previous_projection": [
+          [
+            0.0,
+            0.0,
+            0.0,
+            0.0,
+            0.0,
+            0.0,
+            0.0,
+            0.0,
+            0.0,
+            0.0,
+            0.0,
+            0.0,
+            0.0,
+            0.0,
+            0.0,
+            0.0
+          ]
+        ],
+        "replenish": false
+      },
+      "kind": "relocation",
+      "scheduled_food": [
+        51.170642925920774,
+        22.43139974874195
+      ],
+      "elapsed": 0,
+      "episode_return": 0.0
+    },
+    {
+      "seed": 7075467032041511230,
+      "episode_steps": 250,
+      "split": "train",
+      "random": {
+        "bit_generator": "PCG64",
+        "state": {
+          "state": 67624630031765432783534987168580792340,
+          "inc": 209704947220887238218682401738533579841
+        },
+        "has_uint32": 1,
+        "uinteger": 1029074995
+      },
+      "episodes": 1001,
+      "world": {
+        "schema": "world-v1",
+        "seed": 73280705851678,
+        "scenario": "open",
+        "step": 0,
+        "bodies": [
+          {
+            "x": 43.110021076658825,
+            "y": 33.717146085891024,
+            "heading": -0.5404786051156227,
+            "speed": 0.0,
+            "energy": 0.7270009276246674,
+            "food": 0.0,
+            "collisions": 0,
+            "action": [
+              0.0,
+              0.0,
+              0.0,
+              0.0
+            ]
+          }
+        ],
+        "foods": [
+          {
+            "x": 44.921682728066706,
+            "y": 30.69861735891027,
+            "amount": 0.7,
+            "radius": 1.2
+          },
+          {
+            "x": 50.75000746673924,
+            "y": 24.46346530690443,
+            "amount": 0.7,
+            "radius": 1.2
+          }
+        ],
+        "obstacles": [],
+        "stimuli": [
+          {
+            "x": 33.153155978154636,
+            "y": 34.6449593268987,
+            "radius": 1.2,
+            "vx": 0.0,
+            "vy": 0.0,
+            "growth": 1.0,
+            "physical": true
+          }
+        ],
+        "external_events": [],
+        "previous_projection": [
+          [
+            0.0,
+            0.0,
+            0.0,
+            0.0,
+            0.0,
+            0.0,
+            0.0,
+            0.0,
+            0.0,
+            0.0,
+            0.0,
+            0.0,
+            0.0,
+            0.0,
+            0.0,
+            0.0
+          ]
+        ],
+        "replenish": false
+      },
+      "kind": "threat",
+      "scheduled_food": [
+        34.603661948869565,
+        32.08922632098785
+      ],
+      "elapsed": 0,
+      "episode_return": 0.0
+    }
+  ],
+  "recent_episodes": [
+    {
+      "transition": 975997,
+      "food": 0.6999999999999996,
+      "energy": 0.9995513335825874,
+      "collisions": 0,
+      "episode_return": 70.1104228157261,
+      "episode_steps": 250,
+      "scene": "threat",
+      "terminated": false,
+      "truncated": true
+    },
+    {
+      "transition": 975998,
+      "food": 0.0,
+      "energy": 0.59566614696073,
+      "collisions": 0,
+      "episode_return": -0.35612128442410373,
+      "episode_steps": 250,
+      "scene": "obstacles",
+      "terminated": false,
+      "truncated": true
+    },
+    {
+      "transition": 975999,
+      "food": 0.0,
+      "energy": 0.7794304941412645,
+      "collisions": 0,
+      "episode_return": -0.2620694613315717,
+      "episode_steps": 250,
+      "scene": "threat",
+      "terminated": false,
+      "truncated": true
+    },
+    {
+      "transition": 976000,
+      "food": 0.0,
+      "energy": 0.5837550140808938,
+      "collisions": 0,
+      "episode_return": -0.20829972114212747,
+      "episode_steps": 250,
+      "scene": "forage",
+      "terminated": false,
+      "truncated": true
+    },
+    {
+      "transition": 976997,
+      "food": 0.0,
+      "energy": 0.874868227246165,
+      "collisions": 0,
+      "episode_return": -0.277027508952208,
+      "episode_steps": 250,
+      "scene": "forage",
+      "terminated": false,
+      "truncated": true
+    },
+    {
+      "transition": 976998,
+      "food": 0.0,
+      "energy": 0.6879948829519595,
+      "collisions": 0,
+      "episode_return": -0.22689822270600257,
+      "episode_steps": 250,
+      "scene": "relocation",
+      "terminated": false,
+      "truncated": true
+    },
+    {
+      "transition": 976999,
+      "food": 0.0,
+      "energy": 0.5383698989325025,
+      "collisions": 0,
+      "episode_return": -0.21558561494957681,
+      "episode_steps": 250,
+      "scene": "forage",
+      "terminated": false,
+      "truncated": true
+    },
+    {
+      "transition": 977000,
+      "food": 0.0,
+      "energy": 0.7408382215717368,
+      "collisions": 0,
+      "episode_return": -0.26766360549215173,
+      "episode_steps": 250,
+      "scene": "threat",
+      "terminated": false,
+      "truncated": true
+    },
+    {
+      "transition": 977997,
+      "food": 0.0,
+      "energy": 0.5626100945428834,
+      "collisions": 0,
+      "episode_return": -0.247213090757692,
+      "episode_steps": 250,
+      "scene": "relocation",
+      "terminated": false,
+      "truncated": true
+    },
+    {
+      "transition": 977998,
+      "food": 0.0,
+      "energy": 0.8006036895142126,
+      "collisions": 0,
+      "episode_return": -0.3542257504249732,
+      "episode_steps": 250,
+      "scene": "obstacles",
+      "terminated": false,
+      "truncated": true
+    },
+    {
+      "transition": 977999,
+      "food": 0.0,
+      "energy": 0.9097916381041707,
+      "collisions": 0,
+      "episode_return": -0.3009765408631802,
+      "episode_steps": 250,
+      "scene": "threat",
+      "terminated": false,
+      "truncated": true
+    },
+    {
+      "transition": 978000,
+      "food": 0.45944909028708963,
+      "energy": 0.9563814988973781,
+      "collisions": 0,
+      "episode_return": 46.03770838540674,
+      "episode_steps": 250,
+      "scene": "relocation",
+      "terminated": false,
+      "truncated": true
+    },
+    {
+      "transition": 978997,
+      "food": 0.0,
+      "energy": 0.5405379908344099,
+      "collisions": 0,
+      "episode_return": -0.21856628894168859,
+      "episode_steps": 250,
+      "scene": "forage",
+      "terminated": false,
+      "truncated": true
+    },
+    {
+      "transition": 978998,
+      "food": 0.0,
+      "energy": 0.7044169299165095,
+      "collisions": 0,
+      "episode_return": -0.253009992705285,
+      "episode_steps": 250,
+      "scene": "forage",
+      "terminated": false,
+      "truncated": true
+    },
+    {
+      "transition": 978999,
+      "food": 0.0,
+      "energy": 0.588842077261723,
+      "collisions": 0,
+      "episode_return": -0.25556974601451177,
+      "episode_steps": 250,
+      "scene": "relocation",
+      "terminated": false,
+      "truncated": true
+    },
+    {
+      "transition": 979000,
+      "food": 0.0,
+      "energy": 0.7047963996689925,
+      "collisions": 0,
+      "episode_return": -0.26478161260753996,
+      "episode_steps": 250,
+      "scene": "threat",
+      "terminated": false,
+      "truncated": true
+    },
+    {
+      "transition": 979997,
+      "food": 0.6999999999999995,
+      "energy": 0.9984138560048913,
+      "collisions": 0,
+      "episode_return": 70.18422390783978,
+      "episode_steps": 250,
+      "scene": "forage",
+      "terminated": false,
+      "truncated": true
+    },
+    {
+      "transition": 979998,
+      "food": 0.0,
+      "energy": 0.6068037106895982,
+      "collisions": 0,
+      "episode_return": -0.25996936600036796,
+      "episode_steps": 250,
+      "scene": "forage",
+      "terminated": false,
+      "truncated": true
+    },
+    {
+      "transition": 979999,
+      "food": 0.7000000000000004,
+      "energy": 0.9816970106739284,
+      "collisions": 0,
+      "episode_return": 70.28914922431133,
+      "episode_steps": 250,
+      "scene": "threat",
+      "terminated": false,
+      "truncated": true
+    },
+    {
+      "transition": 980000,
+      "food": 0.0,
+      "energy": 0.51373173752964,
+      "collisions": 0,
+      "episode_return": -0.35169782653797377,
+      "episode_steps": 250,
+      "scene": "obstacles",
+      "terminated": false,
+      "truncated": true
+    },
+    {
+      "transition": 980997,
+      "food": 0.2331373769976198,
+      "energy": 0.8414517489749704,
+      "collisions": 0,
+      "episode_return": 23.239129620815454,
+      "episode_steps": 250,
+      "scene": "forage",
+      "terminated": false,
+      "truncated": true
+    },
+    {
+      "transition": 980998,
+      "food": 0.0,
+      "energy": 0.5875045817776897,
+      "collisions": 0,
+      "episode_return": -0.2541159643572576,
+      "episode_steps": 250,
+      "scene": "threat",
+      "terminated": false,
+      "truncated": true
+    },
+    {
+      "transition": 980999,
+      "food": 0.0,
+      "energy": 0.5414544483945916,
+      "collisions": 0,
+      "episode_return": -0.32816382008172557,
+      "episode_steps": 250,
+      "scene": "obstacles",
+      "terminated": false,
+      "truncated": true
+    },
+    {
+      "transition": 981000,
+      "food": 0.0,
+      "energy": 0.5697509617288776,
+      "collisions": 0,
+      "episode_return": -0.22458160279592507,
+      "episode_steps": 250,
+      "scene": "threat",
+      "terminated": false,
+      "truncated": true
+    },
+    {
+      "transition": 981997,
+      "food": 0.0,
+      "energy": 0.5347328525051688,
+      "collisions": 0,
+      "episode_return": -0.23718637416832214,
+      "episode_steps": 250,
+      "scene": "forage",
+      "terminated": false,
+      "truncated": true
+    },
+    {
+      "transition": 981998,
+      "food": 0.7000000000000016,
+      "energy": 0.995067574461689,
+      "collisions": 0,
+      "episode_return": 70.16589108330683,
+      "episode_steps": 250,
+      "scene": "forage",
+      "terminated": false,
+      "truncated": true
+    },
+    {
+      "transition": 981999,
+      "food": 0.0,
+      "energy": 0.5747549104295233,
+      "collisions": 0,
+      "episode_return": -0.20433188934594268,
+      "episode_steps": 250,
+      "scene": "relocation",
+      "terminated": false,
+      "truncated": true
+    },
+    {
+      "transition": 982000,
+      "food": 0.0,
+      "energy": 0.8174107139824267,
+      "collisions": 0,
+      "episode_return": -0.30328186142236013,
+      "episode_steps": 250,
+      "scene": "relocation",
+      "terminated": false,
+      "truncated": true
+    },
+    {
+      "transition": 982997,
+      "food": 0.0,
+      "energy": 0.5434056709985464,
+      "collisions": 0,
+      "episode_return": -0.22834000103183028,
+      "episode_steps": 250,
+      "scene": "threat",
+      "terminated": false,
+      "truncated": true
+    },
+    {
+      "transition": 982998,
+      "food": 0.7000000000000005,
+      "energy": 0.9967514299082572,
+      "collisions": 0,
+      "episode_return": 70.0953000070125,
+      "episode_steps": 250,
+      "scene": "threat",
+      "terminated": false,
+      "truncated": true
+    },
+    {
+      "transition": 982999,
+      "food": 0.0,
+      "energy": 0.5261197551624298,
+      "collisions": 0,
+      "episode_return": -0.22826571649201188,
+      "episode_steps": 250,
+      "scene": "forage",
+      "terminated": false,
+      "truncated": true
+    },
+    {
+      "transition": 983000,
+      "food": 0.4992552818357944,
+      "energy": 0.9844871753152742,
+      "collisions": 0,
+      "episode_return": 50.03092145616961,
+      "episode_steps": 250,
+      "scene": "relocation",
+      "terminated": false,
+      "truncated": true
+    },
+    {
+      "transition": 983997,
+      "food": 0.0,
+      "energy": 0.7062338601937426,
+      "collisions": 0,
+      "episode_return": -0.3035826944534858,
+      "episode_steps": 250,
+      "scene": "relocation",
+      "terminated": false,
+      "truncated": true
+    },
+    {
+      "transition": 983998,
+      "food": 0.0,
+      "energy": 0.7644423008277195,
+      "collisions": 0,
+      "episode_return": -0.28719947093099346,
+      "episode_steps": 250,
+      "scene": "relocation",
+      "terminated": false,
+      "truncated": true
+    },
+    {
+      "transition": 983999,
+      "food": 0.0,
+      "energy": 0.6360609792308761,
+      "collisions": 0,
+      "episode_return": -0.26382621644549,
+      "episode_steps": 250,
+      "scene": "threat",
+      "terminated": false,
+      "truncated": true
+    },
+    {
+      "transition": 984000,
+      "food": 0.6999999999999997,
+      "energy": 0.9689690502551848,
+      "collisions": 0,
+      "episode_return": 70.28489342431452,
+      "episode_steps": 250,
+      "scene": "forage",
+      "terminated": false,
+      "truncated": true
+    },
+    {
+      "transition": 984997,
+      "food": 0.7000000000000008,
+      "energy": 0.9995735356561093,
+      "collisions": 0,
+      "episode_return": 70.25846323687664,
+      "episode_steps": 250,
+      "scene": "forage",
+      "terminated": false,
+      "truncated": true
+    },
+    {
+      "transition": 984998,
+      "food": 0.0,
+      "energy": 0.6081475331360333,
+      "collisions": 0,
+      "episode_return": -0.34680334441089955,
+      "episode_steps": 250,
+      "scene": "obstacles",
+      "terminated": false,
+      "truncated": true
+    },
+    {
+      "transition": 984999,
+      "food": 0.0,
+      "energy": 0.8140521435109682,
+      "collisions": 0,
+      "episode_return": -0.2978990184596922,
+      "episode_steps": 250,
+      "scene": "threat",
+      "terminated": false,
+      "truncated": true
+    },
+    {
+      "transition": 985000,
+      "food": 0.6999999999999997,
+      "energy": 0.9958945398955693,
+      "collisions": 0,
+      "episode_return": 70.25905714727591,
+      "episode_steps": 250,
+      "scene": "forage",
+      "terminated": false,
+      "truncated": true
+    },
+    {
+      "transition": 985997,
+      "food": 0.0,
+      "energy": 0.7791080114828968,
+      "collisions": 0,
+      "episode_return": -0.24233269855968645,
+      "episode_steps": 250,
+      "scene": "threat",
+      "terminated": false,
+      "truncated": true
+    },
+    {
+      "transition": 985998,
+      "food": 0.0,
+      "energy": 0.5305903083450931,
+      "collisions": 0,
+      "episode_return": -0.31303225369172055,
+      "episode_steps": 250,
+      "scene": "obstacles",
+      "terminated": false,
+      "truncated": true
+    },
+    {
+      "transition": 985999,
+      "food": 0.0,
+      "energy": 0.8631648509780444,
+      "collisions": 0,
+      "episode_return": -0.29370341165125435,
+      "episode_steps": 250,
+      "scene": "relocation",
+      "terminated": false,
+      "truncated": true
+    },
+    {
+      "transition": 986000,
+      "food": 0.7000000000000004,
+      "energy": 0.9234580033761216,
+      "collisions": 0,
+      "episode_return": 70.04532330377737,
+      "episode_steps": 250,
+      "scene": "threat",
+      "terminated": false,
+      "truncated": true
+    },
+    {
+      "transition": 986997,
+      "food": 0.0,
+      "energy": 0.7475082051462723,
+      "collisions": 0,
+      "episode_return": -0.26916262609049735,
+      "episode_steps": 250,
+      "scene": "threat",
+      "terminated": false,
+      "truncated": true
+    },
+    {
+      "transition": 986998,
+      "food": 0.0,
+      "energy": 0.8349596921745435,
+      "collisions": 0,
+      "episode_return": -0.3526607290418076,
+      "episode_steps": 250,
+      "scene": "obstacles",
+      "terminated": false,
+      "truncated": true
+    },
+    {
+      "transition": 986999,
+      "food": 0.0,
+      "energy": 0.5649286157904763,
+      "collisions": 0,
+      "episode_return": -0.32809769714448656,
+      "episode_steps": 250,
+      "scene": "obstacles",
+      "terminated": false,
+      "truncated": true
+    },
+    {
+      "transition": 987000,
+      "food": 0.0,
+      "energy": 0.717497897325237,
+      "collisions": 0,
+      "episode_return": -0.2504573948419102,
+      "episode_steps": 250,
+      "scene": "forage",
+      "terminated": false,
+      "truncated": true
+    },
+    {
+      "transition": 987997,
+      "food": 0.6999999999999995,
+      "energy": 0.9961326574622562,
+      "collisions": 0,
+      "episode_return": 70.13710002779246,
+      "episode_steps": 250,
+      "scene": "threat",
+      "terminated": false,
+      "truncated": true
+    },
+    {
+      "transition": 987998,
+      "food": 0.0,
+      "energy": 0.6639100682984768,
+      "collisions": 0,
+      "episode_return": -0.32893838364269445,
+      "episode_steps": 250,
+      "scene": "obstacles",
+      "terminated": false,
+      "truncated": true
+    },
+    {
+      "transition": 987999,
+      "food": 0.0,
+      "energy": 0.7743318189901546,
+      "collisions": 0,
+      "episode_return": -0.33759594510383895,
+      "episode_steps": 250,
+      "scene": "obstacles",
+      "terminated": false,
+      "truncated": true
+    },
+    {
+      "transition": 988000,
+      "food": 0.36351989232003673,
+      "energy": 0.8769770891630917,
+      "collisions": 0,
+      "episode_return": 36.39916821388285,
+      "episode_steps": 250,
+      "scene": "threat",
+      "terminated": false,
+      "truncated": true
+    },
+    {
+      "transition": 988997,
+      "food": 0.0,
+      "energy": 0.7638318425819786,
+      "collisions": 0,
+      "episode_return": -0.2176027711385867,
+      "episode_steps": 250,
+      "scene": "threat",
+      "terminated": false,
+      "truncated": true
+    },
+    {
+      "transition": 988998,
+      "food": 0.0,
+      "energy": 0.5463875722834839,
+      "collisions": 0,
+      "episode_return": -0.16039198234563762,
+      "episode_steps": 250,
+      "scene": "threat",
+      "terminated": false,
+      "truncated": true
+    },
+    {
+      "transition": 988999,
+      "food": 0.0,
+      "energy": 0.597573160273587,
+      "collisions": 0,
+      "episode_return": -0.22808921648617814,
+      "episode_steps": 250,
+      "scene": "forage",
+      "terminated": false,
+      "truncated": true
+    },
+    {
+      "transition": 989000,
+      "food": 0.4956276127696039,
+      "energy": 0.912875627181563,
+      "collisions": 0,
+      "episode_return": 49.68105116500303,
+      "episode_steps": 250,
+      "scene": "relocation",
+      "terminated": false,
+      "truncated": true
+    },
+    {
+      "transition": 989997,
+      "food": 0.0,
+      "energy": 0.9074138237299512,
+      "collisions": 0,
+      "episode_return": -0.2507181048726281,
+      "episode_steps": 250,
+      "scene": "forage",
+      "terminated": false,
+      "truncated": true
+    },
+    {
+      "transition": 989998,
+      "food": 0.0,
+      "energy": 0.6537792756615839,
+      "collisions": 0,
+      "episode_return": -0.3474821839128076,
+      "episode_steps": 250,
+      "scene": "threat",
+      "terminated": false,
+      "truncated": true
+    },
+    {
+      "transition": 989999,
+      "food": 0.0,
+      "energy": 0.9040285282218492,
+      "collisions": 0,
+      "episode_return": -0.26807016417093527,
+      "episode_steps": 250,
+      "scene": "relocation",
+      "terminated": false,
+      "truncated": true
+    },
+    {
+      "transition": 990000,
+      "food": 0.0,
+      "energy": 0.8741409074181685,
+      "collisions": 0,
+      "episode_return": -0.2440408940349514,
+      "episode_steps": 250,
+      "scene": "threat",
+      "terminated": false,
+      "truncated": true
+    },
+    {
+      "transition": 990997,
+      "food": 0.0,
+      "energy": 0.6723760442647105,
+      "collisions": 0,
+      "episode_return": -0.387591527527682,
+      "episode_steps": 250,
+      "scene": "threat",
+      "terminated": false,
+      "truncated": true
+    },
+    {
+      "transition": 990998,
+      "food": 0.0,
+      "energy": 0.6197271666859118,
+      "collisions": 0,
+      "episode_return": -0.22835628514805703,
+      "episode_steps": 250,
+      "scene": "forage",
+      "terminated": false,
+      "truncated": true
+    },
+    {
+      "transition": 990999,
+      "food": 0.0,
+      "energy": 0.7377064304277298,
+      "collisions": 0,
+      "episode_return": -0.3232265717323879,
+      "episode_steps": 250,
+      "scene": "obstacles",
+      "terminated": false,
+      "truncated": true
+    },
+    {
+      "transition": 991000,
+      "food": 0.7000000000000015,
+      "energy": 0.9499968256765599,
+      "collisions": 0,
+      "episode_return": 70.23085315959544,
+      "episode_steps": 250,
+      "scene": "threat",
+      "terminated": false,
+      "truncated": true
+    },
+    {
+      "transition": 991997,
+      "food": 0.0,
+      "energy": 0.5955035778192964,
+      "collisions": 0,
+      "episode_return": -0.3379869610749934,
+      "episode_steps": 250,
+      "scene": "obstacles",
+      "terminated": false,
+      "truncated": true
+    },
+    {
+      "transition": 991998,
+      "food": 0.0,
+      "energy": 0.7207920919792585,
+      "collisions": 0,
+      "episode_return": -0.3585027729813947,
+      "episode_steps": 250,
+      "scene": "obstacles",
+      "terminated": false,
+      "truncated": true
+    },
+    {
+      "transition": 991999,
+      "food": 0.0,
+      "energy": 0.773829001013207,
+      "collisions": 0,
+      "episode_return": -0.34040382136043107,
+      "episode_steps": 250,
+      "scene": "obstacles",
+      "terminated": false,
+      "truncated": true
+    },
+    {
+      "transition": 992000,
+      "food": 0.0,
+      "energy": 0.5524521651702864,
+      "collisions": 0,
+      "episode_return": -0.33354802328649963,
+      "episode_steps": 250,
+      "scene": "obstacles",
+      "terminated": false,
+      "truncated": true
+    },
+    {
+      "transition": 992997,
+      "food": 0.0,
+      "energy": 0.7025730540842249,
+      "collisions": 0,
+      "episode_return": -0.23774814045485035,
+      "episode_steps": 250,
+      "scene": "forage",
+      "terminated": false,
+      "truncated": true
+    },
+    {
+      "transition": 992998,
+      "food": 0.0,
+      "energy": 0.5622872698404956,
+      "collisions": 0,
+      "episode_return": -0.3010360903403891,
+      "episode_steps": 250,
+      "scene": "obstacles",
+      "terminated": false,
+      "truncated": true
+    },
+    {
+      "transition": 992999,
+      "food": 0.0,
+      "energy": 0.635726852761278,
+      "collisions": 0,
+      "episode_return": -0.3258856406289695,
+      "episode_steps": 250,
+      "scene": "obstacles",
+      "terminated": false,
+      "truncated": true
+    },
+    {
+      "transition": 993000,
+      "food": 0.0,
+      "energy": 0.48942741723129546,
+      "collisions": 0,
+      "episode_return": -0.30052247247319624,
+      "episode_steps": 250,
+      "scene": "threat",
+      "terminated": false,
+      "truncated": true
+    },
+    {
+      "transition": 993997,
+      "food": 0.0,
+      "energy": 0.5213307818428115,
+      "collisions": 0,
+      "episode_return": -0.2606529715035859,
+      "episode_steps": 250,
+      "scene": "relocation",
+      "terminated": false,
+      "truncated": true
+    },
+    {
+      "transition": 993998,
+      "food": 0.6360741949081425,
+      "energy": 0.9522272260047188,
+      "collisions": 0,
+      "episode_return": 63.85657454664992,
+      "episode_steps": 250,
+      "scene": "forage",
+      "terminated": false,
+      "truncated": true
+    },
+    {
+      "transition": 993999,
+      "food": 0.0,
+      "energy": 0.549763532006846,
+      "collisions": 0,
+      "episode_return": -0.3186496618320242,
+      "episode_steps": 250,
+      "scene": "obstacles",
+      "terminated": false,
+      "truncated": true
+    },
+    {
+      "transition": 994000,
+      "food": 0.0,
+      "energy": 0.8702163395581404,
+      "collisions": 0,
+      "episode_return": -0.2553934026357547,
+      "episode_steps": 250,
+      "scene": "forage",
+      "terminated": false,
+      "truncated": true
+    },
+    {
+      "transition": 994997,
+      "food": 0.0,
+      "energy": 0.7786022148781807,
+      "collisions": 0,
+      "episode_return": -0.24137517822261792,
+      "episode_steps": 250,
+      "scene": "forage",
+      "terminated": false,
+      "truncated": true
+    },
+    {
+      "transition": 994998,
+      "food": 0.0,
+      "energy": 0.7293881973485352,
+      "collisions": 0,
+      "episode_return": -0.2714441017007813,
+      "episode_steps": 250,
+      "scene": "relocation",
+      "terminated": false,
+      "truncated": true
+    },
+    {
+      "transition": 994999,
+      "food": 0.0,
+      "energy": 0.6413782511215365,
+      "collisions": 0,
+      "episode_return": -0.4098247427365934,
+      "episode_steps": 250,
+      "scene": "threat",
+      "terminated": false,
+      "truncated": true
+    },
+    {
+      "transition": 995000,
+      "food": 0.0,
+      "energy": 0.6976760483299499,
+      "collisions": 0,
+      "episode_return": -0.24617219885758976,
+      "episode_steps": 250,
+      "scene": "relocation",
+      "terminated": false,
+      "truncated": true
+    },
+    {
+      "transition": 995997,
+      "food": 0.0,
+      "energy": 0.5769240887834987,
+      "collisions": 0,
+      "episode_return": -0.2466775200615074,
+      "episode_steps": 250,
+      "scene": "forage",
+      "terminated": false,
+      "truncated": true
+    },
+    {
+      "transition": 995998,
+      "food": 0.0,
+      "energy": 0.8517675696369257,
+      "collisions": 0,
+      "episode_return": -0.3066486088275532,
+      "episode_steps": 250,
+      "scene": "relocation",
+      "terminated": false,
+      "truncated": true
+    },
+    {
+      "transition": 995999,
+      "food": 0.0,
+      "energy": 0.5388883958696138,
+      "collisions": 0,
+      "episode_return": -0.25213730197448236,
+      "episode_steps": 250,
+      "scene": "threat",
+      "terminated": false,
+      "truncated": true
+    },
+    {
+      "transition": 996000,
+      "food": 0.0,
+      "energy": 0.5277121983953278,
+      "collisions": 0,
+      "episode_return": -0.31668166419323435,
+      "episode_steps": 250,
+      "scene": "obstacles",
+      "terminated": false,
+      "truncated": true
+    },
+    {
+      "transition": 996997,
+      "food": 0.0,
+      "energy": 0.815841724459996,
+      "collisions": 0,
+      "episode_return": -0.3028656656462705,
+      "episode_steps": 250,
+      "scene": "relocation",
+      "terminated": false,
+      "truncated": true
+    },
+    {
+      "transition": 996998,
+      "food": 0.0,
+      "energy": 0.5187172328813676,
+      "collisions": 0,
+      "episode_return": -0.32878341828551105,
+      "episode_steps": 250,
+      "scene": "obstacles",
+      "terminated": false,
+      "truncated": true
+    },
+    {
+      "transition": 996999,
+      "food": 0.0,
+      "energy": 0.9078706167021555,
+      "collisions": 0,
+      "episode_return": -0.28035095493722695,
+      "episode_steps": 250,
+      "scene": "forage",
+      "terminated": false,
+      "truncated": true
+    },
+    {
+      "transition": 997000,
+      "food": 0.4910126309422778,
+      "energy": 0.999895088640824,
+      "collisions": 0,
+      "episode_return": 49.134075442788365,
+      "episode_steps": 250,
+      "scene": "threat",
+      "terminated": false,
+      "truncated": true
+    },
+    {
+      "transition": 997997,
+      "food": 0.0,
+      "energy": 0.7153995090928468,
+      "collisions": 0,
+      "episode_return": -0.2936284491363916,
+      "episode_steps": 250,
+      "scene": "relocation",
+      "terminated": false,
+      "truncated": true
+    },
+    {
+      "transition": 997998,
+      "food": 0.0,
+      "energy": 0.887555852963725,
+      "collisions": 0,
+      "episode_return": -0.30502584554191536,
+      "episode_steps": 250,
+      "scene": "threat",
+      "terminated": false,
+      "truncated": true
+    },
+    {
+      "transition": 997999,
+      "food": 0.0,
+      "energy": 0.8576300235904599,
+      "collisions": 0,
+      "episode_return": -0.3586896925055419,
+      "episode_steps": 250,
+      "scene": "obstacles",
+      "terminated": false,
+      "truncated": true
+    },
+    {
+      "transition": 998000,
+      "food": 0.0,
+      "energy": 0.5285047018353909,
+      "collisions": 0,
+      "episode_return": -0.2554244471493355,
+      "episode_steps": 250,
+      "scene": "threat",
+      "terminated": false,
+      "truncated": true
+    },
+    {
+      "transition": 998997,
+      "food": 0.0,
+      "energy": 0.5389880442927275,
+      "collisions": 0,
+      "episode_return": -0.25059568514876157,
+      "episode_steps": 250,
+      "scene": "relocation",
+      "terminated": false,
+      "truncated": true
+    },
+    {
+      "transition": 998998,
+      "food": 0.0,
+      "energy": 0.7972141213022428,
+      "collisions": 0,
+      "episode_return": -0.2891032273315254,
+      "episode_steps": 250,
+      "scene": "forage",
+      "terminated": false,
+      "truncated": true
+    },
+    {
+      "transition": 998999,
+      "food": 0.0,
+      "energy": 0.7537807641519836,
+      "collisions": 0,
+      "episode_return": -0.34431071144871345,
+      "episode_steps": 250,
+      "scene": "obstacles",
+      "terminated": false,
+      "truncated": true
+    },
+    {
+      "transition": 999000,
+      "food": 0.0,
+      "energy": 0.665800669206464,
+      "collisions": 0,
+      "episode_return": -0.3344609478773192,
+      "episode_steps": 250,
+      "scene": "obstacles",
+      "terminated": false,
+      "truncated": true
+    },
+    {
+      "transition": 999997,
+      "food": 0.3215848350524902,
+      "energy": 0.9302672907158622,
+      "collisions": 0,
+      "episode_return": 32.17886810719365,
+      "episode_steps": 250,
+      "scene": "relocation",
+      "terminated": false,
+      "truncated": true
+    },
+    {
+      "transition": 999998,
+      "food": 0.0,
+      "energy": 0.6262730971865172,
+      "collisions": 0,
+      "episode_return": -0.27856744023297036,
+      "episode_steps": 250,
+      "scene": "threat",
+      "terminated": false,
+      "truncated": true
+    },
+    {
+      "transition": 999999,
+      "food": 0.0,
+      "energy": 0.7139879748923994,
+      "collisions": 0,
+      "episode_return": -0.33125592215638766,
+      "episode_steps": 250,
+      "scene": "obstacles",
+      "terminated": false,
+      "truncated": true
+    },
+    {
+      "transition": 1000000,
+      "food": 0.0,
+      "energy": 0.7928981364089458,
+      "collisions": 0,
+      "episode_return": -0.2939378197837976,
+      "episode_steps": 250,
+      "scene": "threat",
+      "terminated": false,
+      "truncated": true
+    }
+  ],
+  "versions": {
+    "python": "3.12.14",
+    "torch": "2.14.0",
+    "numpy": "1.26.4"
+  }
+}

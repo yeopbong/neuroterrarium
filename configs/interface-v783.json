@@ -1,0 +1,4940 @@
+{
+  "schema": "neuroterrarium.interface.v1",
+  "profile": "v783",
+  "access_date": "2026-09-13",
+  "license": "CC-BY-NC-4.0",
+  "annotation": {
+    "version": "v2.1.0",
+    "materialization": 783,
+    "commit": "ebd66db2596fcc39c6950fb54ea3efa00f7fe8a0",
+    "url": "https://raw.githubusercontent.com/flyconnectome/flywire_annotations/ebd66db2596fcc39c6950fb54ea3efa00f7fe8a0/supplemental_files/Supplemental_file1_neuron_annotations.tsv",
+    "sha256": "30be6c73975a70c56d930e27911f36455d3886e15abf383b78edd2a5d679e0b6"
+  },
+  "evidence": {
+    "annotations": {
+      "url": "https://raw.githubusercontent.com/flyconnectome/flywire_annotations/ebd66db2596fcc39c6950fb54ea3efa00f7fe8a0/supplemental_files/Supplemental_file1_neuron_annotations.tsv",
+      "citation": "Schlegel et al. (2024), doi:10.1038/s41586-024-07686-5; Dorkenwald et al. (2024), doi:10.1038/s41586-024-07558-y"
+    },
+    "sugar_protocol": {
+      "url": "https://github.com/philshiu/Drosophila_brain_model/blob/91bdd1e7dcf193f3e7ca5a8933497fcef63b7960/example.ipynb",
+      "scope": "Published input list; migrated to v783. This is not a reproduction of v630 numerical results."
+    },
+    "mn9_protocol": {
+      "url": "https://github.com/philshiu/Drosophila_brain_model/blob/91bdd1e7dcf193f3e7ca5a8933497fcef63b7960/figures.ipynb",
+      "scope": "Published MN9 root IDs; side and changed segmentation resolved through systematic annotations."
+    },
+    "looming": {
+      "url": "https://pmc.ncbi.nlm.nih.gov/articles/PMC7457385/",
+      "citation": "Klapoetke et al. (2017), doi:10.1038/nature24626",
+      "scope": "LPLC2 excitation of GF and looming-selective biological responses; no implied reproduction of dendritic computations by this model."
+    },
+    "lc4": {
+      "url": "https://doi.org/10.1016/j.neuron.2017.05.036",
+      "citation": "von Reyn et al. (2017)",
+      "scope": "LC4 angular expansion velocity input to the GF escape pathway."
+    },
+    "steering": {
+      "url": "https://elifesciences.org/articles/102230",
+      "citation": "Rayshubskiy et al. (2025), doi:10.7554/eLife.102230.3",
+      "scope": "Explicit v783 DNa01/DNa02 identities and ipsilateral steering relationship; body gain is an engineering assumption."
+    }
+  },
+  "migration_sources": {
+    "from": {
+      "materialization": 630,
+      "annotation_version": "v1.1.0",
+      "commit": "df6bb136f5b3d91c3992df4e8de2642329e2a384",
+      "url": "https://raw.githubusercontent.com/flyconnectome/flywire_annotations/df6bb136f5b3d91c3992df4e8de2642329e2a384/supplemental_files/Supplemental_file1_neuron_annotations.tsv",
+      "sha256": "55c99c61eecf8db6cc36f1a684b35e4c4208afbab02197d753ccc8dc2a6e2e76"
+    },
+    "to": "annotations",
+    "rule": "An identical supervoxel anchor in both frozen annotation tables links changed root IDs. This identifies the anchored segmentation; it does not assert every fragment or edge stayed unchanged."
+  },
+  "migrations": [
+    {
+      "source_root_id": "720575940620900446",
+      "root_id": "720575940639259967",
+      "supervoxel_anchor": "78678166201187069",
+      "from_materialization": 630,
+      "to_materialization": 783,
+      "method": "identical_supervoxel_anchor",
+      "source": "migration_sources"
+    },
+    {
+      "source_root_id": "720575940645521262",
+      "root_id": "720575940618238523",
+      "supervoxel_anchor": "78536329000155754",
+      "from_materialization": 630,
+      "to_materialization": 783,
+      "method": "identical_supervoxel_anchor",
+      "source": "migration_sources"
+    }
+  ],
+  "groups": {
+    "sugar": {
+      "label": "Labellar sugar inputs",
+      "role": "sensory_input",
+      "status": "candidate",
+      "selection": "Published 21-neuron source list with one anchored root migration; cell_type LB3, side left",
+      "assumptions": "Sugar-specific role comes from the source experiment; the systematic annotation alone is sugar/water. World contact-to-Hz encoding is engineered.",
+      "neurons": [
+        {
+          "root_id": "720575940624963786",
+          "type": "LB3",
+          "type_field": "cell_type",
+          "side": "left",
+          "role": "sensory_input",
+          "status": "candidate",
+          "evidence": [
+            "annotations",
+            "sugar_protocol"
+          ],
+          "top_nt": "acetylcholine",
+          "top_nt_confidence": 0.5624935110305522
+        },
+        {
+          "root_id": "720575940630233916",
+          "type": "LB3",
+          "type_field": "cell_type",
+          "side": "left",
+          "role": "sensory_input",
+          "status": "candidate",
+          "evidence": [
+            "annotations",
+            "sugar_protocol"
+          ],
+          "top_nt": "acetylcholine",
+          "top_nt_confidence": 0.5531984663840286
+        },
+        {
+          "root_id": "720575940637568838",
+          "type": "LB3",
+          "type_field": "cell_type",
+          "side": "left",
+          "role": "sensory_input",
+          "status": "candidate",
+          "evidence": [
+            "annotations",
+            "sugar_protocol"
+          ],
+          "top_nt": "acetylcholine",
+          "top_nt_confidence": 0.48338731477409547
+        },
+        {
+          "root_id": "720575940638202345",
+          "type": "LB3",
+          "type_field": "cell_type",
+          "side": "left",
+          "role": "sensory_input",
+          "status": "candidate",
+          "evidence": [
+            "annotations",
+            "sugar_protocol"
+          ],
+          "top_nt": "acetylcholine",
+          "top_nt_confidence": 0.5505346525991083
+        },
+        {
+          "root_id": "720575940617000768",
+          "type": "LB3",
+          "type_field": "cell_type",
+          "side": "left",
+          "role": "sensory_input",
+          "status": "candidate",
+          "evidence": [
+            "annotations",
+            "sugar_protocol"
+          ],
+          "top_nt": "acetylcholine",
+          "top_nt_confidence": 0.43337288414758784
+        },
+        {
+          "root_id": "720575940630797113",
+          "type": "LB3",
+          "type_field": "cell_type",
+          "side": "left",
+          "role": "sensory_input",
+          "status": "candidate",
+          "evidence": [
+            "annotations",
+            "sugar_protocol"
+          ],
+          "top_nt": "acetylcholine",
+          "top_nt_confidence": 0.33939217229453217
+        },
+        {
+          "root_id": "720575940632889389",
+          "type": "LB3",
+          "type_field": "cell_type",
+          "side": "left",
+          "role": "sensory_input",
+          "status": "candidate",
+          "evidence": [
+            "annotations",
+            "sugar_protocol"
+          ],
+          "top_nt": "acetylcholine",
+          "top_nt_confidence": 0.5014574001850858
+        },
+        {
+          "root_id": "720575940621754367",
+          "type": "LB3",
+          "type_field": "cell_type",
+          "side": "left",
+          "role": "sensory_input",
+          "status": "candidate",
+          "evidence": [
+            "annotations",
+            "sugar_protocol"
+          ],
+          "top_nt": "acetylcholine",
+          "top_nt_confidence": 0.34517470000003353
+        },
+        {
+          "root_id": "720575940621502051",
+          "type": "LB3",
+          "type_field": "cell_type",
+          "side": "left",
+          "role": "sensory_input",
+          "status": "candidate",
+          "evidence": [
+            "annotations",
+            "sugar_protocol"
+          ],
+          "top_nt": "acetylcholine",
+          "top_nt_confidence": 0.3885039877940543
+        },
+        {
+          "root_id": "720575940640649691",
+          "type": "LB3",
+          "type_field": "cell_type",
+          "side": "left",
+          "role": "sensory_input",
+          "status": "candidate",
+          "evidence": [
+            "annotations",
+            "sugar_protocol"
+          ],
+          "top_nt": "acetylcholine",
+          "top_nt_confidence": 0.43774481466981935
+        },
+        {
+          "root_id": "720575940639332736",
+          "type": "LB3",
+          "type_field": "cell_type",
+          "side": "left",
+          "role": "sensory_input",
+          "status": "candidate",
+          "evidence": [
+            "annotations",
+            "sugar_protocol"
+          ],
+          "top_nt": "acetylcholine",
+          "top_nt_confidence": 0.3361322075901598
+        },
+        {
+          "root_id": "720575940616885538",
+          "type": "LB3",
+          "type_field": "cell_type",
+          "side": "left",
+          "role": "sensory_input",
+          "status": "candidate",
+          "evidence": [
+            "annotations",
+            "sugar_protocol"
+          ],
+          "top_nt": "acetylcholine",
+          "top_nt_confidence": 0.5174281997479576
+        },
+        {
+          "root_id": "720575940639198653",
+          "type": "LB3",
+          "type_field": "cell_type",
+          "side": "left",
+          "role": "sensory_input",
+          "status": "candidate",
+          "evidence": [
+            "annotations",
+            "sugar_protocol"
+          ],
+          "top_nt": "acetylcholine",
+          "top_nt_confidence": 0.7043013325030385
+        },
+        {
+          "root_id": "720575940639259967",
+          "type": "LB3",
+          "type_field": "cell_type",
+          "side": "left",
+          "role": "sensory_input",
+          "status": "candidate",
+          "evidence": [
+            "annotations",
+            "sugar_protocol"
+          ],
+          "top_nt": "acetylcholine",
+          "top_nt_confidence": 0.6743281814727596
+        },
+        {
+          "root_id": "720575940617937543",
+          "type": "LB3",
+          "type_field": "cell_type",
+          "side": "left",
+          "role": "sensory_input",
+          "status": "candidate",
+          "evidence": [
+            "annotations",
+            "sugar_protocol"
+          ],
+          "top_nt": "acetylcholine",
+          "top_nt_confidence": 0.49850219658931033
+        },
+        {
+          "root_id": "720575940632425919",
+          "type": "LB3",
+          "type_field": "cell_type",
+          "side": "left",
+          "role": "sensory_input",
+          "status": "candidate",
+          "evidence": [
+            "annotations",
+            "sugar_protocol"
+          ],
+          "top_nt": "acetylcholine",
+          "top_nt_confidence": 0.7122366039656187
+        },
+        {
+          "root_id": "720575940633143833",
+          "type": "LB3",
+          "type_field": "cell_type",
+          "side": "left",
+          "role": "sensory_input",
+          "status": "candidate",
+          "evidence": [
+            "annotations",
+            "sugar_protocol"
+          ],
+          "top_nt": "acetylcholine",
+          "top_nt_confidence": 0.6150619325405469
+        },
+        {
+          "root_id": "720575940612670570",
+          "type": "LB3",
+          "type_field": "cell_type",
+          "side": "left",
+          "role": "sensory_input",
+          "status": "candidate",
+          "evidence": [
+            "annotations",
+            "sugar_protocol"
+          ],
+          "top_nt": "acetylcholine",
+          "top_nt_confidence": 0.5788147610546769
+        },
+        {
+          "root_id": "720575940628853239",
+          "type": "LB3",
+          "type_field": "cell_type",
+          "side": "left",
+          "role": "sensory_input",
+          "status": "candidate",
+          "evidence": [
+            "annotations",
+            "sugar_protocol"
+          ],
+          "top_nt": "acetylcholine",
+          "top_nt_confidence": 0.6925751770628855
+        },
+        {
+          "root_id": "720575940629176663",
+          "type": "LB3",
+          "type_field": "cell_type",
+          "side": "left",
+          "role": "sensory_input",
+          "status": "candidate",
+          "evidence": [
+            "annotations",
+            "sugar_protocol"
+          ],
+          "top_nt": "acetylcholine",
+          "top_nt_confidence": 0.5856328416590961
+        },
+        {
+          "root_id": "720575940611875570",
+          "type": "LB3",
+          "type_field": "cell_type",
+          "side": "left",
+          "role": "sensory_input",
+          "status": "candidate",
+          "evidence": [
+            "annotations",
+            "sugar_protocol"
+          ],
+          "top_nt": "acetylcholine",
+          "top_nt_confidence": 0.6204716141343772
+        }
+      ]
+    },
+    "mn9": {
+      "label": "MN9 feeding readout",
+      "role": "motor_readout",
+      "status": "candidate",
+      "selection": "Published MN9 pair mapped by exact roots or a shared supervoxel anchor; current cell_type CB0701",
+      "assumptions": "Spike-to-feeding gate is engineered; food absorption still requires physical contact.",
+      "neurons": [
+        {
+          "root_id": "720575940660219265",
+          "type": "CB0701",
+          "type_field": "cell_type",
+          "side": "right",
+          "role": "motor_readout",
+          "status": "candidate",
+          "evidence": [
+            "annotations",
+            "mn9_protocol"
+          ],
+          "top_nt": "acetylcholine",
+          "top_nt_confidence": 0.4390765645416484
+        },
+        {
+          "root_id": "720575940618238523",
+          "type": "CB0701",
+          "type_field": "cell_type",
+          "side": "left",
+          "role": "motor_readout",
+          "status": "candidate",
+          "evidence": [
+            "annotations",
+            "mn9_protocol"
+          ],
+          "top_nt": "acetylcholine",
+          "top_nt_confidence": 0.4697639974151721
+        }
+      ]
+    },
+    "lplc2": {
+      "label": "LPLC2",
+      "role": "sensory_input",
+      "status": "candidate",
+      "selection": "Exact hemibrain_type == LPLC2 in the frozen annotation table",
+      "assumptions": "Injection at visual projection neurons bypasses retinal, T4/T5 and LPi computations. Any encoded looming selectivity is engineered.",
+      "neurons": [
+        {
+          "root_id": "720575940603989420",
+          "type": "LPLC2",
+          "type_field": "hemibrain_type",
+          "side": "left",
+          "role": "sensory_input",
+          "status": "candidate",
+          "evidence": [
+            "annotations",
+            "looming"
+          ],
+          "top_nt": "acetylcholine",
+          "top_nt_confidence": 0.5010227895454986
+        },
+        {
+          "root_id": "720575940605825666",
+          "type": "LPLC2",
+          "type_field": "hemibrain_type",
+          "side": "right",
+          "role": "sensory_input",
+          "status": "candidate",
+          "evidence": [
+            "annotations",
+            "looming"
+          ],
+          "top_nt": "acetylcholine",
+          "top_nt_confidence": 0.6281807327922889
+        },
+        {
+          "root_id": "720575940606126438",
+          "type": "LPLC2",
+          "type_field": "hemibrain_type",
+          "side": "left",
+          "role": "sensory_input",
+          "status": "candidate",
+          "evidence": [
+            "annotations",
+            "looming"
+          ],
+          "top_nt": "acetylcholine",
+          "top_nt_confidence": 0.638731342365785
+        },
+        {
+          "root_id": "720575940606217138",
+          "type": "LPLC2",
+          "type_field": "hemibrain_type",
+          "side": "right",
+          "role": "sensory_input",
+          "status": "candidate",
+          "evidence": [
+            "annotations",
+            "looming"
+          ],
+          "top_nt": "acetylcholine",
+          "top_nt_confidence": 0.43943080868016
+        },
+        {
+          "root_id": "720575940606855554",
+          "type": "LPLC2",
+          "type_field": "hemibrain_type",
+          "side": "right",
+          "role": "sensory_input",
+          "status": "candidate",
+          "evidence": [
+            "annotations",
+            "looming"
+          ],
+          "top_nt": "acetylcholine",
+          "top_nt_confidence": 0.4325623251464158
+        },
+        {
+          "root_id": "720575940607683011",
+          "type": "LPLC2",
+          "type_field": "hemibrain_type",
+          "side": "right",
+          "role": "sensory_input",
+          "status": "candidate",
+          "evidence": [
+            "annotations",
+            "looming"
+          ],
+          "top_nt": "acetylcholine",
+          "top_nt_confidence": 0.5592305102092079
+        },
+        {
+          "root_id": "720575940607845250",
+          "type": "LPLC2",
+          "type_field": "hemibrain_type",
+          "side": "left",
+          "role": "sensory_input",
+          "status": "candidate",
+          "evidence": [
+            "annotations",
+            "looming"
+          ],
+          "top_nt": "acetylcholine",
+          "top_nt_confidence": 0.4761892132312008
+        },
+        {
+          "root_id": "720575940607854531",
+          "type": "LPLC2",
+          "type_field": "hemibrain_type",
+          "side": "left",
+          "role": "sensory_input",
+          "status": "candidate",
+          "evidence": [
+            "annotations",
+            "looming"
+          ],
+          "top_nt": "acetylcholine",
+          "top_nt_confidence": 0.6338505875109599
+        },
+        {
+          "root_id": "720575940608088259",
+          "type": "LPLC2",
+          "type_field": "hemibrain_type",
+          "side": "left",
+          "role": "sensory_input",
+          "status": "candidate",
+          "evidence": [
+            "annotations",
+            "looming"
+          ],
+          "top_nt": "acetylcholine",
+          "top_nt_confidence": 0.6855157783898624
+        },
+        {
+          "root_id": "720575940608875531",
+          "type": "LPLC2",
+          "type_field": "hemibrain_type",
+          "side": "left",
+          "role": "sensory_input",
+          "status": "candidate",
+          "evidence": [
+            "annotations",
+            "looming"
+          ],
+          "top_nt": "acetylcholine",
+          "top_nt_confidence": 0.602953876031213
+        },
+        {
+          "root_id": "720575940609592674",
+          "type": "LPLC2",
+          "type_field": "hemibrain_type",
+          "side": "right",
+          "role": "sensory_input",
+          "status": "candidate",
+          "evidence": [
+            "annotations",
+            "looming"
+          ],
+          "top_nt": "acetylcholine",
+          "top_nt_confidence": 0.6485883056109202
+        },
+        {
+          "root_id": "720575940610116757",
+          "type": "LPLC2",
+          "type_field": "hemibrain_type",
+          "side": "right",
+          "role": "sensory_input",
+          "status": "candidate",
+          "evidence": [
+            "annotations",
+            "looming"
+          ],
+          "top_nt": "acetylcholine",
+          "top_nt_confidence": 0.5810880050127354
+        },
+        {
+          "root_id": "720575940610226645",
+          "type": "LPLC2",
+          "type_field": "hemibrain_type",
+          "side": "left",
+          "role": "sensory_input",
+          "status": "candidate",
+          "evidence": [
+            "annotations",
+            "looming"
+          ],
+          "top_nt": "acetylcholine",
+          "top_nt_confidence": 0.6285890498396406
+        },
+        {
+          "root_id": "720575940610536290",
+          "type": "LPLC2",
+          "type_field": "hemibrain_type",
+          "side": "right",
+          "role": "sensory_input",
+          "status": "candidate",
+          "evidence": [
+            "annotations",
+            "looming"
+          ],
+          "top_nt": "acetylcholine",
+          "top_nt_confidence": 0.5870202835366458
+        },
+        {
+          "root_id": "720575940610681829",
+          "type": "LPLC2",
+          "type_field": "hemibrain_type",
+          "side": "right",
+          "role": "sensory_input",
+          "status": "candidate",
+          "evidence": [
+            "annotations",
+            "looming"
+          ],
+          "top_nt": "acetylcholine",
+          "top_nt_confidence": 0.6650135034428236
+        },
+        {
+          "root_id": "720575940610953651",
+          "type": "LPLC2",
+          "type_field": "hemibrain_type",
+          "side": "right",
+          "role": "sensory_input",
+          "status": "candidate",
+          "evidence": [
+            "annotations",
+            "looming"
+          ],
+          "top_nt": "acetylcholine",
+          "top_nt_confidence": 0.4315915756991642
+        },
+        {
+          "root_id": "720575940611352234",
+          "type": "LPLC2",
+          "type_field": "hemibrain_type",
+          "side": "right",
+          "role": "sensory_input",
+          "status": "candidate",
+          "evidence": [
+            "annotations",
+            "looming"
+          ],
+          "top_nt": "acetylcholine",
+          "top_nt_confidence": 0.61428916039134
+        },
+        {
+          "root_id": "720575940611567638",
+          "type": "LPLC2",
+          "type_field": "hemibrain_type",
+          "side": "left",
+          "role": "sensory_input",
+          "status": "candidate",
+          "evidence": [
+            "annotations",
+            "looming"
+          ],
+          "top_nt": "acetylcholine",
+          "top_nt_confidence": 0.5552414530425034
+        },
+        {
+          "root_id": "720575940611740569",
+          "type": "LPLC2",
+          "type_field": "hemibrain_type",
+          "side": "right",
+          "role": "sensory_input",
+          "status": "candidate",
+          "evidence": [
+            "annotations",
+            "looming"
+          ],
+          "top_nt": "acetylcholine",
+          "top_nt_confidence": 0.4561959927111048
+        },
+        {
+          "root_id": "720575940611821334",
+          "type": "LPLC2",
+          "type_field": "hemibrain_type",
+          "side": "left",
+          "role": "sensory_input",
+          "status": "candidate",
+          "evidence": [
+            "annotations",
+            "looming"
+          ],
+          "top_nt": "acetylcholine",
+          "top_nt_confidence": 0.5273137120948089
+        },
+        {
+          "root_id": "720575940612045352",
+          "type": "LPLC2",
+          "type_field": "hemibrain_type",
+          "side": "right",
+          "role": "sensory_input",
+          "status": "candidate",
+          "evidence": [
+            "annotations",
+            "looming"
+          ],
+          "top_nt": "acetylcholine",
+          "top_nt_confidence": 0.6949679772904047
+        },
+        {
+          "root_id": "720575940612096462",
+          "type": "LPLC2",
+          "type_field": "hemibrain_type",
+          "side": "left",
+          "role": "sensory_input",
+          "status": "candidate",
+          "evidence": [
+            "annotations",
+            "looming"
+          ],
+          "top_nt": "acetylcholine",
+          "top_nt_confidence": 0.5952841948959031
+        },
+        {
+          "root_id": "720575940612254701",
+          "type": "LPLC2",
+          "type_field": "hemibrain_type",
+          "side": "right",
+          "role": "sensory_input",
+          "status": "candidate",
+          "evidence": [
+            "annotations",
+            "looming"
+          ],
+          "top_nt": "acetylcholine",
+          "top_nt_confidence": 0.49550128046279224
+        },
+        {
+          "root_id": "720575940612462307",
+          "type": "LPLC2",
+          "type_field": "hemibrain_type",
+          "side": "right",
+          "role": "sensory_input",
+          "status": "candidate",
+          "evidence": [
+            "annotations",
+            "looming"
+          ],
+          "top_nt": "acetylcholine",
+          "top_nt_confidence": 0.49472336466033057
+        },
+        {
+          "root_id": "720575940612560680",
+          "type": "LPLC2",
+          "type_field": "hemibrain_type",
+          "side": "left",
+          "role": "sensory_input",
+          "status": "candidate",
+          "evidence": [
+            "annotations",
+            "looming"
+          ],
+          "top_nt": "acetylcholine",
+          "top_nt_confidence": 0.47604961807789775
+        },
+        {
+          "root_id": "720575940612766691",
+          "type": "LPLC2",
+          "type_field": "hemibrain_type",
+          "side": "left",
+          "role": "sensory_input",
+          "status": "candidate",
+          "evidence": [
+            "annotations",
+            "looming"
+          ],
+          "top_nt": "acetylcholine",
+          "top_nt_confidence": 0.4971388883756419
+        },
+        {
+          "root_id": "720575940612874536",
+          "type": "LPLC2",
+          "type_field": "hemibrain_type",
+          "side": "left",
+          "role": "sensory_input",
+          "status": "candidate",
+          "evidence": [
+            "annotations",
+            "looming"
+          ],
+          "top_nt": "acetylcholine",
+          "top_nt_confidence": 0.5077528975408943
+        },
+        {
+          "root_id": "720575940612944382",
+          "type": "LPLC2",
+          "type_field": "hemibrain_type",
+          "side": "right",
+          "role": "sensory_input",
+          "status": "candidate",
+          "evidence": [
+            "annotations",
+            "looming"
+          ],
+          "top_nt": "acetylcholine",
+          "top_nt_confidence": 0.47740394714216805
+        },
+        {
+          "root_id": "720575940612994929",
+          "type": "LPLC2",
+          "type_field": "hemibrain_type",
+          "side": "right",
+          "role": "sensory_input",
+          "status": "candidate",
+          "evidence": [
+            "annotations",
+            "looming"
+          ],
+          "top_nt": "acetylcholine",
+          "top_nt_confidence": 0.5939006553040521
+        },
+        {
+          "root_id": "720575940613145258",
+          "type": "LPLC2",
+          "type_field": "hemibrain_type",
+          "side": "left",
+          "role": "sensory_input",
+          "status": "candidate",
+          "evidence": [
+            "annotations",
+            "looming"
+          ],
+          "top_nt": "acetylcholine",
+          "top_nt_confidence": 0.5780676862971842
+        },
+        {
+          "root_id": "720575940613219474",
+          "type": "LPLC2",
+          "type_field": "hemibrain_type",
+          "side": "left",
+          "role": "sensory_input",
+          "status": "candidate",
+          "evidence": [
+            "annotations",
+            "looming"
+          ],
+          "top_nt": "acetylcholine",
+          "top_nt_confidence": 0.6180392550905971
+        },
+        {
+          "root_id": "720575940613470947",
+          "type": "LPLC2",
+          "type_field": "hemibrain_type",
+          "side": "left",
+          "role": "sensory_input",
+          "status": "candidate",
+          "evidence": [
+            "annotations",
+            "looming"
+          ],
+          "top_nt": "acetylcholine",
+          "top_nt_confidence": 0.581335499264857
+        },
+        {
+          "root_id": "720575940613763759",
+          "type": "LPLC2",
+          "type_field": "hemibrain_type",
+          "side": "left",
+          "role": "sensory_input",
+          "status": "candidate",
+          "evidence": [
+            "annotations",
+            "looming"
+          ],
+          "top_nt": "acetylcholine",
+          "top_nt_confidence": 0.680267946770827
+        },
+        {
+          "root_id": "720575940613804906",
+          "type": "LPLC2",
+          "type_field": "hemibrain_type",
+          "side": "right",
+          "role": "sensory_input",
+          "status": "candidate",
+          "evidence": [
+            "annotations",
+            "looming"
+          ],
+          "top_nt": "acetylcholine",
+          "top_nt_confidence": 0.5461236135662592
+        },
+        {
+          "root_id": "720575940613821290",
+          "type": "LPLC2",
+          "type_field": "hemibrain_type",
+          "side": "right",
+          "role": "sensory_input",
+          "status": "candidate",
+          "evidence": [
+            "annotations",
+            "looming"
+          ],
+          "top_nt": "acetylcholine",
+          "top_nt_confidence": 0.6105337796076121
+        },
+        {
+          "root_id": "720575940614067167",
+          "type": "LPLC2",
+          "type_field": "hemibrain_type",
+          "side": "right",
+          "role": "sensory_input",
+          "status": "candidate",
+          "evidence": [
+            "annotations",
+            "looming"
+          ],
+          "top_nt": "acetylcholine",
+          "top_nt_confidence": 0.48329386910389227
+        },
+        {
+          "root_id": "720575940614373279",
+          "type": "LPLC2",
+          "type_field": "hemibrain_type",
+          "side": "right",
+          "role": "sensory_input",
+          "status": "candidate",
+          "evidence": [
+            "annotations",
+            "looming"
+          ],
+          "top_nt": "acetylcholine",
+          "top_nt_confidence": 0.4644395893971022
+        },
+        {
+          "root_id": "720575940614526974",
+          "type": "LPLC2",
+          "type_field": "hemibrain_type",
+          "side": "right",
+          "role": "sensory_input",
+          "status": "candidate",
+          "evidence": [
+            "annotations",
+            "looming"
+          ],
+          "top_nt": "acetylcholine",
+          "top_nt_confidence": 0.5368038994184088
+        },
+        {
+          "root_id": "720575940614631079",
+          "type": "LPLC2",
+          "type_field": "hemibrain_type",
+          "side": "left",
+          "role": "sensory_input",
+          "status": "candidate",
+          "evidence": [
+            "annotations",
+            "looming"
+          ],
+          "top_nt": "acetylcholine",
+          "top_nt_confidence": 0.5938063789120787
+        },
+        {
+          "root_id": "720575940614738444",
+          "type": "LPLC2",
+          "type_field": "hemibrain_type",
+          "side": "left",
+          "role": "sensory_input",
+          "status": "candidate",
+          "evidence": [
+            "annotations",
+            "looming"
+          ],
+          "top_nt": "acetylcholine",
+          "top_nt_confidence": 0.4660020067500226
+        },
+        {
+          "root_id": "720575940615055989",
+          "type": "LPLC2",
+          "type_field": "hemibrain_type",
+          "side": "left",
+          "role": "sensory_input",
+          "status": "candidate",
+          "evidence": [
+            "annotations",
+            "looming"
+          ],
+          "top_nt": "acetylcholine",
+          "top_nt_confidence": 0.49465730288582727
+        },
+        {
+          "root_id": "720575940615116731",
+          "type": "LPLC2",
+          "type_field": "hemibrain_type",
+          "side": "right",
+          "role": "sensory_input",
+          "status": "candidate",
+          "evidence": [
+            "annotations",
+            "looming"
+          ],
+          "top_nt": "acetylcholine",
+          "top_nt_confidence": 0.5223019488734968
+        },
+        {
+          "root_id": "720575940615288203",
+          "type": "LPLC2",
+          "type_field": "hemibrain_type",
+          "side": "right",
+          "role": "sensory_input",
+          "status": "candidate",
+          "evidence": [
+            "annotations",
+            "looming"
+          ],
+          "top_nt": "acetylcholine",
+          "top_nt_confidence": 0.4520987042969873
+        },
+        {
+          "root_id": "720575940615332502",
+          "type": "LPLC2",
+          "type_field": "hemibrain_type",
+          "side": "left",
+          "role": "sensory_input",
+          "status": "candidate",
+          "evidence": [
+            "annotations",
+            "looming"
+          ],
+          "top_nt": "acetylcholine",
+          "top_nt_confidence": 0.5064714426894226
+        },
+        {
+          "root_id": "720575940615907723",
+          "type": "LPLC2",
+          "type_field": "hemibrain_type",
+          "side": "left",
+          "role": "sensory_input",
+          "status": "candidate",
+          "evidence": [
+            "annotations",
+            "looming"
+          ],
+          "top_nt": "acetylcholine",
+          "top_nt_confidence": 0.5631867823415062
+        },
+        {
+          "root_id": "720575940615920453",
+          "type": "LPLC2",
+          "type_field": "hemibrain_type",
+          "side": "right",
+          "role": "sensory_input",
+          "status": "candidate",
+          "evidence": [
+            "annotations",
+            "looming"
+          ],
+          "top_nt": "acetylcholine",
+          "top_nt_confidence": 0.65236924517835
+        },
+        {
+          "root_id": "720575940615953302",
+          "type": "LPLC2",
+          "type_field": "hemibrain_type",
+          "side": "left",
+          "role": "sensory_input",
+          "status": "candidate",
+          "evidence": [
+            "annotations",
+            "looming"
+          ],
+          "top_nt": "acetylcholine",
+          "top_nt_confidence": 0.5264472508217349
+        },
+        {
+          "root_id": "720575940615967377",
+          "type": "LPLC2",
+          "type_field": "hemibrain_type",
+          "side": "right",
+          "role": "sensory_input",
+          "status": "candidate",
+          "evidence": [
+            "annotations",
+            "looming"
+          ],
+          "top_nt": "acetylcholine",
+          "top_nt_confidence": 0.5463204762726326
+        },
+        {
+          "root_id": "720575940616008854",
+          "type": "LPLC2",
+          "type_field": "hemibrain_type",
+          "side": "left",
+          "role": "sensory_input",
+          "status": "candidate",
+          "evidence": [
+            "annotations",
+            "looming"
+          ],
+          "top_nt": "acetylcholine",
+          "top_nt_confidence": 0.5810364410091179
+        },
+        {
+          "root_id": "720575940616083345",
+          "type": "LPLC2",
+          "type_field": "hemibrain_type",
+          "side": "left",
+          "role": "sensory_input",
+          "status": "candidate",
+          "evidence": [
+            "annotations",
+            "looming"
+          ],
+          "top_nt": "acetylcholine",
+          "top_nt_confidence": 0.6184414709307385
+        },
+        {
+          "root_id": "720575940616116697",
+          "type": "LPLC2",
+          "type_field": "hemibrain_type",
+          "side": "right",
+          "role": "sensory_input",
+          "status": "candidate",
+          "evidence": [
+            "annotations",
+            "looming"
+          ],
+          "top_nt": "acetylcholine",
+          "top_nt_confidence": 0.44382511748844566
+        },
+        {
+          "root_id": "720575940616166685",
+          "type": "LPLC2",
+          "type_field": "hemibrain_type",
+          "side": "right",
+          "role": "sensory_input",
+          "status": "candidate",
+          "evidence": [
+            "annotations",
+            "looming"
+          ],
+          "top_nt": "acetylcholine",
+          "top_nt_confidence": 0.44320417890877895
+        },
+        {
+          "root_id": "720575940616377817",
+          "type": "LPLC2",
+          "type_field": "hemibrain_type",
+          "side": "left",
+          "role": "sensory_input",
+          "status": "candidate",
+          "evidence": [
+            "annotations",
+            "looming"
+          ],
+          "top_nt": "acetylcholine",
+          "top_nt_confidence": 0.5143869346302211
+        },
+        {
+          "root_id": "720575940616491993",
+          "type": "LPLC2",
+          "type_field": "hemibrain_type",
+          "side": "right",
+          "role": "sensory_input",
+          "status": "candidate",
+          "evidence": [
+            "annotations",
+            "looming"
+          ],
+          "top_nt": "acetylcholine",
+          "top_nt_confidence": 0.7510901997770381
+        },
+        {
+          "root_id": "720575940616735489",
+          "type": "LPLC2",
+          "type_field": "hemibrain_type",
+          "side": "right",
+          "role": "sensory_input",
+          "status": "candidate",
+          "evidence": [
+            "annotations",
+            "looming"
+          ],
+          "top_nt": "acetylcholine",
+          "top_nt_confidence": 0.6408486643103118
+        },
+        {
+          "root_id": "720575940617289782",
+          "type": "LPLC2",
+          "type_field": "hemibrain_type",
+          "side": "left",
+          "role": "sensory_input",
+          "status": "candidate",
+          "evidence": [
+            "annotations",
+            "looming"
+          ],
+          "top_nt": "acetylcholine",
+          "top_nt_confidence": 0.5408849248650907
+        },
+        {
+          "root_id": "720575940617294219",
+          "type": "LPLC2",
+          "type_field": "hemibrain_type",
+          "side": "left",
+          "role": "sensory_input",
+          "status": "candidate",
+          "evidence": [
+            "annotations",
+            "looming"
+          ],
+          "top_nt": "acetylcholine",
+          "top_nt_confidence": 0.5420470477571292
+        },
+        {
+          "root_id": "720575940617480094",
+          "type": "LPLC2",
+          "type_field": "hemibrain_type",
+          "side": "left",
+          "role": "sensory_input",
+          "status": "candidate",
+          "evidence": [
+            "annotations",
+            "looming"
+          ],
+          "top_nt": "acetylcholine",
+          "top_nt_confidence": 0.6601412784657333
+        },
+        {
+          "root_id": "720575940617997241",
+          "type": "LPLC2",
+          "type_field": "hemibrain_type",
+          "side": "left",
+          "role": "sensory_input",
+          "status": "candidate",
+          "evidence": [
+            "annotations",
+            "looming"
+          ],
+          "top_nt": "acetylcholine",
+          "top_nt_confidence": 0.38769666207603504
+        },
+        {
+          "root_id": "720575940618172509",
+          "type": "LPLC2",
+          "type_field": "hemibrain_type",
+          "side": "right",
+          "role": "sensory_input",
+          "status": "candidate",
+          "evidence": [
+            "annotations",
+            "looming"
+          ],
+          "top_nt": "acetylcholine",
+          "top_nt_confidence": 0.4852069029397573
+        },
+        {
+          "root_id": "720575940618307046",
+          "type": "LPLC2",
+          "type_field": "hemibrain_type",
+          "side": "right",
+          "role": "sensory_input",
+          "status": "candidate",
+          "evidence": [
+            "annotations",
+            "looming"
+          ],
+          "top_nt": "acetylcholine",
+          "top_nt_confidence": 0.5827500640162637
+        },
+        {
+          "root_id": "720575940618450496",
+          "type": "LPLC2",
+          "type_field": "hemibrain_type",
+          "side": "right",
+          "role": "sensory_input",
+          "status": "candidate",
+          "evidence": [
+            "annotations",
+            "looming"
+          ],
+          "top_nt": "acetylcholine",
+          "top_nt_confidence": 0.4713765858439908
+        },
+        {
+          "root_id": "720575940618538641",
+          "type": "LPLC2",
+          "type_field": "hemibrain_type",
+          "side": "right",
+          "role": "sensory_input",
+          "status": "candidate",
+          "evidence": [
+            "annotations",
+            "looming"
+          ],
+          "top_nt": "acetylcholine",
+          "top_nt_confidence": 0.7389851061314812
+        },
+        {
+          "root_id": "720575940618608177",
+          "type": "LPLC2",
+          "type_field": "hemibrain_type",
+          "side": "left",
+          "role": "sensory_input",
+          "status": "candidate",
+          "evidence": [
+            "annotations",
+            "looming"
+          ],
+          "top_nt": "acetylcholine",
+          "top_nt_confidence": 0.524622624687752
+        },
+        {
+          "root_id": "720575940618711535",
+          "type": "LPLC2",
+          "type_field": "hemibrain_type",
+          "side": "right",
+          "role": "sensory_input",
+          "status": "candidate",
+          "evidence": [
+            "annotations",
+            "looming"
+          ],
+          "top_nt": "acetylcholine",
+          "top_nt_confidence": 0.5909358702642747
+        },
+        {
+          "root_id": "720575940618927892",
+          "type": "LPLC2",
+          "type_field": "hemibrain_type",
+          "side": "left",
+          "role": "sensory_input",
+          "status": "candidate",
+          "evidence": [
+            "annotations",
+            "looming"
+          ],
+          "top_nt": "acetylcholine",
+          "top_nt_confidence": 0.4830532193402729
+        },
+        {
+          "root_id": "720575940619197318",
+          "type": "LPLC2",
+          "type_field": "hemibrain_type",
+          "side": "left",
+          "role": "sensory_input",
+          "status": "candidate",
+          "evidence": [
+            "annotations",
+            "looming"
+          ],
+          "top_nt": "acetylcholine",
+          "top_nt_confidence": 0.5168247435855663
+        },
+        {
+          "root_id": "720575940619263937",
+          "type": "LPLC2",
+          "type_field": "hemibrain_type",
+          "side": "left",
+          "role": "sensory_input",
+          "status": "candidate",
+          "evidence": [
+            "annotations",
+            "looming"
+          ],
+          "top_nt": "acetylcholine",
+          "top_nt_confidence": 0.6694084866855168
+        },
+        {
+          "root_id": "720575940619627934",
+          "type": "LPLC2",
+          "type_field": "hemibrain_type",
+          "side": "right",
+          "role": "sensory_input",
+          "status": "candidate",
+          "evidence": [
+            "annotations",
+            "looming"
+          ],
+          "top_nt": "acetylcholine",
+          "top_nt_confidence": 0.4876691468708167
+        },
+        {
+          "root_id": "720575940619654149",
+          "type": "LPLC2",
+          "type_field": "hemibrain_type",
+          "side": "right",
+          "role": "sensory_input",
+          "status": "candidate",
+          "evidence": [
+            "annotations",
+            "looming"
+          ],
+          "top_nt": "acetylcholine",
+          "top_nt_confidence": 0.4891052015691802
+        },
+        {
+          "root_id": "720575940619750822",
+          "type": "LPLC2",
+          "type_field": "hemibrain_type",
+          "side": "left",
+          "role": "sensory_input",
+          "status": "candidate",
+          "evidence": [
+            "annotations",
+            "looming"
+          ],
+          "top_nt": "acetylcholine",
+          "top_nt_confidence": 0.5044125332248924
+        },
+        {
+          "root_id": "720575940619900993",
+          "type": "LPLC2",
+          "type_field": "hemibrain_type",
+          "side": "left",
+          "role": "sensory_input",
+          "status": "candidate",
+          "evidence": [
+            "annotations",
+            "looming"
+          ],
+          "top_nt": "acetylcholine",
+          "top_nt_confidence": 0.4779815685179615
+        },
+        {
+          "root_id": "720575940619981494",
+          "type": "LPLC2",
+          "type_field": "hemibrain_type",
+          "side": "left",
+          "role": "sensory_input",
+          "status": "candidate",
+          "evidence": [
+            "annotations",
+            "looming"
+          ],
+          "top_nt": "acetylcholine",
+          "top_nt_confidence": 0.46818094122145926
+        },
+        {
+          "root_id": "720575940620001718",
+          "type": "LPLC2",
+          "type_field": "hemibrain_type",
+          "side": "right",
+          "role": "sensory_input",
+          "status": "candidate",
+          "evidence": [
+            "annotations",
+            "looming"
+          ],
+          "top_nt": "acetylcholine",
+          "top_nt_confidence": 0.41313577593182665
+        },
+        {
+          "root_id": "720575940620139678",
+          "type": "LPLC2",
+          "type_field": "hemibrain_type",
+          "side": "left",
+          "role": "sensory_input",
+          "status": "candidate",
+          "evidence": [
+            "annotations",
+            "looming"
+          ],
+          "top_nt": "acetylcholine",
+          "top_nt_confidence": 0.7663272539285376
+        },
+        {
+          "root_id": "720575940620306904",
+          "type": "LPLC2",
+          "type_field": "hemibrain_type",
+          "side": "left",
+          "role": "sensory_input",
+          "status": "candidate",
+          "evidence": [
+            "annotations",
+            "looming"
+          ],
+          "top_nt": "acetylcholine",
+          "top_nt_confidence": 0.49512990414889724
+        },
+        {
+          "root_id": "720575940620575476",
+          "type": "LPLC2",
+          "type_field": "hemibrain_type",
+          "side": "right",
+          "role": "sensory_input",
+          "status": "candidate",
+          "evidence": [
+            "annotations",
+            "looming"
+          ],
+          "top_nt": "acetylcholine",
+          "top_nt_confidence": 0.5951676451971957
+        },
+        {
+          "root_id": "720575940620783180",
+          "type": "LPLC2",
+          "type_field": "hemibrain_type",
+          "side": "right",
+          "role": "sensory_input",
+          "status": "candidate",
+          "evidence": [
+            "annotations",
+            "looming"
+          ],
+          "top_nt": "acetylcholine",
+          "top_nt_confidence": 0.5040277655566495
+        },
+        {
+          "root_id": "720575940620887834",
+          "type": "LPLC2",
+          "type_field": "hemibrain_type",
+          "side": "right",
+          "role": "sensory_input",
+          "status": "candidate",
+          "evidence": [
+            "annotations",
+            "looming"
+          ],
+          "top_nt": "acetylcholine",
+          "top_nt_confidence": 0.41962600963768637
+        },
+        {
+          "root_id": "720575940621634913",
+          "type": "LPLC2",
+          "type_field": "hemibrain_type",
+          "side": "right",
+          "role": "sensory_input",
+          "status": "candidate",
+          "evidence": [
+            "annotations",
+            "looming"
+          ],
+          "top_nt": "acetylcholine",
+          "top_nt_confidence": 0.5671833556959747
+        },
+        {
+          "root_id": "720575940621914904",
+          "type": "LPLC2",
+          "type_field": "hemibrain_type",
+          "side": "left",
+          "role": "sensory_input",
+          "status": "candidate",
+          "evidence": [
+            "annotations",
+            "looming"
+          ],
+          "top_nt": "acetylcholine",
+          "top_nt_confidence": 0.4518207073339974
+        },
+        {
+          "root_id": "720575940622009284",
+          "type": "LPLC2",
+          "type_field": "hemibrain_type",
+          "side": "left",
+          "role": "sensory_input",
+          "status": "candidate",
+          "evidence": [
+            "annotations",
+            "looming"
+          ],
+          "top_nt": "acetylcholine",
+          "top_nt_confidence": 0.7307949983026327
+        },
+        {
+          "root_id": "720575940622156799",
+          "type": "LPLC2",
+          "type_field": "hemibrain_type",
+          "side": "left",
+          "role": "sensory_input",
+          "status": "candidate",
+          "evidence": [
+            "annotations",
+            "looming"
+          ],
+          "top_nt": "acetylcholine",
+          "top_nt_confidence": 0.4021796761931268
+        },
+        {
+          "root_id": "720575940622174463",
+          "type": "LPLC2",
+          "type_field": "hemibrain_type",
+          "side": "right",
+          "role": "sensory_input",
+          "status": "candidate",
+          "evidence": [
+            "annotations",
+            "looming"
+          ],
+          "top_nt": "acetylcholine",
+          "top_nt_confidence": 0.6512576681764303
+        },
+        {
+          "root_id": "720575940622312072",
+          "type": "LPLC2",
+          "type_field": "hemibrain_type",
+          "side": "left",
+          "role": "sensory_input",
+          "status": "candidate",
+          "evidence": [
+            "annotations",
+            "looming"
+          ],
+          "top_nt": "acetylcholine",
+          "top_nt_confidence": 0.5536611688484111
+        },
+        {
+          "root_id": "720575940622425271",
+          "type": "LPLC2",
+          "type_field": "hemibrain_type",
+          "side": "left",
+          "role": "sensory_input",
+          "status": "candidate",
+          "evidence": [
+            "annotations",
+            "looming"
+          ],
+          "top_nt": "acetylcholine",
+          "top_nt_confidence": 0.5411401969695901
+        },
+        {
+          "root_id": "720575940622680088",
+          "type": "LPLC2",
+          "type_field": "hemibrain_type",
+          "side": "left",
+          "role": "sensory_input",
+          "status": "candidate",
+          "evidence": [
+            "annotations",
+            "looming"
+          ],
+          "top_nt": "acetylcholine",
+          "top_nt_confidence": 0.5158924559121382
+        },
+        {
+          "root_id": "720575940622769159",
+          "type": "LPLC2",
+          "type_field": "hemibrain_type",
+          "side": "right",
+          "role": "sensory_input",
+          "status": "candidate",
+          "evidence": [
+            "annotations",
+            "looming"
+          ],
+          "top_nt": "acetylcholine",
+          "top_nt_confidence": 0.5118464248910134
+        },
+        {
+          "root_id": "720575940622992205",
+          "type": "LPLC2",
+          "type_field": "hemibrain_type",
+          "side": "right",
+          "role": "sensory_input",
+          "status": "candidate",
+          "evidence": [
+            "annotations",
+            "looming"
+          ],
+          "top_nt": "acetylcholine",
+          "top_nt_confidence": 0.5465895108824318
+        },
+        {
+          "root_id": "720575940623047629",
+          "type": "LPLC2",
+          "type_field": "hemibrain_type",
+          "side": "right",
+          "role": "sensory_input",
+          "status": "candidate",
+          "evidence": [
+            "annotations",
+            "looming"
+          ],
+          "top_nt": "acetylcholine",
+          "top_nt_confidence": 0.4526120315949199
+        },
+        {
+          "root_id": "720575940623262461",
+          "type": "LPLC2",
+          "type_field": "hemibrain_type",
+          "side": "left",
+          "role": "sensory_input",
+          "status": "candidate",
+          "evidence": [
+            "annotations",
+            "looming"
+          ],
+          "top_nt": "acetylcholine",
+          "top_nt_confidence": 0.4260296645954489
+        },
+        {
+          "root_id": "720575940623333770",
+          "type": "LPLC2",
+          "type_field": "hemibrain_type",
+          "side": "right",
+          "role": "sensory_input",
+          "status": "candidate",
+          "evidence": [
+            "annotations",
+            "looming"
+          ],
+          "top_nt": "acetylcholine",
+          "top_nt_confidence": 0.5444366596713771
+        },
+        {
+          "root_id": "720575940623551684",
+          "type": "LPLC2",
+          "type_field": "hemibrain_type",
+          "side": "left",
+          "role": "sensory_input",
+          "status": "candidate",
+          "evidence": [
+            "annotations",
+            "looming"
+          ],
+          "top_nt": "acetylcholine",
+          "top_nt_confidence": 0.5307262783174476
+        },
+        {
+          "root_id": "720575940623652083",
+          "type": "LPLC2",
+          "type_field": "hemibrain_type",
+          "side": "left",
+          "role": "sensory_input",
+          "status": "candidate",
+          "evidence": [
+            "annotations",
+            "looming"
+          ],
+          "top_nt": "acetylcholine",
+          "top_nt_confidence": 0.5320876740354721
+        },
+        {
+          "root_id": "720575940623769783",
+          "type": "LPLC2",
+          "type_field": "hemibrain_type",
+          "side": "right",
+          "role": "sensory_input",
+          "status": "candidate",
+          "evidence": [
+            "annotations",
+            "looming"
+          ],
+          "top_nt": "acetylcholine",
+          "top_nt_confidence": 0.6206227345879906
+        },
+        {
+          "root_id": "720575940623827348",
+          "type": "LPLC2",
+          "type_field": "hemibrain_type",
+          "side": "left",
+          "role": "sensory_input",
+          "status": "candidate",
+          "evidence": [
+            "annotations",
+            "looming"
+          ],
+          "top_nt": "acetylcholine",
+          "top_nt_confidence": 0.47260460844708724
+        },
+        {
+          "root_id": "720575940623925774",
+          "type": "LPLC2",
+          "type_field": "hemibrain_type",
+          "side": "left",
+          "role": "sensory_input",
+          "status": "candidate",
+          "evidence": [
+            "annotations",
+            "looming"
+          ],
+          "top_nt": "acetylcholine",
+          "top_nt_confidence": 0.69747762380806
+        },
+        {
+          "root_id": "720575940624014524",
+          "type": "LPLC2",
+          "type_field": "hemibrain_type",
+          "side": "right",
+          "role": "sensory_input",
+          "status": "candidate",
+          "evidence": [
+            "annotations",
+            "looming"
+          ],
+          "top_nt": "acetylcholine",
+          "top_nt_confidence": 0.5578570290317812
+        },
+        {
+          "root_id": "720575940624016778",
+          "type": "LPLC2",
+          "type_field": "hemibrain_type",
+          "side": "right",
+          "role": "sensory_input",
+          "status": "candidate",
+          "evidence": [
+            "annotations",
+            "looming"
+          ],
+          "top_nt": "acetylcholine",
+          "top_nt_confidence": 0.7006800652149702
+        },
+        {
+          "root_id": "720575940624208824",
+          "type": "LPLC2",
+          "type_field": "hemibrain_type",
+          "side": "left",
+          "role": "sensory_input",
+          "status": "candidate",
+          "evidence": [
+            "annotations",
+            "looming"
+          ],
+          "top_nt": "acetylcholine",
+          "top_nt_confidence": 0.5092137626217408
+        },
+        {
+          "root_id": "720575940624244922",
+          "type": "LPLC2",
+          "type_field": "hemibrain_type",
+          "side": "right",
+          "role": "sensory_input",
+          "status": "candidate",
+          "evidence": [
+            "annotations",
+            "looming"
+          ],
+          "top_nt": "acetylcholine",
+          "top_nt_confidence": 0.5162912729780454
+        },
+        {
+          "root_id": "720575940624359093",
+          "type": "LPLC2",
+          "type_field": "hemibrain_type",
+          "side": "left",
+          "role": "sensory_input",
+          "status": "candidate",
+          "evidence": [
+            "annotations",
+            "looming"
+          ],
+          "top_nt": "acetylcholine",
+          "top_nt_confidence": 0.43587164653945015
+        },
+        {
+          "root_id": "720575940624417584",
+          "type": "LPLC2",
+          "type_field": "hemibrain_type",
+          "side": "left",
+          "role": "sensory_input",
+          "status": "candidate",
+          "evidence": [
+            "annotations",
+            "looming"
+          ],
+          "top_nt": "acetylcholine",
+          "top_nt_confidence": 0.47996023150185596
+        },
+        {
+          "root_id": "720575940624531652",
+          "type": "LPLC2",
+          "type_field": "hemibrain_type",
+          "side": "left",
+          "role": "sensory_input",
+          "status": "candidate",
+          "evidence": [
+            "annotations",
+            "looming"
+          ],
+          "top_nt": "acetylcholine",
+          "top_nt_confidence": 0.5076297796257929
+        },
+        {
+          "root_id": "720575940624611002",
+          "type": "LPLC2",
+          "type_field": "hemibrain_type",
+          "side": "right",
+          "role": "sensory_input",
+          "status": "candidate",
+          "evidence": [
+            "annotations",
+            "looming"
+          ],
+          "top_nt": "acetylcholine",
+          "top_nt_confidence": 0.4338768933007579
+        },
+        {
+          "root_id": "720575940624755504",
+          "type": "LPLC2",
+          "type_field": "hemibrain_type",
+          "side": "left",
+          "role": "sensory_input",
+          "status": "candidate",
+          "evidence": [
+            "annotations",
+            "looming"
+          ],
+          "top_nt": "acetylcholine",
+          "top_nt_confidence": 0.4978480609296706
+        },
+        {
+          "root_id": "720575940624903064",
+          "type": "LPLC2",
+          "type_field": "hemibrain_type",
+          "side": "right",
+          "role": "sensory_input",
+          "status": "candidate",
+          "evidence": [
+            "annotations",
+            "looming"
+          ],
+          "top_nt": "acetylcholine",
+          "top_nt_confidence": 0.4353855447183026
+        },
+        {
+          "root_id": "720575940624919077",
+          "type": "LPLC2",
+          "type_field": "hemibrain_type",
+          "side": "right",
+          "role": "sensory_input",
+          "status": "candidate",
+          "evidence": [
+            "annotations",
+            "looming"
+          ],
+          "top_nt": "acetylcholine",
+          "top_nt_confidence": 0.471016270760894
+        },
+        {
+          "root_id": "720575940624931530",
+          "type": "LPLC2",
+          "type_field": "hemibrain_type",
+          "side": "right",
+          "role": "sensory_input",
+          "status": "candidate",
+          "evidence": [
+            "annotations",
+            "looming"
+          ],
+          "top_nt": "acetylcholine",
+          "top_nt_confidence": 0.7680529022071687
+        },
+        {
+          "root_id": "720575940625001735",
+          "type": "LPLC2",
+          "type_field": "hemibrain_type",
+          "side": "right",
+          "role": "sensory_input",
+          "status": "candidate",
+          "evidence": [
+            "annotations",
+            "looming"
+          ],
+          "top_nt": "acetylcholine",
+          "top_nt_confidence": 0.4618588368507774
+        },
+        {
+          "root_id": "720575940625216202",
+          "type": "LPLC2",
+          "type_field": "hemibrain_type",
+          "side": "left",
+          "role": "sensory_input",
+          "status": "candidate",
+          "evidence": [
+            "annotations",
+            "looming"
+          ],
+          "top_nt": "acetylcholine",
+          "top_nt_confidence": 0.4426837498683296
+        },
+        {
+          "root_id": "720575940625477721",
+          "type": "LPLC2",
+          "type_field": "hemibrain_type",
+          "side": "left",
+          "role": "sensory_input",
+          "status": "candidate",
+          "evidence": [
+            "annotations",
+            "looming"
+          ],
+          "top_nt": "acetylcholine",
+          "top_nt_confidence": 0.5516676259465857
+        },
+        {
+          "root_id": "720575940625695269",
+          "type": "LPLC2",
+          "type_field": "hemibrain_type",
+          "side": "left",
+          "role": "sensory_input",
+          "status": "candidate",
+          "evidence": [
+            "annotations",
+            "looming"
+          ],
+          "top_nt": "acetylcholine",
+          "top_nt_confidence": 0.4704654816668978
+        },
+        {
+          "root_id": "720575940625697772",
+          "type": "LPLC2",
+          "type_field": "hemibrain_type",
+          "side": "left",
+          "role": "sensory_input",
+          "status": "candidate",
+          "evidence": [
+            "annotations",
+            "looming"
+          ],
+          "top_nt": "acetylcholine",
+          "top_nt_confidence": 0.5187177013133452
+        },
+        {
+          "root_id": "720575940625700739",
+          "type": "LPLC2",
+          "type_field": "hemibrain_type",
+          "side": "left",
+          "role": "sensory_input",
+          "status": "candidate",
+          "evidence": [
+            "annotations",
+            "looming"
+          ],
+          "top_nt": "acetylcholine",
+          "top_nt_confidence": 0.4031718785018107
+        },
+        {
+          "root_id": "720575940625835278",
+          "type": "LPLC2",
+          "type_field": "hemibrain_type",
+          "side": "right",
+          "role": "sensory_input",
+          "status": "candidate",
+          "evidence": [
+            "annotations",
+            "looming"
+          ],
+          "top_nt": "acetylcholine",
+          "top_nt_confidence": 0.5008670720339685
+        },
+        {
+          "root_id": "720575940626161930",
+          "type": "LPLC2",
+          "type_field": "hemibrain_type",
+          "side": "right",
+          "role": "sensory_input",
+          "status": "candidate",
+          "evidence": [
+            "annotations",
+            "looming"
+          ],
+          "top_nt": "acetylcholine",
+          "top_nt_confidence": 0.5205048608173561
+        },
+        {
+          "root_id": "720575940626236041",
+          "type": "LPLC2",
+          "type_field": "hemibrain_type",
+          "side": "left",
+          "role": "sensory_input",
+          "status": "candidate",
+          "evidence": [
+            "annotations",
+            "looming"
+          ],
+          "top_nt": "acetylcholine",
+          "top_nt_confidence": 0.49464964264440187
+        },
+        {
+          "root_id": "720575940626375172",
+          "type": "LPLC2",
+          "type_field": "hemibrain_type",
+          "side": "left",
+          "role": "sensory_input",
+          "status": "candidate",
+          "evidence": [
+            "annotations",
+            "looming"
+          ],
+          "top_nt": "acetylcholine",
+          "top_nt_confidence": 0.5100308062797413
+        },
+        {
+          "root_id": "720575940626384200",
+          "type": "LPLC2",
+          "type_field": "hemibrain_type",
+          "side": "left",
+          "role": "sensory_input",
+          "status": "candidate",
+          "evidence": [
+            "annotations",
+            "looming"
+          ],
+          "top_nt": "acetylcholine",
+          "top_nt_confidence": 0.682919547522043
+        },
+        {
+          "root_id": "720575940626414279",
+          "type": "LPLC2",
+          "type_field": "hemibrain_type",
+          "side": "left",
+          "role": "sensory_input",
+          "status": "candidate",
+          "evidence": [
+            "annotations",
+            "looming"
+          ],
+          "top_nt": "acetylcholine",
+          "top_nt_confidence": 0.5286323707385087
+        },
+        {
+          "root_id": "720575940626447848",
+          "type": "LPLC2",
+          "type_field": "hemibrain_type",
+          "side": "right",
+          "role": "sensory_input",
+          "status": "candidate",
+          "evidence": [
+            "annotations",
+            "looming"
+          ],
+          "top_nt": "acetylcholine",
+          "top_nt_confidence": 0.44377651341063235
+        },
+        {
+          "root_id": "720575940626617084",
+          "type": "LPLC2",
+          "type_field": "hemibrain_type",
+          "side": "left",
+          "role": "sensory_input",
+          "status": "candidate",
+          "evidence": [
+            "annotations",
+            "looming"
+          ],
+          "top_nt": "acetylcholine",
+          "top_nt_confidence": 0.5816995258668689
+        },
+        {
+          "root_id": "720575940626735016",
+          "type": "LPLC2",
+          "type_field": "hemibrain_type",
+          "side": "right",
+          "role": "sensory_input",
+          "status": "candidate",
+          "evidence": [
+            "annotations",
+            "looming"
+          ],
+          "top_nt": "acetylcholine",
+          "top_nt_confidence": 0.7430075236248677
+        },
+        {
+          "root_id": "720575940626745392",
+          "type": "LPLC2",
+          "type_field": "hemibrain_type",
+          "side": "right",
+          "role": "sensory_input",
+          "status": "candidate",
+          "evidence": [
+            "annotations",
+            "looming"
+          ],
+          "top_nt": "acetylcholine",
+          "top_nt_confidence": 0.5938895305175015
+        },
+        {
+          "root_id": "720575940626873000",
+          "type": "LPLC2",
+          "type_field": "hemibrain_type",
+          "side": "right",
+          "role": "sensory_input",
+          "status": "candidate",
+          "evidence": [
+            "annotations",
+            "looming"
+          ],
+          "top_nt": "acetylcholine",
+          "top_nt_confidence": 0.49182450872283157
+        },
+        {
+          "root_id": "720575940627368254",
+          "type": "LPLC2",
+          "type_field": "hemibrain_type",
+          "side": "left",
+          "role": "sensory_input",
+          "status": "candidate",
+          "evidence": [
+            "annotations",
+            "looming"
+          ],
+          "top_nt": "acetylcholine",
+          "top_nt_confidence": 0.42514848758904544
+        },
+        {
+          "root_id": "720575940627553923",
+          "type": "LPLC2",
+          "type_field": "hemibrain_type",
+          "side": "right",
+          "role": "sensory_input",
+          "status": "candidate",
+          "evidence": [
+            "annotations",
+            "looming"
+          ],
+          "top_nt": "acetylcholine",
+          "top_nt_confidence": 0.5533644007433857
+        },
+        {
+          "root_id": "720575940627685765",
+          "type": "LPLC2",
+          "type_field": "hemibrain_type",
+          "side": "left",
+          "role": "sensory_input",
+          "status": "candidate",
+          "evidence": [
+            "annotations",
+            "looming"
+          ],
+          "top_nt": "acetylcholine",
+          "top_nt_confidence": 0.6287833739645868
+        },
+        {
+          "root_id": "720575940627902078",
+          "type": "LPLC2",
+          "type_field": "hemibrain_type",
+          "side": "left",
+          "role": "sensory_input",
+          "status": "candidate",
+          "evidence": [
+            "annotations",
+            "looming"
+          ],
+          "top_nt": "acetylcholine",
+          "top_nt_confidence": 0.5650237317408127
+        },
+        {
+          "root_id": "720575940627902979",
+          "type": "LPLC2",
+          "type_field": "hemibrain_type",
+          "side": "right",
+          "role": "sensory_input",
+          "status": "candidate",
+          "evidence": [
+            "annotations",
+            "looming"
+          ],
+          "top_nt": "acetylcholine",
+          "top_nt_confidence": 0.4925465766316294
+        },
+        {
+          "root_id": "720575940628039034",
+          "type": "LPLC2",
+          "type_field": "hemibrain_type",
+          "side": "right",
+          "role": "sensory_input",
+          "status": "candidate",
+          "evidence": [
+            "annotations",
+            "looming"
+          ],
+          "top_nt": "acetylcholine",
+          "top_nt_confidence": 0.5353305955257275
+        },
+        {
+          "root_id": "720575940628197892",
+          "type": "LPLC2",
+          "type_field": "hemibrain_type",
+          "side": "right",
+          "role": "sensory_input",
+          "status": "candidate",
+          "evidence": [
+            "annotations",
+            "looming"
+          ],
+          "top_nt": "acetylcholine",
+          "top_nt_confidence": 0.4578740873881228
+        },
+        {
+          "root_id": "720575940628395797",
+          "type": "LPLC2",
+          "type_field": "hemibrain_type",
+          "side": "left",
+          "role": "sensory_input",
+          "status": "candidate",
+          "evidence": [
+            "annotations",
+            "looming"
+          ],
+          "top_nt": "acetylcholine",
+          "top_nt_confidence": 0.4749443738530429
+        },
+        {
+          "root_id": "720575940628552247",
+          "type": "LPLC2",
+          "type_field": "hemibrain_type",
+          "side": "left",
+          "role": "sensory_input",
+          "status": "candidate",
+          "evidence": [
+            "annotations",
+            "looming"
+          ],
+          "top_nt": "acetylcholine",
+          "top_nt_confidence": 0.7398671871282765
+        },
+        {
+          "root_id": "720575940628603842",
+          "type": "LPLC2",
+          "type_field": "hemibrain_type",
+          "side": "right",
+          "role": "sensory_input",
+          "status": "candidate",
+          "evidence": [
+            "annotations",
+            "looming"
+          ],
+          "top_nt": "acetylcholine",
+          "top_nt_confidence": 0.5961297257399271
+        },
+        {
+          "root_id": "720575940628778058",
+          "type": "LPLC2",
+          "type_field": "hemibrain_type",
+          "side": "right",
+          "role": "sensory_input",
+          "status": "candidate",
+          "evidence": [
+            "annotations",
+            "looming"
+          ],
+          "top_nt": "acetylcholine",
+          "top_nt_confidence": 0.6112701845272801
+        },
+        {
+          "root_id": "720575940628847164",
+          "type": "LPLC2",
+          "type_field": "hemibrain_type",
+          "side": "left",
+          "role": "sensory_input",
+          "status": "candidate",
+          "evidence": [
+            "annotations",
+            "looming"
+          ],
+          "top_nt": "acetylcholine",
+          "top_nt_confidence": 0.5231255667328556
+        },
+        {
+          "root_id": "720575940628849668",
+          "type": "LPLC2",
+          "type_field": "hemibrain_type",
+          "side": "right",
+          "role": "sensory_input",
+          "status": "candidate",
+          "evidence": [
+            "annotations",
+            "looming"
+          ],
+          "top_nt": "acetylcholine",
+          "top_nt_confidence": 0.49831495345685256
+        },
+        {
+          "root_id": "720575940628921303",
+          "type": "LPLC2",
+          "type_field": "hemibrain_type",
+          "side": "left",
+          "role": "sensory_input",
+          "status": "candidate",
+          "evidence": [
+            "annotations",
+            "looming"
+          ],
+          "top_nt": "acetylcholine",
+          "top_nt_confidence": 0.5143002307656895
+        },
+        {
+          "root_id": "720575940628976956",
+          "type": "LPLC2",
+          "type_field": "hemibrain_type",
+          "side": "left",
+          "role": "sensory_input",
+          "status": "candidate",
+          "evidence": [
+            "annotations",
+            "looming"
+          ],
+          "top_nt": "acetylcholine",
+          "top_nt_confidence": 0.5352568888919078
+        },
+        {
+          "root_id": "720575940628990214",
+          "type": "LPLC2",
+          "type_field": "hemibrain_type",
+          "side": "right",
+          "role": "sensory_input",
+          "status": "candidate",
+          "evidence": [
+            "annotations",
+            "looming"
+          ],
+          "top_nt": "acetylcholine",
+          "top_nt_confidence": 0.47681190009057883
+        },
+        {
+          "root_id": "720575940629292785",
+          "type": "LPLC2",
+          "type_field": "hemibrain_type",
+          "side": "left",
+          "role": "sensory_input",
+          "status": "candidate",
+          "evidence": [
+            "annotations",
+            "looming"
+          ],
+          "top_nt": "acetylcholine",
+          "top_nt_confidence": 0.49293472074841604
+        },
+        {
+          "root_id": "720575940629368015",
+          "type": "LPLC2",
+          "type_field": "hemibrain_type",
+          "side": "left",
+          "role": "sensory_input",
+          "status": "candidate",
+          "evidence": [
+            "annotations",
+            "looming"
+          ],
+          "top_nt": "acetylcholine",
+          "top_nt_confidence": 0.7077065497281432
+        },
+        {
+          "root_id": "720575940629384271",
+          "type": "LPLC2",
+          "type_field": "hemibrain_type",
+          "side": "right",
+          "role": "sensory_input",
+          "status": "candidate",
+          "evidence": [
+            "annotations",
+            "looming"
+          ],
+          "top_nt": "acetylcholine",
+          "top_nt_confidence": 0.5331766470330179
+        },
+        {
+          "root_id": "720575940629967703",
+          "type": "LPLC2",
+          "type_field": "hemibrain_type",
+          "side": "right",
+          "role": "sensory_input",
+          "status": "candidate",
+          "evidence": [
+            "annotations",
+            "looming"
+          ],
+          "top_nt": "acetylcholine",
+          "top_nt_confidence": 0.5365437687846908
+        },
+        {
+          "root_id": "720575940630209603",
+          "type": "LPLC2",
+          "type_field": "hemibrain_type",
+          "side": "left",
+          "role": "sensory_input",
+          "status": "candidate",
+          "evidence": [
+            "annotations",
+            "looming"
+          ],
+          "top_nt": "acetylcholine",
+          "top_nt_confidence": 0.5008110883274783
+        },
+        {
+          "root_id": "720575940630650936",
+          "type": "LPLC2",
+          "type_field": "hemibrain_type",
+          "side": "right",
+          "role": "sensory_input",
+          "status": "candidate",
+          "evidence": [
+            "annotations",
+            "looming"
+          ],
+          "top_nt": "acetylcholine",
+          "top_nt_confidence": 0.550856783520056
+        },
+        {
+          "root_id": "720575940630719831",
+          "type": "LPLC2",
+          "type_field": "hemibrain_type",
+          "side": "right",
+          "role": "sensory_input",
+          "status": "candidate",
+          "evidence": [
+            "annotations",
+            "looming"
+          ],
+          "top_nt": "acetylcholine",
+          "top_nt_confidence": 0.728353448261154
+        },
+        {
+          "root_id": "720575940630731847",
+          "type": "LPLC2",
+          "type_field": "hemibrain_type",
+          "side": "left",
+          "role": "sensory_input",
+          "status": "candidate",
+          "evidence": [
+            "annotations",
+            "looming"
+          ],
+          "top_nt": "acetylcholine",
+          "top_nt_confidence": 0.7928751958544853
+        },
+        {
+          "root_id": "720575940630831185",
+          "type": "LPLC2",
+          "type_field": "hemibrain_type",
+          "side": "left",
+          "role": "sensory_input",
+          "status": "candidate",
+          "evidence": [
+            "annotations",
+            "looming"
+          ],
+          "top_nt": "acetylcholine",
+          "top_nt_confidence": 0.5884943836620586
+        },
+        {
+          "root_id": "720575940631095158",
+          "type": "LPLC2",
+          "type_field": "hemibrain_type",
+          "side": "right",
+          "role": "sensory_input",
+          "status": "candidate",
+          "evidence": [
+            "annotations",
+            "looming"
+          ],
+          "top_nt": "acetylcholine",
+          "top_nt_confidence": 0.528302887968773
+        },
+        {
+          "root_id": "720575940631312428",
+          "type": "LPLC2",
+          "type_field": "hemibrain_type",
+          "side": "right",
+          "role": "sensory_input",
+          "status": "candidate",
+          "evidence": [
+            "annotations",
+            "looming"
+          ],
+          "top_nt": "acetylcholine",
+          "top_nt_confidence": 0.5735147048669983
+        },
+        {
+          "root_id": "720575940631380695",
+          "type": "LPLC2",
+          "type_field": "hemibrain_type",
+          "side": "left",
+          "role": "sensory_input",
+          "status": "candidate",
+          "evidence": [
+            "annotations",
+            "looming"
+          ],
+          "top_nt": "acetylcholine",
+          "top_nt_confidence": 0.5833305410963041
+        },
+        {
+          "root_id": "720575940631397549",
+          "type": "LPLC2",
+          "type_field": "hemibrain_type",
+          "side": "right",
+          "role": "sensory_input",
+          "status": "candidate",
+          "evidence": [
+            "annotations",
+            "looming"
+          ],
+          "top_nt": "acetylcholine",
+          "top_nt_confidence": 0.5363312944056551
+        },
+        {
+          "root_id": "720575940631582751",
+          "type": "LPLC2",
+          "type_field": "hemibrain_type",
+          "side": "right",
+          "role": "sensory_input",
+          "status": "candidate",
+          "evidence": [
+            "annotations",
+            "looming"
+          ],
+          "top_nt": "acetylcholine",
+          "top_nt_confidence": 0.44267128644631887
+        },
+        {
+          "root_id": "720575940631742405",
+          "type": "LPLC2",
+          "type_field": "hemibrain_type",
+          "side": "right",
+          "role": "sensory_input",
+          "status": "candidate",
+          "evidence": [
+            "annotations",
+            "looming"
+          ],
+          "top_nt": "acetylcholine",
+          "top_nt_confidence": 0.588420000431836
+        },
+        {
+          "root_id": "720575940632009167",
+          "type": "LPLC2",
+          "type_field": "hemibrain_type",
+          "side": "left",
+          "role": "sensory_input",
+          "status": "candidate",
+          "evidence": [
+            "annotations",
+            "looming"
+          ],
+          "top_nt": "acetylcholine",
+          "top_nt_confidence": 0.5585812509589032
+        },
+        {
+          "root_id": "720575940632080146",
+          "type": "LPLC2",
+          "type_field": "hemibrain_type",
+          "side": "left",
+          "role": "sensory_input",
+          "status": "candidate",
+          "evidence": [
+            "annotations",
+            "looming"
+          ],
+          "top_nt": "acetylcholine",
+          "top_nt_confidence": 0.5194833172011847
+        },
+        {
+          "root_id": "720575940632129848",
+          "type": "LPLC2",
+          "type_field": "hemibrain_type",
+          "side": "left",
+          "role": "sensory_input",
+          "status": "candidate",
+          "evidence": [
+            "annotations",
+            "looming"
+          ],
+          "top_nt": "acetylcholine",
+          "top_nt_confidence": 0.5913166789073987
+        },
+        {
+          "root_id": "720575940632512226",
+          "type": "LPLC2",
+          "type_field": "hemibrain_type",
+          "side": "right",
+          "role": "sensory_input",
+          "status": "candidate",
+          "evidence": [
+            "annotations",
+            "looming"
+          ],
+          "top_nt": "acetylcholine",
+          "top_nt_confidence": 0.5263284597760538
+        },
+        {
+          "root_id": "720575940632711052",
+          "type": "LPLC2",
+          "type_field": "hemibrain_type",
+          "side": "right",
+          "role": "sensory_input",
+          "status": "candidate",
+          "evidence": [
+            "annotations",
+            "looming"
+          ],
+          "top_nt": "acetylcholine",
+          "top_nt_confidence": 0.6187659610522219
+        },
+        {
+          "root_id": "720575940632777124",
+          "type": "LPLC2",
+          "type_field": "hemibrain_type",
+          "side": "left",
+          "role": "sensory_input",
+          "status": "candidate",
+          "evidence": [
+            "annotations",
+            "looming"
+          ],
+          "top_nt": "acetylcholine",
+          "top_nt_confidence": 0.5135672194172938
+        },
+        {
+          "root_id": "720575940632779932",
+          "type": "LPLC2",
+          "type_field": "hemibrain_type",
+          "side": "left",
+          "role": "sensory_input",
+          "status": "candidate",
+          "evidence": [
+            "annotations",
+            "looming"
+          ],
+          "top_nt": "acetylcholine",
+          "top_nt_confidence": 0.732519607923403
+        },
+        {
+          "root_id": "720575940633552685",
+          "type": "LPLC2",
+          "type_field": "hemibrain_type",
+          "side": "right",
+          "role": "sensory_input",
+          "status": "candidate",
+          "evidence": [
+            "annotations",
+            "looming"
+          ],
+          "top_nt": "acetylcholine",
+          "top_nt_confidence": 0.5409526605781038
+        },
+        {
+          "root_id": "720575940633588320",
+          "type": "LPLC2",
+          "type_field": "hemibrain_type",
+          "side": "right",
+          "role": "sensory_input",
+          "status": "candidate",
+          "evidence": [
+            "annotations",
+            "looming"
+          ],
+          "top_nt": "acetylcholine",
+          "top_nt_confidence": 0.5524950422708941
+        },
+        {
+          "root_id": "720575940634146967",
+          "type": "LPLC2",
+          "type_field": "hemibrain_type",
+          "side": "right",
+          "role": "sensory_input",
+          "status": "candidate",
+          "evidence": [
+            "annotations",
+            "looming"
+          ],
+          "top_nt": "acetylcholine",
+          "top_nt_confidence": 0.4363090421499559
+        },
+        {
+          "root_id": "720575940634700980",
+          "type": "LPLC2",
+          "type_field": "hemibrain_type",
+          "side": "left",
+          "role": "sensory_input",
+          "status": "candidate",
+          "evidence": [
+            "annotations",
+            "looming"
+          ],
+          "top_nt": "acetylcholine",
+          "top_nt_confidence": 0.5307935389715817
+        },
+        {
+          "root_id": "720575940635004271",
+          "type": "LPLC2",
+          "type_field": "hemibrain_type",
+          "side": "left",
+          "role": "sensory_input",
+          "status": "candidate",
+          "evidence": [
+            "annotations",
+            "looming"
+          ],
+          "top_nt": "acetylcholine",
+          "top_nt_confidence": 0.4501673746202267
+        },
+        {
+          "root_id": "720575940635040357",
+          "type": "LPLC2",
+          "type_field": "hemibrain_type",
+          "side": "right",
+          "role": "sensory_input",
+          "status": "candidate",
+          "evidence": [
+            "annotations",
+            "looming"
+          ],
+          "top_nt": "acetylcholine",
+          "top_nt_confidence": 0.4716738983324266
+        },
+        {
+          "root_id": "720575940635234478",
+          "type": "LPLC2",
+          "type_field": "hemibrain_type",
+          "side": "left",
+          "role": "sensory_input",
+          "status": "candidate",
+          "evidence": [
+            "annotations",
+            "looming"
+          ],
+          "top_nt": "acetylcholine",
+          "top_nt_confidence": 0.45459109973668244
+        },
+        {
+          "root_id": "720575940635307639",
+          "type": "LPLC2",
+          "type_field": "hemibrain_type",
+          "side": "left",
+          "role": "sensory_input",
+          "status": "candidate",
+          "evidence": [
+            "annotations",
+            "looming"
+          ],
+          "top_nt": "acetylcholine",
+          "top_nt_confidence": 0.5206612621126165
+        },
+        {
+          "root_id": "720575940635516084",
+          "type": "LPLC2",
+          "type_field": "hemibrain_type",
+          "side": "left",
+          "role": "sensory_input",
+          "status": "candidate",
+          "evidence": [
+            "annotations",
+            "looming"
+          ],
+          "top_nt": "acetylcholine",
+          "top_nt_confidence": 0.5272645907783806
+        },
+        {
+          "root_id": "720575940635572592",
+          "type": "LPLC2",
+          "type_field": "hemibrain_type",
+          "side": "right",
+          "role": "sensory_input",
+          "status": "candidate",
+          "evidence": [
+            "annotations",
+            "looming"
+          ],
+          "top_nt": "acetylcholine",
+          "top_nt_confidence": 0.5601421579147366
+        },
+        {
+          "root_id": "720575940636295019",
+          "type": "LPLC2",
+          "type_field": "hemibrain_type",
+          "side": "left",
+          "role": "sensory_input",
+          "status": "candidate",
+          "evidence": [
+            "annotations",
+            "looming"
+          ],
+          "top_nt": "acetylcholine",
+          "top_nt_confidence": 0.5050762286491152
+        },
+        {
+          "root_id": "720575940636529520",
+          "type": "LPLC2",
+          "type_field": "hemibrain_type",
+          "side": "left",
+          "role": "sensory_input",
+          "status": "candidate",
+          "evidence": [
+            "annotations",
+            "looming"
+          ],
+          "top_nt": "acetylcholine",
+          "top_nt_confidence": 0.5471926086368878
+        },
+        {
+          "root_id": "720575940636539102",
+          "type": "LPLC2",
+          "type_field": "hemibrain_type",
+          "side": "right",
+          "role": "sensory_input",
+          "status": "candidate",
+          "evidence": [
+            "annotations",
+            "looming"
+          ],
+          "top_nt": "acetylcholine",
+          "top_nt_confidence": 0.5046871830913112
+        },
+        {
+          "root_id": "720575940636878682",
+          "type": "LPLC2",
+          "type_field": "hemibrain_type",
+          "side": "right",
+          "role": "sensory_input",
+          "status": "candidate",
+          "evidence": [
+            "annotations",
+            "looming"
+          ],
+          "top_nt": "acetylcholine",
+          "top_nt_confidence": 0.47541096194632726
+        },
+        {
+          "root_id": "720575940636950505",
+          "type": "LPLC2",
+          "type_field": "hemibrain_type",
+          "side": "right",
+          "role": "sensory_input",
+          "status": "candidate",
+          "evidence": [
+            "annotations",
+            "looming"
+          ],
+          "top_nt": "acetylcholine",
+          "top_nt_confidence": 0.45206901119808807
+        },
+        {
+          "root_id": "720575940636999401",
+          "type": "LPLC2",
+          "type_field": "hemibrain_type",
+          "side": "right",
+          "role": "sensory_input",
+          "status": "candidate",
+          "evidence": [
+            "annotations",
+            "looming"
+          ],
+          "top_nt": "acetylcholine",
+          "top_nt_confidence": 0.46735955095855247
+        },
+        {
+          "root_id": "720575940637088602",
+          "type": "LPLC2",
+          "type_field": "hemibrain_type",
+          "side": "right",
+          "role": "sensory_input",
+          "status": "candidate",
+          "evidence": [
+            "annotations",
+            "looming"
+          ],
+          "top_nt": "acetylcholine",
+          "top_nt_confidence": 0.4093312403279873
+        },
+        {
+          "root_id": "720575940637702222",
+          "type": "LPLC2",
+          "type_field": "hemibrain_type",
+          "side": "right",
+          "role": "sensory_input",
+          "status": "candidate",
+          "evidence": [
+            "annotations",
+            "looming"
+          ],
+          "top_nt": "acetylcholine",
+          "top_nt_confidence": 0.6292440074914505
+        },
+        {
+          "root_id": "720575940637958709",
+          "type": "LPLC2",
+          "type_field": "hemibrain_type",
+          "side": "right",
+          "role": "sensory_input",
+          "status": "candidate",
+          "evidence": [
+            "annotations",
+            "looming"
+          ],
+          "top_nt": "acetylcholine",
+          "top_nt_confidence": 0.6084194985742803
+        },
+        {
+          "root_id": "720575940638626118",
+          "type": "LPLC2",
+          "type_field": "hemibrain_type",
+          "side": "left",
+          "role": "sensory_input",
+          "status": "candidate",
+          "evidence": [
+            "annotations",
+            "looming"
+          ],
+          "top_nt": "acetylcholine",
+          "top_nt_confidence": 0.6285710693700048
+        },
+        {
+          "root_id": "720575940638835288",
+          "type": "LPLC2",
+          "type_field": "hemibrain_type",
+          "side": "left",
+          "role": "sensory_input",
+          "status": "candidate",
+          "evidence": [
+            "annotations",
+            "looming"
+          ],
+          "top_nt": "acetylcholine",
+          "top_nt_confidence": 0.5086694233536807
+        },
+        {
+          "root_id": "720575940638857048",
+          "type": "LPLC2",
+          "type_field": "hemibrain_type",
+          "side": "right",
+          "role": "sensory_input",
+          "status": "candidate",
+          "evidence": [
+            "annotations",
+            "looming"
+          ],
+          "top_nt": "acetylcholine",
+          "top_nt_confidence": 0.5467749694413954
+        },
+        {
+          "root_id": "720575940638922624",
+          "type": "LPLC2",
+          "type_field": "hemibrain_type",
+          "side": "right",
+          "role": "sensory_input",
+          "status": "candidate",
+          "evidence": [
+            "annotations",
+            "looming"
+          ],
+          "top_nt": "acetylcholine",
+          "top_nt_confidence": 0.45922211583995076
+        },
+        {
+          "root_id": "720575940639109795",
+          "type": "LPLC2",
+          "type_field": "hemibrain_type",
+          "side": "left",
+          "role": "sensory_input",
+          "status": "candidate",
+          "evidence": [
+            "annotations",
+            "looming"
+          ],
+          "top_nt": "acetylcholine",
+          "top_nt_confidence": 0.5530034770764789
+        },
+        {
+          "root_id": "720575940639177449",
+          "type": "LPLC2",
+          "type_field": "hemibrain_type",
+          "side": "right",
+          "role": "sensory_input",
+          "status": "candidate",
+          "evidence": [
+            "annotations",
+            "looming"
+          ],
+          "top_nt": "acetylcholine",
+          "top_nt_confidence": 0.6844721661582648
+        },
+        {
+          "root_id": "720575940639878352",
+          "type": "LPLC2",
+          "type_field": "hemibrain_type",
+          "side": "left",
+          "role": "sensory_input",
+          "status": "candidate",
+          "evidence": [
+            "annotations",
+            "looming"
+          ],
+          "top_nt": "acetylcholine",
+          "top_nt_confidence": 0.5341141885047005
+        },
+        {
+          "root_id": "720575940639884878",
+          "type": "LPLC2",
+          "type_field": "hemibrain_type",
+          "side": "left",
+          "role": "sensory_input",
+          "status": "candidate",
+          "evidence": [
+            "annotations",
+            "looming"
+          ],
+          "top_nt": "acetylcholine",
+          "top_nt_confidence": 0.5126468451019939
+        },
+        {
+          "root_id": "720575940639895003",
+          "type": "LPLC2",
+          "type_field": "hemibrain_type",
+          "side": "left",
+          "role": "sensory_input",
+          "status": "candidate",
+          "evidence": [
+            "annotations",
+            "looming"
+          ],
+          "top_nt": "acetylcholine",
+          "top_nt_confidence": 0.4700504018556061
+        },
+        {
+          "root_id": "720575940640302389",
+          "type": "LPLC2",
+          "type_field": "hemibrain_type",
+          "side": "left",
+          "role": "sensory_input",
+          "status": "candidate",
+          "evidence": [
+            "annotations",
+            "looming"
+          ],
+          "top_nt": "acetylcholine",
+          "top_nt_confidence": 0.5459664373026804
+        },
+        {
+          "root_id": "720575940640510427",
+          "type": "LPLC2",
+          "type_field": "hemibrain_type",
+          "side": "right",
+          "role": "sensory_input",
+          "status": "candidate",
+          "evidence": [
+            "annotations",
+            "looming"
+          ],
+          "top_nt": "acetylcholine",
+          "top_nt_confidence": 0.6749403746184385
+        },
+        {
+          "root_id": "720575940641552347",
+          "type": "LPLC2",
+          "type_field": "hemibrain_type",
+          "side": "left",
+          "role": "sensory_input",
+          "status": "candidate",
+          "evidence": [
+            "annotations",
+            "looming"
+          ],
+          "top_nt": "acetylcholine",
+          "top_nt_confidence": 0.5735736391463921
+        },
+        {
+          "root_id": "720575940641704656",
+          "type": "LPLC2",
+          "type_field": "hemibrain_type",
+          "side": "left",
+          "role": "sensory_input",
+          "status": "candidate",
+          "evidence": [
+            "annotations",
+            "looming"
+          ],
+          "top_nt": "acetylcholine",
+          "top_nt_confidence": 0.4284761615046012
+        },
+        {
+          "root_id": "720575940642397128",
+          "type": "LPLC2",
+          "type_field": "hemibrain_type",
+          "side": "right",
+          "role": "sensory_input",
+          "status": "candidate",
+          "evidence": [
+            "annotations",
+            "looming"
+          ],
+          "top_nt": "acetylcholine",
+          "top_nt_confidence": 0.7641171061713204
+        },
+        {
+          "root_id": "720575940642414837",
+          "type": "LPLC2",
+          "type_field": "hemibrain_type",
+          "side": "left",
+          "role": "sensory_input",
+          "status": "candidate",
+          "evidence": [
+            "annotations",
+            "looming"
+          ],
+          "top_nt": "acetylcholine",
+          "top_nt_confidence": 0.4400819509006151
+        },
+        {
+          "root_id": "720575940643740964",
+          "type": "LPLC2",
+          "type_field": "hemibrain_type",
+          "side": "left",
+          "role": "sensory_input",
+          "status": "candidate",
+          "evidence": [
+            "annotations",
+            "looming"
+          ],
+          "top_nt": "acetylcholine",
+          "top_nt_confidence": 0.46664717803548683
+        },
+        {
+          "root_id": "720575940645180196",
+          "type": "LPLC2",
+          "type_field": "hemibrain_type",
+          "side": "right",
+          "role": "sensory_input",
+          "status": "candidate",
+          "evidence": [
+            "annotations",
+            "looming"
+          ],
+          "top_nt": "acetylcholine",
+          "top_nt_confidence": 0.5740985676843625
+        },
+        {
+          "root_id": "720575940645328436",
+          "type": "LPLC2",
+          "type_field": "hemibrain_type",
+          "side": "left",
+          "role": "sensory_input",
+          "status": "candidate",
+          "evidence": [
+            "annotations",
+            "looming"
+          ],
+          "top_nt": "acetylcholine",
+          "top_nt_confidence": 0.42732532647280014
+        },
+        {
+          "root_id": "720575940645407268",
+          "type": "LPLC2",
+          "type_field": "hemibrain_type",
+          "side": "left",
+          "role": "sensory_input",
+          "status": "candidate",
+          "evidence": [
+            "annotations",
+            "looming"
+          ],
+          "top_nt": "acetylcholine",
+          "top_nt_confidence": 0.6445058979469402
+        },
+        {
+          "root_id": "720575940645699124",
+          "type": "LPLC2",
+          "type_field": "hemibrain_type",
+          "side": "right",
+          "role": "sensory_input",
+          "status": "candidate",
+          "evidence": [
+            "annotations",
+            "looming"
+          ],
+          "top_nt": "acetylcholine",
+          "top_nt_confidence": 0.5800833222772973
+        },
+        {
+          "root_id": "720575940647358243",
+          "type": "LPLC2",
+          "type_field": "hemibrain_type",
+          "side": "right",
+          "role": "sensory_input",
+          "status": "candidate",
+          "evidence": [
+            "annotations",
+            "looming"
+          ],
+          "top_nt": "acetylcholine",
+          "top_nt_confidence": 0.5008300822308037
+        },
+        {
+          "root_id": "720575940647369507",
+          "type": "LPLC2",
+          "type_field": "hemibrain_type",
+          "side": "left",
+          "role": "sensory_input",
+          "status": "candidate",
+          "evidence": [
+            "annotations",
+            "looming"
+          ],
+          "top_nt": "acetylcholine",
+          "top_nt_confidence": 0.4522785470548874
+        },
+        {
+          "root_id": "720575940648418425",
+          "type": "LPLC2",
+          "type_field": "hemibrain_type",
+          "side": "left",
+          "role": "sensory_input",
+          "status": "candidate",
+          "evidence": [
+            "annotations",
+            "looming"
+          ],
+          "top_nt": "acetylcholine",
+          "top_nt_confidence": 0.47835987567623384
+        },
+        {
+          "root_id": "720575940653666465",
+          "type": "LPLC2",
+          "type_field": "hemibrain_type",
+          "side": "left",
+          "role": "sensory_input",
+          "status": "candidate",
+          "evidence": [
+            "annotations",
+            "looming"
+          ],
+          "top_nt": "acetylcholine",
+          "top_nt_confidence": 0.47602616561078465
+        },
+        {
+          "root_id": "720575940653742753",
+          "type": "LPLC2",
+          "type_field": "hemibrain_type",
+          "side": "right",
+          "role": "sensory_input",
+          "status": "candidate",
+          "evidence": [
+            "annotations",
+            "looming"
+          ],
+          "top_nt": "acetylcholine",
+          "top_nt_confidence": 0.43261494056968297
+        },
+        {
+          "root_id": "720575940655750305",
+          "type": "LPLC2",
+          "type_field": "hemibrain_type",
+          "side": "left",
+          "role": "sensory_input",
+          "status": "candidate",
+          "evidence": [
+            "annotations",
+            "looming"
+          ],
+          "top_nt": "acetylcholine",
+          "top_nt_confidence": 0.5369297500505582
+        },
+        {
+          "root_id": "720575940661316993",
+          "type": "LPLC2",
+          "type_field": "hemibrain_type",
+          "side": "right",
+          "role": "sensory_input",
+          "status": "candidate",
+          "evidence": [
+            "annotations",
+            "looming"
+          ],
+          "top_nt": "acetylcholine",
+          "top_nt_confidence": 0.497957329210531
+        }
+      ]
+    },
+    "lc4": {
+      "label": "LC4",
+      "role": "sensory_input",
+      "status": "candidate",
+      "selection": "Exact hemibrain_type == LC4 in the frozen annotation table",
+      "assumptions": "Local angular projection change-to-Hz encoding is engineered and supplies no escape direction.",
+      "neurons": [
+        {
+          "root_id": "720575940603637438",
+          "type": "LC4",
+          "type_field": "hemibrain_type",
+          "side": "right",
+          "role": "sensory_input",
+          "status": "candidate",
+          "evidence": [
+            "annotations",
+            "lc4"
+          ],
+          "top_nt": "acetylcholine",
+          "top_nt_confidence": 0.673364411833264
+        },
+        {
+          "root_id": "720575940605598892",
+          "type": "LC4",
+          "type_field": "hemibrain_type",
+          "side": "left",
+          "role": "sensory_input",
+          "status": "candidate",
+          "evidence": [
+            "annotations",
+            "lc4"
+          ],
+          "top_nt": "acetylcholine",
+          "top_nt_confidence": 0.541191619409766
+        },
+        {
+          "root_id": "720575940610522009",
+          "type": "LC4",
+          "type_field": "hemibrain_type",
+          "side": "left",
+          "role": "sensory_input",
+          "status": "candidate",
+          "evidence": [
+            "annotations",
+            "lc4"
+          ],
+          "top_nt": "acetylcholine",
+          "top_nt_confidence": 0.6014026665803216
+        },
+        {
+          "root_id": "720575940611134833",
+          "type": "LC4",
+          "type_field": "hemibrain_type",
+          "side": "left",
+          "role": "sensory_input",
+          "status": "candidate",
+          "evidence": [
+            "annotations",
+            "lc4"
+          ],
+          "top_nt": "acetylcholine",
+          "top_nt_confidence": 0.5634265783395052
+        },
+        {
+          "root_id": "720575940612093351",
+          "type": "LC4",
+          "type_field": "hemibrain_type",
+          "side": "right",
+          "role": "sensory_input",
+          "status": "candidate",
+          "evidence": [
+            "annotations",
+            "lc4"
+          ],
+          "top_nt": "acetylcholine",
+          "top_nt_confidence": 0.6966614137516078
+        },
+        {
+          "root_id": "720575940612323025",
+          "type": "LC4",
+          "type_field": "hemibrain_type",
+          "side": "right",
+          "role": "sensory_input",
+          "status": "candidate",
+          "evidence": [
+            "annotations",
+            "lc4"
+          ],
+          "top_nt": "acetylcholine",
+          "top_nt_confidence": 0.6146961885617777
+        },
+        {
+          "root_id": "720575940612380723",
+          "type": "LC4",
+          "type_field": "hemibrain_type",
+          "side": "right",
+          "role": "sensory_input",
+          "status": "candidate",
+          "evidence": [
+            "annotations",
+            "lc4"
+          ],
+          "top_nt": "acetylcholine",
+          "top_nt_confidence": 0.6239781812810907
+        },
+        {
+          "root_id": "720575940612498129",
+          "type": "LC4",
+          "type_field": "hemibrain_type",
+          "side": "right",
+          "role": "sensory_input",
+          "status": "candidate",
+          "evidence": [
+            "annotations",
+            "lc4"
+          ],
+          "top_nt": "acetylcholine",
+          "top_nt_confidence": 0.5708245978004789
+        },
+        {
+          "root_id": "720575940612518055",
+          "type": "LC4",
+          "type_field": "hemibrain_type",
+          "side": "left",
+          "role": "sensory_input",
+          "status": "candidate",
+          "evidence": [
+            "annotations",
+            "lc4"
+          ],
+          "top_nt": "acetylcholine",
+          "top_nt_confidence": 0.5856059593127513
+        },
+        {
+          "root_id": "720575940612580977",
+          "type": "LC4",
+          "type_field": "hemibrain_type",
+          "side": "left",
+          "role": "sensory_input",
+          "status": "candidate",
+          "evidence": [
+            "annotations",
+            "lc4"
+          ],
+          "top_nt": "acetylcholine",
+          "top_nt_confidence": 0.5394241131951015
+        },
+        {
+          "root_id": "720575940612968421",
+          "type": "LC4",
+          "type_field": "hemibrain_type",
+          "side": "right",
+          "role": "sensory_input",
+          "status": "candidate",
+          "evidence": [
+            "annotations",
+            "lc4"
+          ],
+          "top_nt": "acetylcholine",
+          "top_nt_confidence": 0.6102739881561219
+        },
+        {
+          "root_id": "720575940613256863",
+          "type": "LC4",
+          "type_field": "hemibrain_type",
+          "side": "left",
+          "role": "sensory_input",
+          "status": "candidate",
+          "evidence": [
+            "annotations",
+            "lc4"
+          ],
+          "top_nt": "acetylcholine",
+          "top_nt_confidence": 0.5962822689152933
+        },
+        {
+          "root_id": "720575940613260959",
+          "type": "LC4",
+          "type_field": "hemibrain_type",
+          "side": "left",
+          "role": "sensory_input",
+          "status": "candidate",
+          "evidence": [
+            "annotations",
+            "lc4"
+          ],
+          "top_nt": "acetylcholine",
+          "top_nt_confidence": 0.656003414128343
+        },
+        {
+          "root_id": "720575940613609484",
+          "type": "LC4",
+          "type_field": "hemibrain_type",
+          "side": "right",
+          "role": "sensory_input",
+          "status": "candidate",
+          "evidence": [
+            "annotations",
+            "lc4"
+          ],
+          "top_nt": "acetylcholine",
+          "top_nt_confidence": 0.5494665663565431
+        },
+        {
+          "root_id": "720575940613638041",
+          "type": "LC4",
+          "type_field": "hemibrain_type",
+          "side": "right",
+          "role": "sensory_input",
+          "status": "candidate",
+          "evidence": [
+            "annotations",
+            "lc4"
+          ],
+          "top_nt": "acetylcholine",
+          "top_nt_confidence": 0.6072068060405593
+        },
+        {
+          "root_id": "720575940614572742",
+          "type": "LC4",
+          "type_field": "hemibrain_type",
+          "side": "left",
+          "role": "sensory_input",
+          "status": "candidate",
+          "evidence": [
+            "annotations",
+            "lc4"
+          ],
+          "top_nt": "acetylcholine",
+          "top_nt_confidence": 0.5599702293836716
+        },
+        {
+          "root_id": "720575940614582946",
+          "type": "LC4",
+          "type_field": "hemibrain_type",
+          "side": "right",
+          "role": "sensory_input",
+          "status": "candidate",
+          "evidence": [
+            "annotations",
+            "lc4"
+          ],
+          "top_nt": "acetylcholine",
+          "top_nt_confidence": 0.6691109543646591
+        },
+        {
+          "root_id": "720575940614914107",
+          "type": "LC4",
+          "type_field": "hemibrain_type",
+          "side": "left",
+          "role": "sensory_input",
+          "status": "candidate",
+          "evidence": [
+            "annotations",
+            "lc4"
+          ],
+          "top_nt": "acetylcholine",
+          "top_nt_confidence": 0.5909182510118784
+        },
+        {
+          "root_id": "720575940615053580",
+          "type": "LC4",
+          "type_field": "hemibrain_type",
+          "side": "left",
+          "role": "sensory_input",
+          "status": "candidate",
+          "evidence": [
+            "annotations",
+            "lc4"
+          ],
+          "top_nt": "acetylcholine",
+          "top_nt_confidence": 0.5296869018066843
+        },
+        {
+          "root_id": "720575940615127227",
+          "type": "LC4",
+          "type_field": "hemibrain_type",
+          "side": "left",
+          "role": "sensory_input",
+          "status": "candidate",
+          "evidence": [
+            "annotations",
+            "lc4"
+          ],
+          "top_nt": "acetylcholine",
+          "top_nt_confidence": 0.6014447646261821
+        },
+        {
+          "root_id": "720575940615232217",
+          "type": "LC4",
+          "type_field": "hemibrain_type",
+          "side": "right",
+          "role": "sensory_input",
+          "status": "candidate",
+          "evidence": [
+            "annotations",
+            "lc4"
+          ],
+          "top_nt": "acetylcholine",
+          "top_nt_confidence": 0.6520964393898956
+        },
+        {
+          "root_id": "720575940615462587",
+          "type": "LC4",
+          "type_field": "hemibrain_type",
+          "side": "left",
+          "role": "sensory_input",
+          "status": "candidate",
+          "evidence": [
+            "annotations",
+            "lc4"
+          ],
+          "top_nt": "acetylcholine",
+          "top_nt_confidence": 0.5619640237118932
+        },
+        {
+          "root_id": "720575940615575007",
+          "type": "LC4",
+          "type_field": "hemibrain_type",
+          "side": "left",
+          "role": "sensory_input",
+          "status": "candidate",
+          "evidence": [
+            "annotations",
+            "lc4"
+          ],
+          "top_nt": "acetylcholine",
+          "top_nt_confidence": 0.620446039336602
+        },
+        {
+          "root_id": "720575940616066705",
+          "type": "LC4",
+          "type_field": "hemibrain_type",
+          "side": "right",
+          "role": "sensory_input",
+          "status": "candidate",
+          "evidence": [
+            "annotations",
+            "lc4"
+          ],
+          "top_nt": "acetylcholine",
+          "top_nt_confidence": 0.6232687511947032
+        },
+        {
+          "root_id": "720575940616713355",
+          "type": "LC4",
+          "type_field": "hemibrain_type",
+          "side": "left",
+          "role": "sensory_input",
+          "status": "candidate",
+          "evidence": [
+            "annotations",
+            "lc4"
+          ],
+          "top_nt": "acetylcholine",
+          "top_nt_confidence": 0.5549588249642996
+        },
+        {
+          "root_id": "720575940617026260",
+          "type": "LC4",
+          "type_field": "hemibrain_type",
+          "side": "left",
+          "role": "sensory_input",
+          "status": "candidate",
+          "evidence": [
+            "annotations",
+            "lc4"
+          ],
+          "top_nt": "acetylcholine",
+          "top_nt_confidence": 0.5056471510028838
+        },
+        {
+          "root_id": "720575940617176321",
+          "type": "LC4",
+          "type_field": "hemibrain_type",
+          "side": "left",
+          "role": "sensory_input",
+          "status": "candidate",
+          "evidence": [
+            "annotations",
+            "lc4"
+          ],
+          "top_nt": "acetylcholine",
+          "top_nt_confidence": 0.5131245927081787
+        },
+        {
+          "root_id": "720575940617266722",
+          "type": "LC4",
+          "type_field": "hemibrain_type",
+          "side": "left",
+          "role": "sensory_input",
+          "status": "candidate",
+          "evidence": [
+            "annotations",
+            "lc4"
+          ],
+          "top_nt": "acetylcholine",
+          "top_nt_confidence": 0.5830274217962489
+        },
+        {
+          "root_id": "720575940617348379",
+          "type": "LC4",
+          "type_field": "hemibrain_type",
+          "side": "right",
+          "role": "sensory_input",
+          "status": "candidate",
+          "evidence": [
+            "annotations",
+            "lc4"
+          ],
+          "top_nt": "acetylcholine",
+          "top_nt_confidence": 0.6434318170381085
+        },
+        {
+          "root_id": "720575940618002644",
+          "type": "LC4",
+          "type_field": "hemibrain_type",
+          "side": "left",
+          "role": "sensory_input",
+          "status": "candidate",
+          "evidence": [
+            "annotations",
+            "lc4"
+          ],
+          "top_nt": "acetylcholine",
+          "top_nt_confidence": 0.5835598448005004
+        },
+        {
+          "root_id": "720575940618234704",
+          "type": "LC4",
+          "type_field": "hemibrain_type",
+          "side": "right",
+          "role": "sensory_input",
+          "status": "candidate",
+          "evidence": [
+            "annotations",
+            "lc4"
+          ],
+          "top_nt": "acetylcholine",
+          "top_nt_confidence": 0.6116270482683244
+        },
+        {
+          "root_id": "720575940618234715",
+          "type": "LC4",
+          "type_field": "hemibrain_type",
+          "side": "right",
+          "role": "sensory_input",
+          "status": "candidate",
+          "evidence": [
+            "annotations",
+            "lc4"
+          ],
+          "top_nt": "acetylcholine",
+          "top_nt_confidence": 0.6321254577805517
+        },
+        {
+          "root_id": "720575940618266459",
+          "type": "LC4",
+          "type_field": "hemibrain_type",
+          "side": "right",
+          "role": "sensory_input",
+          "status": "candidate",
+          "evidence": [
+            "annotations",
+            "lc4"
+          ],
+          "top_nt": "acetylcholine",
+          "top_nt_confidence": 0.6328988598690284
+        },
+        {
+          "root_id": "720575940618267227",
+          "type": "LC4",
+          "type_field": "hemibrain_type",
+          "side": "right",
+          "role": "sensory_input",
+          "status": "candidate",
+          "evidence": [
+            "annotations",
+            "lc4"
+          ],
+          "top_nt": "acetylcholine",
+          "top_nt_confidence": 0.5768035743385873
+        },
+        {
+          "root_id": "720575940618275520",
+          "type": "LC4",
+          "type_field": "hemibrain_type",
+          "side": "right",
+          "role": "sensory_input",
+          "status": "candidate",
+          "evidence": [
+            "annotations",
+            "lc4"
+          ],
+          "top_nt": "acetylcholine",
+          "top_nt_confidence": 0.5636071077864484
+        },
+        {
+          "root_id": "720575940618312606",
+          "type": "LC4",
+          "type_field": "hemibrain_type",
+          "side": "left",
+          "role": "sensory_input",
+          "status": "candidate",
+          "evidence": [
+            "annotations",
+            "lc4"
+          ],
+          "top_nt": "acetylcholine",
+          "top_nt_confidence": 0.5627326617740898
+        },
+        {
+          "root_id": "720575940618676440",
+          "type": "LC4",
+          "type_field": "hemibrain_type",
+          "side": "left",
+          "role": "sensory_input",
+          "status": "candidate",
+          "evidence": [
+            "annotations",
+            "lc4"
+          ],
+          "top_nt": "acetylcholine",
+          "top_nt_confidence": 0.5946219636060353
+        },
+        {
+          "root_id": "720575940618709158",
+          "type": "LC4",
+          "type_field": "hemibrain_type",
+          "side": "right",
+          "role": "sensory_input",
+          "status": "candidate",
+          "evidence": [
+            "annotations",
+            "lc4"
+          ],
+          "top_nt": "acetylcholine",
+          "top_nt_confidence": 0.5830481425877776
+        },
+        {
+          "root_id": "720575940618723749",
+          "type": "LC4",
+          "type_field": "hemibrain_type",
+          "side": "left",
+          "role": "sensory_input",
+          "status": "candidate",
+          "evidence": [
+            "annotations",
+            "lc4"
+          ],
+          "top_nt": "acetylcholine",
+          "top_nt_confidence": 0.5410937845538862
+        },
+        {
+          "root_id": "720575940618807105",
+          "type": "LC4",
+          "type_field": "hemibrain_type",
+          "side": "left",
+          "role": "sensory_input",
+          "status": "candidate",
+          "evidence": [
+            "annotations",
+            "lc4"
+          ],
+          "top_nt": "acetylcholine",
+          "top_nt_confidence": 0.5386059660476914
+        },
+        {
+          "root_id": "720575940619397542",
+          "type": "LC4",
+          "type_field": "hemibrain_type",
+          "side": "left",
+          "role": "sensory_input",
+          "status": "candidate",
+          "evidence": [
+            "annotations",
+            "lc4"
+          ],
+          "top_nt": "acetylcholine",
+          "top_nt_confidence": 0.579549086157529
+        },
+        {
+          "root_id": "720575940620314221",
+          "type": "LC4",
+          "type_field": "hemibrain_type",
+          "side": "right",
+          "role": "sensory_input",
+          "status": "candidate",
+          "evidence": [
+            "annotations",
+            "lc4"
+          ],
+          "top_nt": "acetylcholine",
+          "top_nt_confidence": 0.47864517713794236
+        },
+        {
+          "root_id": "720575940620314612",
+          "type": "LC4",
+          "type_field": "hemibrain_type",
+          "side": "right",
+          "role": "sensory_input",
+          "status": "candidate",
+          "evidence": [
+            "annotations",
+            "lc4"
+          ],
+          "top_nt": "acetylcholine",
+          "top_nt_confidence": 0.5271705746295182
+        },
+        {
+          "root_id": "720575940620731380",
+          "type": "LC4",
+          "type_field": "hemibrain_type",
+          "side": "right",
+          "role": "sensory_input",
+          "status": "candidate",
+          "evidence": [
+            "annotations",
+            "lc4"
+          ],
+          "top_nt": "acetylcholine",
+          "top_nt_confidence": 0.4638199069048779
+        },
+        {
+          "root_id": "720575940620795728",
+          "type": "LC4",
+          "type_field": "hemibrain_type",
+          "side": "left",
+          "role": "sensory_input",
+          "status": "candidate",
+          "evidence": [
+            "annotations",
+            "lc4"
+          ],
+          "top_nt": "acetylcholine",
+          "top_nt_confidence": 0.6169415525969965
+        },
+        {
+          "root_id": "720575940620903551",
+          "type": "LC4",
+          "type_field": "hemibrain_type",
+          "side": "left",
+          "role": "sensory_input",
+          "status": "candidate",
+          "evidence": [
+            "annotations",
+            "lc4"
+          ],
+          "top_nt": "acetylcholine",
+          "top_nt_confidence": 0.5467347223190137
+        },
+        {
+          "root_id": "720575940621145821",
+          "type": "LC4",
+          "type_field": "hemibrain_type",
+          "side": "right",
+          "role": "sensory_input",
+          "status": "candidate",
+          "evidence": [
+            "annotations",
+            "lc4"
+          ],
+          "top_nt": "acetylcholine",
+          "top_nt_confidence": 0.6373449092754252
+        },
+        {
+          "root_id": "720575940621522458",
+          "type": "LC4",
+          "type_field": "hemibrain_type",
+          "side": "right",
+          "role": "sensory_input",
+          "status": "candidate",
+          "evidence": [
+            "annotations",
+            "lc4"
+          ],
+          "top_nt": "acetylcholine",
+          "top_nt_confidence": 0.6142518036569962
+        },
+        {
+          "root_id": "720575940621753579",
+          "type": "LC4",
+          "type_field": "hemibrain_type",
+          "side": "right",
+          "role": "sensory_input",
+          "status": "candidate",
+          "evidence": [
+            "annotations",
+            "lc4"
+          ],
+          "top_nt": "acetylcholine",
+          "top_nt_confidence": 0.6181143699734393
+        },
+        {
+          "root_id": "720575940622108001",
+          "type": "LC4",
+          "type_field": "hemibrain_type",
+          "side": "left",
+          "role": "sensory_input",
+          "status": "candidate",
+          "evidence": [
+            "annotations",
+            "lc4"
+          ],
+          "top_nt": "acetylcholine",
+          "top_nt_confidence": 0.5970081416313718
+        },
+        {
+          "root_id": "720575940622330582",
+          "type": "LC4",
+          "type_field": "hemibrain_type",
+          "side": "right",
+          "role": "sensory_input",
+          "status": "candidate",
+          "evidence": [
+            "annotations",
+            "lc4"
+          ],
+          "top_nt": "acetylcholine",
+          "top_nt_confidence": 0.6116132203512162
+        },
+        {
+          "root_id": "720575940622531767",
+          "type": "LC4",
+          "type_field": "hemibrain_type",
+          "side": "left",
+          "role": "sensory_input",
+          "status": "candidate",
+          "evidence": [
+            "annotations",
+            "lc4"
+          ],
+          "top_nt": "acetylcholine",
+          "top_nt_confidence": 0.506449201960657
+        },
+        {
+          "root_id": "720575940622939836",
+          "type": "LC4",
+          "type_field": "hemibrain_type",
+          "side": "left",
+          "role": "sensory_input",
+          "status": "candidate",
+          "evidence": [
+            "annotations",
+            "lc4"
+          ],
+          "top_nt": "acetylcholine",
+          "top_nt_confidence": 0.6263759352816992
+        },
+        {
+          "root_id": "720575940624017251",
+          "type": "LC4",
+          "type_field": "hemibrain_type",
+          "side": "left",
+          "role": "sensory_input",
+          "status": "candidate",
+          "evidence": [
+            "annotations",
+            "lc4"
+          ],
+          "top_nt": "acetylcholine",
+          "top_nt_confidence": 0.5373659637666931
+        },
+        {
+          "root_id": "720575940624111763",
+          "type": "LC4",
+          "type_field": "hemibrain_type",
+          "side": "left",
+          "role": "sensory_input",
+          "status": "candidate",
+          "evidence": [
+            "annotations",
+            "lc4"
+          ],
+          "top_nt": "acetylcholine",
+          "top_nt_confidence": 0.5792923887640562
+        },
+        {
+          "root_id": "720575940624790781",
+          "type": "LC4",
+          "type_field": "hemibrain_type",
+          "side": "right",
+          "role": "sensory_input",
+          "status": "candidate",
+          "evidence": [
+            "annotations",
+            "lc4"
+          ],
+          "top_nt": "acetylcholine",
+          "top_nt_confidence": 0.6624543681378827
+        },
+        {
+          "root_id": "720575940624856762",
+          "type": "LC4",
+          "type_field": "hemibrain_type",
+          "side": "right",
+          "role": "sensory_input",
+          "status": "candidate",
+          "evidence": [
+            "annotations",
+            "lc4"
+          ],
+          "top_nt": "acetylcholine",
+          "top_nt_confidence": 0.6500028351365872
+        },
+        {
+          "root_id": "720575940625038090",
+          "type": "LC4",
+          "type_field": "hemibrain_type",
+          "side": "left",
+          "role": "sensory_input",
+          "status": "candidate",
+          "evidence": [
+            "annotations",
+            "lc4"
+          ],
+          "top_nt": "acetylcholine",
+          "top_nt_confidence": 0.5749044168548242
+        },
+        {
+          "root_id": "720575940625841351",
+          "type": "LC4",
+          "type_field": "hemibrain_type",
+          "side": "right",
+          "role": "sensory_input",
+          "status": "candidate",
+          "evidence": [
+            "annotations",
+            "lc4"
+          ],
+          "top_nt": "acetylcholine",
+          "top_nt_confidence": 0.6698268642076451
+        },
+        {
+          "root_id": "720575940625845447",
+          "type": "LC4",
+          "type_field": "hemibrain_type",
+          "side": "right",
+          "role": "sensory_input",
+          "status": "candidate",
+          "evidence": [
+            "annotations",
+            "lc4"
+          ],
+          "top_nt": "acetylcholine",
+          "top_nt_confidence": 0.6071134880613442
+        },
+        {
+          "root_id": "720575940625906702",
+          "type": "LC4",
+          "type_field": "hemibrain_type",
+          "side": "right",
+          "role": "sensory_input",
+          "status": "candidate",
+          "evidence": [
+            "annotations",
+            "lc4"
+          ],
+          "top_nt": "acetylcholine",
+          "top_nt_confidence": 0.6203882423531925
+        },
+        {
+          "root_id": "720575940625932421",
+          "type": "LC4",
+          "type_field": "hemibrain_type",
+          "side": "right",
+          "role": "sensory_input",
+          "status": "candidate",
+          "evidence": [
+            "annotations",
+            "lc4"
+          ],
+          "top_nt": "acetylcholine",
+          "top_nt_confidence": 0.6284955002155974
+        },
+        {
+          "root_id": "720575940625934973",
+          "type": "LC4",
+          "type_field": "hemibrain_type",
+          "side": "left",
+          "role": "sensory_input",
+          "status": "candidate",
+          "evidence": [
+            "annotations",
+            "lc4"
+          ],
+          "top_nt": "acetylcholine",
+          "top_nt_confidence": 0.5382800336561002
+        },
+        {
+          "root_id": "720575940625991043",
+          "type": "LC4",
+          "type_field": "hemibrain_type",
+          "side": "left",
+          "role": "sensory_input",
+          "status": "candidate",
+          "evidence": [
+            "annotations",
+            "lc4"
+          ],
+          "top_nt": "acetylcholine",
+          "top_nt_confidence": 0.5881437167545813
+        },
+        {
+          "root_id": "720575940626553596",
+          "type": "LC4",
+          "type_field": "hemibrain_type",
+          "side": "right",
+          "role": "sensory_input",
+          "status": "candidate",
+          "evidence": [
+            "annotations",
+            "lc4"
+          ],
+          "top_nt": "acetylcholine",
+          "top_nt_confidence": 0.6101868570055267
+        },
+        {
+          "root_id": "720575940626605200",
+          "type": "LC4",
+          "type_field": "hemibrain_type",
+          "side": "left",
+          "role": "sensory_input",
+          "status": "candidate",
+          "evidence": [
+            "annotations",
+            "lc4"
+          ],
+          "top_nt": "acetylcholine",
+          "top_nt_confidence": 0.5912210969696529
+        },
+        {
+          "root_id": "720575940626626895",
+          "type": "LC4",
+          "type_field": "hemibrain_type",
+          "side": "left",
+          "role": "sensory_input",
+          "status": "candidate",
+          "evidence": [
+            "annotations",
+            "lc4"
+          ],
+          "top_nt": "acetylcholine",
+          "top_nt_confidence": 0.5479296438571722
+        },
+        {
+          "root_id": "720575940626916936",
+          "type": "LC4",
+          "type_field": "hemibrain_type",
+          "side": "left",
+          "role": "sensory_input",
+          "status": "candidate",
+          "evidence": [
+            "annotations",
+            "lc4"
+          ],
+          "top_nt": "acetylcholine",
+          "top_nt_confidence": 0.6268629248257755
+        },
+        {
+          "root_id": "720575940627519107",
+          "type": "LC4",
+          "type_field": "hemibrain_type",
+          "side": "left",
+          "role": "sensory_input",
+          "status": "candidate",
+          "evidence": [
+            "annotations",
+            "lc4"
+          ],
+          "top_nt": "acetylcholine",
+          "top_nt_confidence": 0.5762975340012252
+        },
+        {
+          "root_id": "720575940628064260",
+          "type": "LC4",
+          "type_field": "hemibrain_type",
+          "side": "left",
+          "role": "sensory_input",
+          "status": "candidate",
+          "evidence": [
+            "annotations",
+            "lc4"
+          ],
+          "top_nt": "acetylcholine",
+          "top_nt_confidence": 0.5962915630283564
+        },
+        {
+          "root_id": "720575940628081541",
+          "type": "LC4",
+          "type_field": "hemibrain_type",
+          "side": "left",
+          "role": "sensory_input",
+          "status": "candidate",
+          "evidence": [
+            "annotations",
+            "lc4"
+          ],
+          "top_nt": "acetylcholine",
+          "top_nt_confidence": 0.5961615779921929
+        },
+        {
+          "root_id": "720575940628419527",
+          "type": "LC4",
+          "type_field": "hemibrain_type",
+          "side": "right",
+          "role": "sensory_input",
+          "status": "candidate",
+          "evidence": [
+            "annotations",
+            "lc4"
+          ],
+          "top_nt": "acetylcholine",
+          "top_nt_confidence": 0.6270646276336582
+        },
+        {
+          "root_id": "720575940628454522",
+          "type": "LC4",
+          "type_field": "hemibrain_type",
+          "side": "left",
+          "role": "sensory_input",
+          "status": "candidate",
+          "evidence": [
+            "annotations",
+            "lc4"
+          ],
+          "top_nt": "acetylcholine",
+          "top_nt_confidence": 0.5936377829701406
+        },
+        {
+          "root_id": "720575940628462340",
+          "type": "LC4",
+          "type_field": "hemibrain_type",
+          "side": "left",
+          "role": "sensory_input",
+          "status": "candidate",
+          "evidence": [
+            "annotations",
+            "lc4"
+          ],
+          "top_nt": "acetylcholine",
+          "top_nt_confidence": 0.5766449059662723
+        },
+        {
+          "root_id": "720575940628518400",
+          "type": "LC4",
+          "type_field": "hemibrain_type",
+          "side": "right",
+          "role": "sensory_input",
+          "status": "candidate",
+          "evidence": [
+            "annotations",
+            "lc4"
+          ],
+          "top_nt": "acetylcholine",
+          "top_nt_confidence": 0.6472406036380386
+        },
+        {
+          "root_id": "720575940628599895",
+          "type": "LC4",
+          "type_field": "hemibrain_type",
+          "side": "right",
+          "role": "sensory_input",
+          "status": "candidate",
+          "evidence": [
+            "annotations",
+            "lc4"
+          ],
+          "top_nt": "acetylcholine",
+          "top_nt_confidence": 0.5766362143419905
+        },
+        {
+          "root_id": "720575940628606713",
+          "type": "LC4",
+          "type_field": "hemibrain_type",
+          "side": "right",
+          "role": "sensory_input",
+          "status": "candidate",
+          "evidence": [
+            "annotations",
+            "lc4"
+          ],
+          "top_nt": "acetylcholine",
+          "top_nt_confidence": 0.5968646831448027
+        },
+        {
+          "root_id": "720575940628699560",
+          "type": "LC4",
+          "type_field": "hemibrain_type",
+          "side": "left",
+          "role": "sensory_input",
+          "status": "candidate",
+          "evidence": [
+            "annotations",
+            "lc4"
+          ],
+          "top_nt": "acetylcholine",
+          "top_nt_confidence": 0.5562240272872647
+        },
+        {
+          "root_id": "720575940628891863",
+          "type": "LC4",
+          "type_field": "hemibrain_type",
+          "side": "right",
+          "role": "sensory_input",
+          "status": "candidate",
+          "evidence": [
+            "annotations",
+            "lc4"
+          ],
+          "top_nt": "acetylcholine",
+          "top_nt_confidence": 0.5508334659416535
+        },
+        {
+          "root_id": "720575940629753807",
+          "type": "LC4",
+          "type_field": "hemibrain_type",
+          "side": "left",
+          "role": "sensory_input",
+          "status": "candidate",
+          "evidence": [
+            "annotations",
+            "lc4"
+          ],
+          "top_nt": "acetylcholine",
+          "top_nt_confidence": 0.5305569620992916
+        },
+        {
+          "root_id": "720575940629964591",
+          "type": "LC4",
+          "type_field": "hemibrain_type",
+          "side": "right",
+          "role": "sensory_input",
+          "status": "candidate",
+          "evidence": [
+            "annotations",
+            "lc4"
+          ],
+          "top_nt": "acetylcholine",
+          "top_nt_confidence": 0.6137226690685323
+        },
+        {
+          "root_id": "720575940630154660",
+          "type": "LC4",
+          "type_field": "hemibrain_type",
+          "side": "right",
+          "role": "sensory_input",
+          "status": "candidate",
+          "evidence": [
+            "annotations",
+            "lc4"
+          ],
+          "top_nt": "acetylcholine",
+          "top_nt_confidence": 0.634789856385066
+        },
+        {
+          "root_id": "720575940630484495",
+          "type": "LC4",
+          "type_field": "hemibrain_type",
+          "side": "left",
+          "role": "sensory_input",
+          "status": "candidate",
+          "evidence": [
+            "annotations",
+            "lc4"
+          ],
+          "top_nt": "acetylcholine",
+          "top_nt_confidence": 0.6838924296275382
+        },
+        {
+          "root_id": "720575940630851036",
+          "type": "LC4",
+          "type_field": "hemibrain_type",
+          "side": "left",
+          "role": "sensory_input",
+          "status": "candidate",
+          "evidence": [
+            "annotations",
+            "lc4"
+          ],
+          "top_nt": "acetylcholine",
+          "top_nt_confidence": 0.6152458906933427
+        },
+        {
+          "root_id": "720575940630998339",
+          "type": "LC4",
+          "type_field": "hemibrain_type",
+          "side": "left",
+          "role": "sensory_input",
+          "status": "candidate",
+          "evidence": [
+            "annotations",
+            "lc4"
+          ],
+          "top_nt": "acetylcholine",
+          "top_nt_confidence": 0.6004082383861999
+        },
+        {
+          "root_id": "720575940631032657",
+          "type": "LC4",
+          "type_field": "hemibrain_type",
+          "side": "right",
+          "role": "sensory_input",
+          "status": "candidate",
+          "evidence": [
+            "annotations",
+            "lc4"
+          ],
+          "top_nt": "acetylcholine",
+          "top_nt_confidence": 0.5601455550287946
+        },
+        {
+          "root_id": "720575940631338271",
+          "type": "LC4",
+          "type_field": "hemibrain_type",
+          "side": "left",
+          "role": "sensory_input",
+          "status": "candidate",
+          "evidence": [
+            "annotations",
+            "lc4"
+          ],
+          "top_nt": "acetylcholine",
+          "top_nt_confidence": 0.5593393128973626
+        },
+        {
+          "root_id": "720575940632475449",
+          "type": "LC4",
+          "type_field": "hemibrain_type",
+          "side": "right",
+          "role": "sensory_input",
+          "status": "candidate",
+          "evidence": [
+            "annotations",
+            "lc4"
+          ],
+          "top_nt": "acetylcholine",
+          "top_nt_confidence": 0.6824870505121483
+        },
+        {
+          "root_id": "720575940632715234",
+          "type": "LC4",
+          "type_field": "hemibrain_type",
+          "side": "right",
+          "role": "sensory_input",
+          "status": "candidate",
+          "evidence": [
+            "annotations",
+            "lc4"
+          ],
+          "top_nt": "acetylcholine",
+          "top_nt_confidence": 0.5853316182451903
+        },
+        {
+          "root_id": "720575940632769180",
+          "type": "LC4",
+          "type_field": "hemibrain_type",
+          "side": "left",
+          "role": "sensory_input",
+          "status": "candidate",
+          "evidence": [
+            "annotations",
+            "lc4"
+          ],
+          "top_nt": "acetylcholine",
+          "top_nt_confidence": 0.6104038909435661
+        },
+        {
+          "root_id": "720575940633013355",
+          "type": "LC4",
+          "type_field": "hemibrain_type",
+          "side": "right",
+          "role": "sensory_input",
+          "status": "candidate",
+          "evidence": [
+            "annotations",
+            "lc4"
+          ],
+          "top_nt": "acetylcholine",
+          "top_nt_confidence": 0.5739873605923514
+        },
+        {
+          "root_id": "720575940633218863",
+          "type": "LC4",
+          "type_field": "hemibrain_type",
+          "side": "right",
+          "role": "sensory_input",
+          "status": "candidate",
+          "evidence": [
+            "annotations",
+            "lc4"
+          ],
+          "top_nt": "acetylcholine",
+          "top_nt_confidence": 0.5827212716844562
+        },
+        {
+          "root_id": "720575940633580384",
+          "type": "LC4",
+          "type_field": "hemibrain_type",
+          "side": "left",
+          "role": "sensory_input",
+          "status": "candidate",
+          "evidence": [
+            "annotations",
+            "lc4"
+          ],
+          "top_nt": "acetylcholine",
+          "top_nt_confidence": 0.5069861288695127
+        },
+        {
+          "root_id": "720575940634517856",
+          "type": "LC4",
+          "type_field": "hemibrain_type",
+          "side": "left",
+          "role": "sensory_input",
+          "status": "candidate",
+          "evidence": [
+            "annotations",
+            "lc4"
+          ],
+          "top_nt": "acetylcholine",
+          "top_nt_confidence": 0.6551156219521345
+        },
+        {
+          "root_id": "720575940635835967",
+          "type": "LC4",
+          "type_field": "hemibrain_type",
+          "side": "right",
+          "role": "sensory_input",
+          "status": "candidate",
+          "evidence": [
+            "annotations",
+            "lc4"
+          ],
+          "top_nt": "acetylcholine",
+          "top_nt_confidence": 0.6580199964196337
+        },
+        {
+          "root_id": "720575940636957006",
+          "type": "LC4",
+          "type_field": "hemibrain_type",
+          "side": "right",
+          "role": "sensory_input",
+          "status": "candidate",
+          "evidence": [
+            "annotations",
+            "lc4"
+          ],
+          "top_nt": "acetylcholine",
+          "top_nt_confidence": 0.670872992740332
+        },
+        {
+          "root_id": "720575940638456227",
+          "type": "LC4",
+          "type_field": "hemibrain_type",
+          "side": "left",
+          "role": "sensory_input",
+          "status": "candidate",
+          "evidence": [
+            "annotations",
+            "lc4"
+          ],
+          "top_nt": "acetylcholine",
+          "top_nt_confidence": 0.5585483468093978
+        },
+        {
+          "root_id": "720575940638496720",
+          "type": "LC4",
+          "type_field": "hemibrain_type",
+          "side": "left",
+          "role": "sensory_input",
+          "status": "candidate",
+          "evidence": [
+            "annotations",
+            "lc4"
+          ],
+          "top_nt": "acetylcholine",
+          "top_nt_confidence": 0.6227959599756708
+        },
+        {
+          "root_id": "720575940639817947",
+          "type": "LC4",
+          "type_field": "hemibrain_type",
+          "side": "right",
+          "role": "sensory_input",
+          "status": "candidate",
+          "evidence": [
+            "annotations",
+            "lc4"
+          ],
+          "top_nt": "acetylcholine",
+          "top_nt_confidence": 0.6205130221966074
+        },
+        {
+          "root_id": "720575940640612480",
+          "type": "LC4",
+          "type_field": "hemibrain_type",
+          "side": "left",
+          "role": "sensory_input",
+          "status": "candidate",
+          "evidence": [
+            "annotations",
+            "lc4"
+          ],
+          "top_nt": "acetylcholine",
+          "top_nt_confidence": 0.6831420706401865
+        },
+        {
+          "root_id": "720575940641213824",
+          "type": "LC4",
+          "type_field": "hemibrain_type",
+          "side": "right",
+          "role": "sensory_input",
+          "status": "candidate",
+          "evidence": [
+            "annotations",
+            "lc4"
+          ],
+          "top_nt": "acetylcholine",
+          "top_nt_confidence": 0.6436635435549436
+        },
+        {
+          "root_id": "720575940645821316",
+          "type": "LC4",
+          "type_field": "hemibrain_type",
+          "side": "right",
+          "role": "sensory_input",
+          "status": "candidate",
+          "evidence": [
+            "annotations",
+            "lc4"
+          ],
+          "top_nt": "acetylcholine",
+          "top_nt_confidence": 0.6723702629804618
+        },
+        {
+          "root_id": "720575940649229433",
+          "type": "LC4",
+          "type_field": "hemibrain_type",
+          "side": "left",
+          "role": "sensory_input",
+          "status": "candidate",
+          "evidence": [
+            "annotations",
+            "lc4"
+          ],
+          "top_nt": "acetylcholine",
+          "top_nt_confidence": 0.6326982674850014
+        },
+        {
+          "root_id": "720575940652611745",
+          "type": "LC4",
+          "type_field": "hemibrain_type",
+          "side": "right",
+          "role": "sensory_input",
+          "status": "candidate",
+          "evidence": [
+            "annotations",
+            "lc4"
+          ],
+          "top_nt": "acetylcholine",
+          "top_nt_confidence": 0.6646858635042873
+        }
+      ]
+    },
+    "gf": {
+      "label": "DNp01",
+      "role": "motor_readout",
+      "status": "candidate",
+      "selection": "Exact cell_type == DNp01 in the frozen annotation table",
+      "assumptions": "Giant fiber activity supports a scalar escape-drive candidate, not a validated two-dimensional escape direction. Body movement mapping is engineered.",
+      "neurons": [
+        {
+          "root_id": "720575940622838154",
+          "type": "DNp01",
+          "type_field": "cell_type",
+          "side": "left",
+          "role": "motor_readout",
+          "status": "candidate",
+          "evidence": [
+            "annotations",
+            "looming"
+          ],
+          "top_nt": "acetylcholine",
+          "top_nt_confidence": 0.3171494291445193
+        },
+        {
+          "root_id": "720575940632499757",
+          "type": "DNp01",
+          "type_field": "cell_type",
+          "side": "right",
+          "role": "motor_readout",
+          "status": "candidate",
+          "evidence": [
+            "annotations",
+            "looming"
+          ],
+          "top_nt": "glutamate",
+          "top_nt_confidence": 0.26569821946215116
+        }
+      ]
+    },
+    "dna01": {
+      "label": "DNa01",
+      "role": "motor_readout",
+      "status": "candidate",
+      "selection": "Exact cell_type == DNa01 in the frozen annotation table",
+      "assumptions": "Left/right filtered activity may drive ipsilateral yaw; the filter and gain are engineered, not a verified forward-velocity decoder.",
+      "neurons": [
+        {
+          "root_id": "720575940627787609",
+          "type": "DNa01",
+          "type_field": "cell_type",
+          "side": "left",
+          "role": "motor_readout",
+          "status": "candidate",
+          "evidence": [
+            "annotations",
+            "steering"
+          ],
+          "top_nt": "acetylcholine",
+          "top_nt_confidence": 0.7130077449558326
+        },
+        {
+          "root_id": "720575940644438551",
+          "type": "DNa01",
+          "type_field": "cell_type",
+          "side": "right",
+          "role": "motor_readout",
+          "status": "candidate",
+          "evidence": [
+            "annotations",
+            "steering"
+          ],
+          "top_nt": "acetylcholine",
+          "top_nt_confidence": 0.7359791570482389
+        }
+      ]
+    },
+    "dna02": {
+      "label": "DNa02",
+      "role": "motor_readout",
+      "status": "candidate",
+      "selection": "Exact hemibrain_type == DNa02 in the frozen annotation table",
+      "assumptions": "Left/right activity difference may drive ipsilateral yaw; the filter and gain are engineered, not a verified forward-velocity decoder.",
+      "neurons": [
+        {
+          "root_id": "720575940604737708",
+          "type": "DNa02",
+          "type_field": "hemibrain_type",
+          "side": "right",
+          "role": "motor_readout",
+          "status": "candidate",
+          "evidence": [
+            "annotations",
+            "steering"
+          ],
+          "top_nt": "acetylcholine",
+          "top_nt_confidence": 0.7908463208967288
+        },
+        {
+          "root_id": "720575940629327659",
+          "type": "DNa02",
+          "type_field": "hemibrain_type",
+          "side": "left",
+          "role": "motor_readout",
+          "status": "candidate",
+          "evidence": [
+            "annotations",
+            "steering"
+          ],
+          "top_nt": "acetylcholine",
+          "top_nt_confidence": 0.7941235871987472
+        }
+      ]
+    }
+  }
+}

@@ -1,0 +1,38 @@
+{
+  "schema": "neuroterrarium.world-restore-compatibility.v1",
+  "original_world_sha256": "6f84eebb1785a91eafd0922524d860581a780fcf0df6facc6317bc06556b7b31",
+  "compatible_world_sha256": "6150cf8af614c2f9b74b544c2077a91599b3ad8e85991de8d969fac1e3486c8a",
+  "unchanged_functions_sha256": {
+    "observe": "c936afea6a268b8f59310c2a38a24577756512b6757cbb7f6d4a9923c4700e34",
+    "advance": "a3dd6354392cc6b3f28b74db97371289c84fb4a0f2c9481df0897dba13859bad"
+  },
+  "change_scope": "Only World.restore input-admission bounds for moving/growing stimuli changed. All other source text, including observe and advance, is byte-identical.",
+  "finite_domains": {
+    "stimulus_position": "abs(coordinate) <= 10000 + abs(own velocity) * step * 0.02 + binary64 accumulation allowance",
+    "stimulus_radius": "0 < radius <= 100 + max(own growth, 0) * step * 0.02 + binary64 accumulation allowance",
+    "allowance": "(2 * step + 8) * ulp(domain upper bound)",
+    "clock_limit_steps": 1000000000,
+    "velocity_and_growth_absolute_limit": 10000,
+    "other_fields": "Unchanged finite bounds, including action, energy, speed, food, object counts and all non-stimulus geometry."
+  },
+  "training_metadata": "Original checkpoint source hashes and all trained weights remain unchanged. This admission repair does not change numerical updates; the paired development comparison is separate evidence.",
+  "original_source_archive": {
+    "filename": "training-source-v1.tar.gz",
+    "bytes": 18289,
+    "sha256": "acc7fbfd3818b8caaf09c2226ac56fdcfdd7a006e7693d9e8c047e58eeebfdaa"
+  },
+  "model_set_manifest_sha256": "de26cab314ac91685d21fff49b926d8290323df7883b453297809d55720b111c",
+  "development_seeds": [
+    7001,
+    7002,
+    7003,
+    7004,
+    7005,
+    7006,
+    7007,
+    7008
+  ],
+  "episode_steps": 250,
+  "comparison": "All nine fixed trained policies; deterministic means; identical development episodes; midpoint world/controller snapshot restore; exact arrays and complete world-state hashes.",
+  "results": "experiments/world-restore-compatibility-v1.json"
+}

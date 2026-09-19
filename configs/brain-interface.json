@@ -1,0 +1,102 @@
+{
+  "schema": "neuroterrarium.brain-interface.v1",
+  "kind": "engineering_parameter_manifest",
+  "profile": "v783",
+  "identity_registry": "interface-v783.json",
+  "implementation": "src/neuroterrarium/interface.py",
+  "configuration_semantics": "Records the implemented defaults and supported interventions; editing this document alone does not reconfigure the implementation.",
+  "calibration_status": "Initial engineering parameters; not fitted biological sensory or motor response curves.",
+  "clocks": {
+    "neural_integration_step_seconds": 0.0001,
+    "body_integration_step_seconds": 0.01,
+    "observation_action_cycle_seconds": 0.02,
+    "default_neural_steps_per_action": 200,
+    "schedule": "Observe at t; encode and advance persistent neural state for one action cycle; derive a bounded action held by the body over the same declared [t, t+0.02) cycle. Wall-clock computation duration does not add a simulated reaction delay."
+  },
+  "observation": {
+    "schema": "local-rays-v1",
+    "size": 59,
+    "validation": "Reject nonnumeric, nonfinite, wrong-shape and out-of-range values. No clipping occurs at the encoder boundary.",
+    "fields": [
+      {"name": "proximity", "start_index": 0, "length": 16, "range": [0, 1], "injected": false},
+      {"name": "dark_projection_occupancy", "start_index": 16, "length": 16, "range": [0, 1], "injected": false},
+      {"name": "normalized_projection_change", "start_index": 32, "length": 16, "range": [-1, 1], "injected": true},
+      {"name": "chemical_samples", "start_index": 48, "length": 4, "range": [0, 1], "injected": false},
+      {"name": "contact_taste", "start_index": 52, "length": 1, "range": [0, 1], "injected": true},
+      {"name": "simulated_energy", "start_index": 53, "length": 1, "range": [0, 1], "injected": false},
+      {"name": "normalized_speed", "start_index": 54, "length": 1, "range": [0, 1], "injected": false},
+      {"name": "previous_drive", "start_index": 55, "length": 1, "range": [0, 1], "injected": false},
+      {"name": "previous_turn", "start_index": 56, "length": 1, "range": [-1, 1], "injected": false},
+      {"name": "previous_escape_drive", "start_index": 57, "length": 1, "range": [0, 1], "injected": false},
+      {"name": "previous_feeding_gate", "start_index": 58, "length": 1, "range": [0, 1], "injected": false}
+    ],
+    "access_scope": "All controllers receive the shared observation schema. The present brain encoder uses only its registered subset; access equality does not mean every controller uses every feature."
+  },
+  "sensory_encoder": {
+    "input_event_model": "Independent Bernoulli events for each cell and neural integration step, with probability rate_hz * 0.0001 seconds.",
+    "rate_unit": "Hz",
+    "taste": {
+      "group": "sugar",
+      "rate_formula": "200 * contact_taste if taste is enabled, otherwise 0",
+      "range_hz": [0, 200],
+      "assumption": "Engineering conversion from local physical food contact to the published labellar sugar input population. The registered population is biological left."
+    },
+    "vision": {
+      "groups": ["lplc2", "lc4"],
+      "rate_formula": "200 * max(0, all normalized_projection_change bins) if vision is enabled, otherwise 0",
+      "range_hz": [0, 200],
+      "world_feature_normalization": "Projection occupancy change divided by the action period in seconds, then by 20 per second, clipped to [-1,1] in World.",
+      "side_allocation": "Every registered LPLC2 and LC4 neuron on both biological sides receives the same scalar rate; cells retain independent random draws.",
+      "injection_level": "Visual projection neurons; retinal, T4/T5, LPi and measured retinotopic computations are bypassed.",
+      "limitations": "Positive local occupancy change also occurs during translation. This encoder does not reproduce biological looming selectivity or separate the biological LC4 velocity and LPLC2 size channels. No stimulus direction or desired escape action is supplied."
+    },
+    "tonic_drive": {
+      "group": "dna02",
+      "default_hz": 15,
+      "supported_range_hz": [0, 50],
+      "disable_hz": 0,
+      "random_stream": "neural-input/dna02",
+      "source": "Engineering baseline-drive assumption, not a measured endogenous spontaneous firing rate.",
+      "observation_dependency": "None. The same fixed per-cell rate applies regardless of food, obstacles, threat, body state and controller identity.",
+      "channel_intervention_semantics": "Disabling taste or vision leaves tonic drive unchanged. Setting tonic_hz to zero removes its external events."
+    },
+    "external_event_model_parameters": {
+      "voltage_increment_mV": 68.75,
+      "voltage_increment_derivation": "0.275 mV per synapse * upstream Poisson factor 250",
+      "registered_injection_sites": ["sugar", "lplc2", "lc4", "dna02"],
+      "injection_site_refractory_seconds": 0,
+      "refractory_semantics": "Upstream activation semantics set registered injection-site refractory periods to zero. This site declaration persists even when its current input rate is zero; a zero-rate ablation does not silently rebuild the neural model. DNa02 baseline injection therefore changes its refractory setting as well as supplying external events."
+    },
+    "random_streams": ["neural-input/sugar", "neural-input/lplc2", "neural-input/lc4", "neural-input/dna02"],
+    "random_generator": "PCG64; independent named streams derived by World.stream",
+    "disabled_stream_schedule": "All four streams consume the same per-cell draws each action window even at zero rate, preserving independence when channels are toggled.",
+    "snapshot": "Strictly validated encoder-v1 includes channel booleans, tonic_hz, all four PCG64 states, and previous delivered rates. Invalid restore is atomic."
+  },
+  "motor_readout": {
+    "inputs": "Registered MN9, GF, DNa01 and DNa02 spike counts by biological side plus its own filter state. No observation or world state is accepted.",
+    "rate_unit": "Hz",
+    "filter": {
+      "time_constant_seconds": 0.08,
+      "update": "filtered += (1-exp(-duration/0.08)) * (mean_group_spike_count/duration-filtered)"
+    },
+    "left_signal": "(filtered_dna01_left + filtered_dna02_left) / 2",
+    "right_signal": "(filtered_dna01_right + filtered_dna02_right) / 2",
+    "actions": [
+      {"name": "forward_drive", "index": 0, "formula": "(left_signal+right_signal)/120", "range": [0, 1], "status": "Engineering locomotion mapping; not a biological forward-velocity decoder."},
+      {"name": "turn", "index": 1, "formula": "(left_signal-right_signal)/60", "range": [-1, 1], "status": "Engineering yaw gain motivated by ipsilateral steering evidence."},
+      {"name": "escape_drive", "index": 2, "formula": "max(filtered_gf_left,filtered_gf_right)/60", "range": [0, 1], "status": "Engineering current-heading surge; no guaranteed avoidance direction or biological takeoff dynamics."},
+      {"name": "feeding_gate", "index": 3, "formula": "max(filtered_mn9_left,filtered_mn9_right)/50", "range": [0, 1], "status": "Engineering feeding gate; resource uptake still requires physical food contact in the shared body."}
+    ],
+    "action_limits": "Clip each action to its declared range before the shared body pipeline.",
+    "all_readout_clamp": "Return four zero actions on every clamped call. The internal filter continues tracking actual spikes; clamp release may expose that retained filtered activity. Neural firing and queued synaptic events are unaffected by a readout clamp.",
+    "snapshot": "Strict readout-v1 structure with finite nonnegative filter states and a boolean clamped field."
+  },
+  "model_boundaries": {
+    "connectome_weights": "Untrained signed synapse counts with the upstream global 0.275 mV scale.",
+    "brain_weights_optimized": false,
+    "encoder_fitted_to_test": false,
+    "readout_fitted_to_test": false,
+    "claim": "A connectome-constrained LIF model operating through a simplified, explicit engineering sensory and motor interface.",
+    "unsupported_claims": ["whole-retina reconstruction", "emergent looming selectivity", "biologically calibrated spontaneous DNa02 activity", "guaranteed directed escape", "biological locomotion or metabolism", "v630 numerical replication"]
+  }
+}

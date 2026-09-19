@@ -1,0 +1,73 @@
+name: Core and full-data integration
+on:
+  push:
+    branches: [main]
+    tags: ['v*']
+  pull_request:
+  workflow_dispatch:
+permissions:
+  contents: read
+concurrency:
+  group: ci-${{ github.ref }}
+  cancel-in-progress: false
+jobs:
+  verify:
+    runs-on: ubuntu-24.04
+    timeout-minutes: 35
+    env:
+      OMP_NUM_THREADS: '2'
+      OPENBLAS_NUM_THREADS: '2'
+      MKL_NUM_THREADS: '2'
+      NUMBA_NUM_THREADS: '2'
+    steps:
+      - uses: actions/checkout@3d3c42e5aac5ba805825da76410c181273ba90b1 # v7
+        with:
+          persist-credentials: false
+      - uses: actions/setup-python@5fda3b95a4ea91299a34e894583c3862153e4b97 # v7
+        with:
+          python-version: '3.12'
+      - uses: actions/setup-node@820762786026740c76f36085b0efc47a31fe5020 # v7
+        with:
+          node-version: '24'
+          package-manager-cache: false
+      - name: Install isolated test dependencies
+        run: |
+          python -m venv .venv
+          .venv/bin/python -m pip install torch==2.14.0 --index-url https://download.pytorch.org/whl/cpu
+          .venv/bin/python -m pip install '.[test]' ruff==0.16.7 build==1.6.1 httpx==0.28.1
+      - name: Lint and core tests
+        run: |
+          .venv/bin/python -m ruff check src scripts tests --select F,E9
+          .venv/bin/python -m pytest -q --junitxml=ci-results/core.xml
+      - name: Type-check and build browser application
+        working-directory: web
+        run: |
+          npx --yes pnpm@11.19.0 install --frozen-lockfile --ignore-scripts
+          node --test test-verify-replay.mjs ../scripts/test-release-gate.mjs
+          npx --yes pnpm@11.19.0 run build
+          node verify-replay.mjs
+      - name: Download and verify the complete v783 profile
+        run: |
+          .venv/bin/python -m neuroterrarium data fetch --data-dir data
+          .venv/bin/python -m neuroterrarium data verify --data-dir data
+      - name: Real full-graph and nine-model integration
+        run: |
+          .venv/bin/python -m neuroterrarium validate --data-dir data --models artifacts/models --output ci-results/runtime
+          PYTHONPATH=src .venv/bin/python scripts/neural_gate.py --data-dir data --output ci-results/neural --duration 0.5 --reference
+      - name: Build and verify installed wheel from a clean location
+        run: |
+          .venv/bin/python scripts/stage_web.py
+          .venv/bin/python -m build --wheel
+          .venv/bin/python scripts/install_check.py --wheel dist --data-dir data --models artifacts/models --output ci-results/install
+      - uses: actions/upload-artifact@043fb46d1a93c77aae656e7c1c64a875d1fc6a0a # v7
+        if: always()
+        with:
+          name: validation-${{ github.sha }}
+          path: |
+            ci-results/core.xml
+            ci-results/runtime/
+            ci-results/neural/
+            ci-results/install/summary.json
+            ci-results/install/*.log
+            ci-results/install/runtime-evidence/
+          if-no-files-found: error
