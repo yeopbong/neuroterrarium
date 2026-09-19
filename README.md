@@ -47,5 +47,3 @@ Pass its actual absolute path to `replay`; the portable launcher runs from its
 own installation directory. A saved full-state snapshot is a different format.
 
 [Results](docs/results.md) cover stimulus responses, food, collisions and simulated energy.
-
-Code is MIT. FlyWire-derived data retain **CC BY-NC 4.0** conditions and required scientific attribution. The [data manifest](configs/data-v783.json) fixes revisions and checksums; [third-party notices](THIRD_PARTY_NOTICES.md) preserve upstream code and dataset credits.
