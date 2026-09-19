@@ -110,7 +110,7 @@ full-graph and nine-policy execution, local HTTP resources, native-library
 locations and the launcher after relocation all passed in paths containing
 spaces and non-ASCII characters. A separate clean wheel installation passed its
 eight required checks. Archive-specific hashes and logs accompany the
-[release evidence](results.md). This is the tested installation platform; the
+[release evidence](https://github.com/yeopbong/neuroterrarium/releases/download/v0.1.0/release-evidence-v1.tar.gz). This is the tested installation platform; the
 bundle is unsigned and not notarized.
 
 `scripts/build_package.py prepare` is the only packaging operation that downloads
@@ -155,3 +155,10 @@ policies with outbound Python networking denied, local HTTP and JavaScript
 resources, native library locations, and the launcher after relocation. Its
 `portable-check.v1` result can pass only after every required command completes.
 Use the recorded archive checksum to match these results to the downloaded bytes.
+
+## Reproducible CPU checks
+
+On x86 builds using Intel MKL, start Python with `MKL_CBWR=COMPATIBLE`,
+`MKL_DYNAMIC=FALSE` and `OMP_DYNAMIC=FALSE` for bitwise checkpoint continuation. CI uses these settings
+with the configured thread limit and zero-tolerance continuation assertions.
+These are [MKL's conditional reproducibility controls](https://www.intel.com/content/www/us/en/docs/onemkl/developer-reference-c/2026-0/getting-started-with-conditional-numerical.html).
